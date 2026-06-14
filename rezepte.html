@@ -44,21 +44,21 @@
     <h3 class="filter-title">⭐ Sterne</h3>
 
     <div class="filter-buttons" id="starFilters">
-        <button onclick="setRecipeStars('all', this)" class="active-filter">Alle</button>
-        <button onclick="setRecipeStars('1', this)">⭐ 1</button>
-        <button onclick="setRecipeStars('2', this)">⭐⭐ 2</button>
-        <button onclick="setRecipeStars('3', this)">⭐⭐⭐ 3</button>
-        <button onclick="setRecipeStars('4', this)">⭐⭐⭐⭐ 4</button>
-        <button onclick="setRecipeStars('5', this)">⭐⭐⭐⭐⭐ 5</button>
+        <button type="button" data-stars="all" class="active-filter">Alle</button>
+        <button type="button" data-stars="1">⭐ 1</button>
+        <button type="button" data-stars="2">⭐⭐ 2</button>
+        <button type="button" data-stars="3">⭐⭐⭐ 3</button>
+        <button type="button" data-stars="4">⭐⭐⭐⭐ 4</button>
+        <button type="button" data-stars="5">⭐⭐⭐⭐⭐ 5</button>
     </div>
 
     <h3 class="filter-title">Sortierung</h3>
 
     <div class="filter-buttons" id="recipeSortFilters">
-        <button onclick="setRecipeSort('name', this)" class="active-filter">A-Z</button>
-        <button onclick="setRecipeSort('priceHigh', this)">💰 Wertvollste</button>
-        <button onclick="setRecipeSort('energyHigh', this)">⚡ Meiste Energie</button>
-        <button onclick="setRecipeSort('starsHigh', this)">⭐ Höchste Sterne</button>
+        <button type="button" data-sort="name" class="active-filter">A-Z</button>
+        <button type="button" data-sort="priceHigh">💰 Wertvollste</button>
+        <button type="button" data-sort="energyHigh">⚡ Meiste Energie</button>
+        <button type="button" data-sort="starsHigh">⭐ Höchste Sterne</button>
     </div>
 
     <div id="recipeStats" class="dashboard dashboard-main"></div>
@@ -69,7 +69,152 @@
 
 </main>
 
-<script src="js/recipes.js?v=100"></script>
+<script>
+let allRecipes = [];
+let selectedStars = "all";
+let selectedSort = "name";
+
+document.addEventListener("DOMContentLoaded", async () => {
+    const response = await fetch("data/recipes.json");
+    allRecipes = await response.json();
+
+    document.getElementById("recipeSearch").addEventListener("input", filterRecipes);
+
+    document.querySelectorAll("#starFilters button").forEach(button => {
+        button.addEventListener("click", () => {
+            selectedStars = button.dataset.stars;
+
+            document.querySelectorAll("#starFilters button").forEach(btn => {
+                btn.classList.remove("active-filter");
+            });
+
+            button.classList.add("active-filter");
+
+            filterRecipes();
+        });
+    });
+
+    document.querySelectorAll("#recipeSortFilters button").forEach(button => {
+        button.addEventListener("click", () => {
+            selectedSort = button.dataset.sort;
+
+            document.querySelectorAll("#recipeSortFilters button").forEach(btn => {
+                btn.classList.remove("active-filter");
+            });
+
+            button.classList.add("active-filter");
+
+            filterRecipes();
+        });
+    });
+
+    filterRecipes();
+});
+
+function filterRecipes() {
+    const searchValue = document.getElementById("recipeSearch").value.toLowerCase();
+
+    let filtered = allRecipes.filter(recipe =>
+        String(recipe.name).toLowerCase().includes(searchValue) ||
+        recipe.zutaten.join(" ").toLowerCase().includes(searchValue) ||
+        String(recipe.quelle).toLowerCase().includes(searchValue) ||
+        String(recipe.beschreibung).toLowerCase().includes(searchValue)
+    );
+
+    if (selectedStars !== "all") {
+        filtered = filtered.filter(recipe =>
+            Number(recipe.sterne) === Number(selectedStars)
+        );
+    }
+
+    if (selectedSort === "name") {
+        filtered.sort((a, b) => String(a.name).localeCompare(String(b.name)));
+    }
+
+    if (selectedSort === "priceHigh") {
+        filtered.sort((a, b) => Number(b.verkaufspreis) - Number(a.verkaufspreis));
+    }
+
+    if (selectedSort === "energyHigh") {
+        filtered.sort((a, b) => Number(b.energie) - Number(a.energie));
+    }
+
+    if (selectedSort === "starsHigh") {
+        filtered.sort((a, b) => Number(b.sterne) - Number(a.sterne));
+    }
+
+    updateRecipeStats(filtered);
+    displayRecipes(filtered);
+}
+
+function updateRecipeStats(recipes) {
+    const container = document.getElementById("recipeStats");
+
+    const bestPrice = [...recipes].sort((a, b) => Number(b.verkaufspreis) - Number(a.verkaufspreis))[0];
+    const bestEnergy = [...recipes].sort((a, b) => Number(b.energie) - Number(a.energie))[0];
+    const fiveStarCount = recipes.filter(recipe => Number(recipe.sterne) === 5).length;
+
+    container.innerHTML = `
+        <div class="dash-card">
+            <strong>🍳 Treffer</strong>
+            <span>${recipes.length} Rezepte</span>
+        </div>
+
+        <div class="dash-card">
+            <strong>💰 Wertvollstes</strong>
+            <span>${bestPrice ? `${bestPrice.name} (${bestPrice.verkaufspreis})` : "Keine Daten"}</span>
+        </div>
+
+        <div class="dash-card">
+            <strong>⚡ Meiste Energie</strong>
+            <span>${bestEnergy ? `${bestEnergy.name} (${bestEnergy.energie})` : "Keine Daten"}</span>
+        </div>
+
+        <div class="dash-card">
+            <strong>⭐⭐⭐⭐⭐</strong>
+            <span>${fiveStarCount} Treffer</span>
+        </div>
+    `;
+}
+
+function displayRecipes(recipes) {
+    const container = document.getElementById("recipesContainer");
+    container.innerHTML = "";
+
+    if (recipes.length === 0) {
+        container.innerHTML = `
+            <div class="card">
+                <h3>Keine Rezepte gefunden</h3>
+                <p>Versuche einen anderen Suchbegriff oder ändere den Filter.</p>
+            </div>
+        `;
+        return;
+    }
+
+    recipes.forEach(recipe => {
+        const sterne = "⭐".repeat(Number(recipe.sterne));
+        const zutaten = recipe.zutaten.join(", ");
+
+        container.innerHTML += `
+            <div class="card">
+
+                <div class="item-badge">${sterne}</div>
+
+                <h3>${recipe.name}</h3>
+
+                <p><strong>🍎 Zutaten:</strong> ${zutaten}</p>
+                <p><strong>💰 Verkaufspreis:</strong> ${recipe.verkaufspreis} Sternenmünzen</p>
+                <p><strong>⚡ Energie:</strong> ${recipe.energie}</p>
+                <p><strong>🎮 Inhalt:</strong> ${recipe.quelle}</p>
+
+                <p class="item-description">${recipe.beschreibung}</p>
+
+            </div>
+        `;
+    });
+}
+</script>
+
 <script src="js/mobilejump.js"></script>
 
 </body>
