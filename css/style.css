@@ -341,41 +341,59 @@ ul, ol{
 
 @media(max-width:700px){
     .main-header{
-        padding:46px 16px 36px;
-        border-bottom-left-radius:34px;
-        border-bottom-right-radius:34px;
+        padding:24px 14px 20px;
+        border-bottom-left-radius:28px;
+        border-bottom-right-radius:28px;
     }
 
     .main-header h1{
-        font-size:2.15rem;
+        font-size:1.8rem;
     }
 
     .main-header p{
-        font-size:1rem;
+        display:none;
     }
 
     main{
-        padding:20px 12px 48px;
+        padding:18px 12px 48px;
     }
 
     .hero{
-        padding:24px;
+        padding:22px;
         border-radius:26px;
     }
 
     .hero h2{
-        font-size:1.55rem;
+        font-size:1.5rem;
     }
 
     nav{
+        position:sticky;
+        top:0;
+        z-index:10;
+        display:flex;
+        flex-wrap:nowrap;
+        justify-content:flex-start;
+        overflow-x:auto;
         gap:8px;
-        padding:16px 12px;
+        padding:10px 12px;
+        background:rgba(255,255,255,0.78);
+        backdrop-filter:blur(10px);
+        scrollbar-width:none;
+        -ms-overflow-style:none;
+    }
+
+    nav::-webkit-scrollbar{
+        display:none;
     }
 
     nav a{
-        width:100%;
+        width:auto;
+        flex:0 0 auto;
+        white-space:nowrap;
         text-align:center;
-        padding:11px 14px;
+        padding:10px 14px;
+        font-size:0.95rem;
     }
 
     .cards{
