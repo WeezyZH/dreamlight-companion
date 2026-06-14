@@ -1,0 +1,102 @@
+[
+  {
+    "id": 1,
+    "name": "Spitzhacke",
+    "icon": "⛏️",
+    "prioritaet": "Sehr hoch",
+    "freischaltung": "Frühes Spiel / Hauptquest",
+    "wichtig_fuer": "Felsen entfernen, Erze und Edelsteine abbauen",
+    "upgrades": [
+      {
+        "name": "Eis entfernen",
+        "freischaltung": "Elsa-Questreihe",
+        "kosten": "Questabhängig",
+        "nutzen": "Erlaubt das Entfernen von Eisblöcken und öffnet blockierte Wege."
+      },
+      {
+        "name": "Korallen / Meeresreste entfernen",
+        "freischaltung": "Maui-Questreihe",
+        "kosten": "Questabhängig",
+        "nutzen": "Erlaubt das Entfernen von Korallen am schillernden Strand."
+      }
+    ],
+    "tipp": "Sehr früh wichtig, weil viele Gebiete und Ressourcen durch Felsen oder Eis blockiert sind."
+  },
+  {
+    "id": 2,
+    "name": "Gießkanne",
+    "icon": "💧",
+    "prioritaet": "Sehr hoch",
+    "freischaltung": "Zu Beginn verfügbar",
+    "wichtig_fuer": "Pflanzen gießen, Pilze entfernen, Wege freischalten",
+    "upgrades": [
+      {
+        "name": "Kleine Pilze entfernen",
+        "freischaltung": "Merlin-Questreihe",
+        "kosten": "Questabhängig",
+        "nutzen": "Erlaubt das Entfernen kleiner Pilze."
+      },
+      {
+        "name": "Große Pilze entfernen",
+        "freischaltung": "Merlin-Questreihe",
+        "kosten": "Questabhängig",
+        "nutzen": "Erlaubt das Entfernen großer Pilze und öffnet weitere Wege."
+      }
+    ],
+    "tipp": "Sehr wichtig für Fortschritt, weil Pilze häufig Wege blockieren."
+  },
+  {
+    "id": 3,
+    "name": "Schaufel",
+    "icon": "🪓",
+    "prioritaet": "Mittel",
+    "freischaltung": "Zu Beginn verfügbar",
+    "wichtig_fuer": "Graben, Pflanzen setzen, Baumstümpfe entfernen",
+    "upgrades": [
+      {
+        "name": "Baumstümpfe entfernen",
+        "freischaltung": "Anna-Questreihe",
+        "kosten": "Questabhängig",
+        "nutzen": "Erlaubt das Entfernen von Baumstümpfen."
+      }
+    ],
+    "tipp": "Wichtig, aber meist etwas weniger dringend als Gießkanne und Spitzhacke."
+  },
+  {
+    "id": 4,
+    "name": "Angel",
+    "icon": "🎣",
+    "prioritaet": "Hoch",
+    "freischaltung": "Goofys frühe Quest",
+    "wichtig_fuer": "Fische, Rezepte, Quests und Geschenke",
+    "upgrades": [],
+    "tipp": "Früh freischalten, weil viele Quests und Rezepte Fische benötigen."
+  },
+  {
+    "id": 5,
+    "name": "Kamera",
+    "icon": "📷",
+    "prioritaet": "Niedrig",
+    "freischaltung": "Zu Beginn verfügbar",
+    "wichtig_fuer": "Fotos, Dreamlight-Aufgaben, Events",
+    "upgrades": [],
+    "tipp": "Nützlich für Aufgaben und Events, aber nicht so wichtig für Progression."
+  },
+  {
+    "id": 6,
+    "name": "Königliche Stunde",
+    "icon": "⏳",
+    "prioritaet": "Spezial",
+    "freischaltung": "A Rift in Time DLC",
+    "wichtig_fuer": "Zeitbiegung, DLC-Ressourcen, spezielle Schätze",
+    "upgrades": [
+      {
+        "name": "Zeitbiegung verbessern",
+        "freischaltung": "DLC-Fortschritt",
+        "kosten": "Nebel / DLC-Ressourcen",
+        "nutzen": "Verbessert die Möglichkeiten beim Zeitbiegen und beim Finden spezieller Ressourcen."
+      }
+    ],
+    "tipp": "Nur relevant, wenn du den A Rift in Time DLC besitzt."
+  }
+]
