@@ -14,8 +14,7 @@ async function loadRecipes() {
         allRecipes = await response.json();
 
         setupRecipeSearch();
-        setupStarFilters();
-        setupRecipeSortFilters();
+        setupFilterClicks();
 
         filterAndDisplayRecipes();
 
@@ -42,41 +41,40 @@ function filterAndDisplayRecipes() {
         const value = currentSearch.toLowerCase();
 
         filtered = filtered.filter(recipe =>
-            recipe.name.toLowerCase().includes(value) ||
+            String(recipe.name).toLowerCase().includes(value) ||
             recipe.zutaten.join(" ").toLowerCase().includes(value) ||
-            recipe.quelle.toLowerCase().includes(value) ||
-            recipe.beschreibung.toLowerCase().includes(value)
+            String(recipe.quelle).toLowerCase().includes(value) ||
+            String(recipe.beschreibung).toLowerCase().includes(value)
         );
     }
 
     if (selectedStars !== "all") {
         filtered = filtered.filter(recipe =>
-            recipe.sterne === Number(selectedStars)
+            Number(recipe.sterne) === Number(selectedStars)
         );
     }
 
     sortRecipes(filtered);
-
     updateRecipeStats(filtered);
     displayRecipes(filtered);
 }
 
 function sortRecipes(recipes) {
-    if (selectedSort === "name") {
-        recipes.sort((a, b) => a.name.localeCompare(b.name));
-    }
+    recipes.sort((a, b) => {
+        if (selectedSort === "priceHigh") {
+            return Number(b.verkaufspreis) - Number(a.verkaufspreis);
+        }
 
-    if (selectedSort === "priceHigh") {
-        recipes.sort((a, b) => b.verkaufspreis - a.verkaufspreis);
-    }
+        if (selectedSort === "energyHigh") {
+            return Number(b.energie) - Number(a.energie);
+        }
 
-    if (selectedSort === "energyHigh") {
-        recipes.sort((a, b) => b.energie - a.energie);
-    }
+        if (selectedSort === "starsHigh") {
+            return Number(b.sterne) - Number(a.sterne);
+        }
 
-    if (selectedSort === "starsHigh") {
-        recipes.sort((a, b) => b.sterne - a.sterne);
-    }
+        return String(a.name).localeCompare(String(b.name));
+    });
 }
 
 function updateRecipeStats(recipes) {
@@ -84,9 +82,9 @@ function updateRecipeStats(recipes) {
 
     if (!container) return;
 
-    const bestPrice = [...recipes].sort((a, b) => b.verkaufspreis - a.verkaufspreis)[0];
-    const bestEnergy = [...recipes].sort((a, b) => b.energie - a.energie)[0];
-    const fiveStarCount = recipes.filter(recipe => recipe.sterne === 5).length;
+    const bestPrice = [...recipes].sort((a, b) => Number(b.verkaufspreis) - Number(a.verkaufspreis))[0];
+    const bestEnergy = [...recipes].sort((a, b) => Number(b.energie) - Number(a.energie))[0];
+    const fiveStarCount = recipes.filter(recipe => Number(recipe.sterne) === 5).length;
 
     container.innerHTML = `
         <div class="dash-card">
@@ -129,15 +127,12 @@ function displayRecipes(recipes) {
     }
 
     recipes.forEach(recipe => {
-        const sterne = "⭐".repeat(recipe.sterne);
+        const sterne = "⭐".repeat(Number(recipe.sterne));
         const zutaten = recipe.zutaten.join(", ");
 
         container.innerHTML += `
             <div class="card">
-
-                <div class="item-badge">
-                    ${sterne}
-                </div>
+                <div class="item-badge">${sterne}</div>
 
                 <h3>${recipe.name}</h3>
 
@@ -146,10 +141,7 @@ function displayRecipes(recipes) {
                 <p><strong>⚡ Energie:</strong> ${recipe.energie}</p>
                 <p><strong>🎮 Inhalt:</strong> ${recipe.quelle}</p>
 
-                <p class="item-description">
-                    ${recipe.beschreibung}
-                </p>
-
+                <p class="item-description">${recipe.beschreibung}</p>
             </div>
         `;
     });
@@ -166,33 +158,34 @@ function setupRecipeSearch() {
     });
 }
 
-function setupStarFilters() {
-    const buttons = document.querySelectorAll("#starFilters button");
+function setupFilterClicks() {
+    document.addEventListener("click", (event) => {
+        const starButton = event.target.closest("#starFilters button");
+        const sortButton = event.target.closest("#recipeSortFilters button");
 
-    buttons.forEach(button => {
-        button.addEventListener("click", () => {
-            selectedStars = button.dataset.stars;
+        if (starButton) {
+            selectedStars = starButton.dataset.stars;
 
-            buttons.forEach(btn => btn.classList.remove("active-filter"));
-            button.classList.add("active-filter");
+            document
+                .querySelectorAll("#starFilters button")
+                .forEach(button => button.classList.remove("active-filter"));
 
-            filterAndDisplayRecipes();
-        });
-    });
-}
-
-function setupRecipeSortFilters() {
-    const buttons = document.querySelectorAll("#recipeSortFilters button");
-
-    buttons.forEach(button => {
-        button.addEventListener("click", () => {
-            selectedSort = button.dataset.sort;
-
-            buttons.forEach(btn => btn.classList.remove("active-filter"));
-            button.classList.add("active-filter");
+            starButton.classList.add("active-filter");
 
             filterAndDisplayRecipes();
-        });
+        }
+
+        if (sortButton) {
+            selectedSort = sortButton.dataset.sort;
+
+            document
+                .querySelectorAll("#recipeSortFilters button")
+                .forEach(button => button.classList.remove("active-filter"));
+
+            sortButton.classList.add("active-filter");
+
+            filterAndDisplayRecipes();
+        }
     });
 }
 
