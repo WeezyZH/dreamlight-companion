@@ -1,0 +1,202 @@
+[
+  {
+    "id": 1,
+    "kategorie": "Pflanze",
+    "phase": "Endgame",
+    "rang": "S",
+    "name": "Kürbis",
+    "biom": "Vergessene Lande",
+    "grund": "Eine der stärksten und zuverlässigsten Geldquellen im Spiel.",
+    "tipp": "Große Felder anbauen und immer einen Gartenarbeits-Begleiter mitnehmen."
+  },
+  {
+    "id": 2,
+    "kategorie": "Pflanze",
+    "phase": "Mittleres Spiel",
+    "rang": "A",
+    "name": "Okra",
+    "biom": "Lichtung des Vertrauens",
+    "grund": "Sehr gute Midgame-Pflanze mit solidem Verkaufspreis.",
+    "tipp": "Perfekt, bevor du Kürbisse freischaltest."
+  },
+  {
+    "id": 3,
+    "kategorie": "Pflanze",
+    "phase": "Frühes Spiel",
+    "rang": "B",
+    "name": "Karotte",
+    "biom": "Friedliche Wiese",
+    "grund": "Früh verfügbar, einfach anzubauen und gut für erste Sternenmünzen.",
+    "tipp": "Ideal für den Start, aber später durch Okra und Kürbis ersetzen."
+  },
+  {
+    "id": 4,
+    "kategorie": "Fisch",
+    "phase": "Endgame",
+    "rang": "S",
+    "name": "Seeteufel",
+    "biom": "Vergessene Lande",
+    "grund": "Sehr hoher Verkaufspreis und stark für hochwertige Gerichte.",
+    "tipp": "Beim Angeln immer einen Fischfang-Begleiter mitnehmen."
+  },
+  {
+    "id": 5,
+    "kategorie": "Fisch",
+    "phase": "Endgame",
+    "rang": "S",
+    "name": "Weißer Stör",
+    "biom": "Eisige Höhen",
+    "grund": "Sehr wertvoller Fisch und gut für spätere Geld- und Rezeptstrategien.",
+    "tipp": "Nicht alles verkaufen, einige für Rezepte und Quests behalten."
+  },
+  {
+    "id": 6,
+    "kategorie": "Fisch",
+    "phase": "Spätes Spiel",
+    "rang": "A",
+    "name": "Fugu",
+    "biom": "Schillernder Strand",
+    "grund": "Sehr wertvoll, aber wetterabhängig.",
+    "tipp": "Bei Regen am Strand gezielt danach angeln."
+  },
+  {
+    "id": 7,
+    "kategorie": "Fisch",
+    "phase": "Spätes Spiel",
+    "rang": "A",
+    "name": "Hummer",
+    "biom": "Lichtung des Vertrauens",
+    "grund": "Wertvoll und wichtig für sehr starke Rezepte.",
+    "tipp": "Besonders für Hummerbrötchen behalten."
+  },
+  {
+    "id": 8,
+    "kategorie": "Edelstein",
+    "phase": "Endgame",
+    "rang": "S",
+    "name": "Glänzender Diamant",
+    "biom": "Vergessene Lande",
+    "grund": "Extrem hoher Verkaufspreis.",
+    "tipp": "Einige behalten, Rest kann verkauft werden."
+  },
+  {
+    "id": 9,
+    "kategorie": "Edelstein",
+    "phase": "Spätes Spiel",
+    "rang": "A",
+    "name": "Glänzender Amethyst",
+    "biom": "Eisige Höhen",
+    "grund": "Sehr guter Verkaufswert aus späteren Gebieten.",
+    "tipp": "Mit Bergbau-Begleiter farmen."
+  },
+  {
+    "id": 10,
+    "kategorie": "Edelstein",
+    "phase": "Spätes Spiel",
+    "rang": "A",
+    "name": "Glänzender Turmalin",
+    "biom": "Eisige Höhen",
+    "grund": "Starker Verkaufswert und guter Mining-Ertrag.",
+    "tipp": "Mining-Routen regelmäßig laufen."
+  },
+  {
+    "id": 11,
+    "kategorie": "Rezept",
+    "phase": "Endgame",
+    "rang": "S",
+    "name": "Hummerbrötchen",
+    "biom": "Kochen",
+    "grund": "Sehr hohe Energie und sehr guter Verkaufswert.",
+    "tipp": "Ideal, wenn du Hummer und Remy-Zutaten verfügbar hast."
+  },
+  {
+    "id": 12,
+    "kategorie": "Rezept",
+    "phase": "Endgame",
+    "rang": "S",
+    "name": "Rauchige Erdnüsse und Seeteufel",
+    "biom": "Kochen",
+    "grund": "Sehr starkes Rezept mit extrem hohem Wert.",
+    "tipp": "Seeteufel nicht immer roh verkaufen – dieses Gericht lohnt sich."
+  },
+  {
+    "id": 13,
+    "kategorie": "Rezept",
+    "phase": "Spätes Spiel",
+    "rang": "A",
+    "name": "Fugu-Sushi",
+    "biom": "Kochen",
+    "grund": "Sehr wertvolles Gericht mit hohem Energieertrag.",
+    "tipp": "Besonders sinnvoll, wenn du Fugu übrig hast."
+  },
+  {
+    "id": 14,
+    "kategorie": "Rezept",
+    "phase": "Spätes Spiel",
+    "rang": "A",
+    "name": "Soufflé",
+    "biom": "Chez Remy",
+    "grund": "Sehr gutes Rezept aus gekauften Remy-Zutaten.",
+    "tipp": "Gut planbar, weil die Zutaten regelmäßig verfügbar sind."
+  },
+  {
+    "id": 15,
+    "kategorie": "Route",
+    "phase": "Spätes Spiel",
+    "rang": "S",
+    "name": "Mining-Route Vergessene Lande",
+    "biom": "Vergessene Lande",
+    "grund": "Diamanten, dunkles Holz und wertvolle Materialien machen das Gebiet extrem stark.",
+    "tipp": "Regelmäßig mit Bergbau-Begleiter laufen."
+  },
+  {
+    "id": 16,
+    "kategorie": "Route",
+    "phase": "Mittleres Spiel",
+    "rang": "A",
+    "name": "Okra-Farm Lichtung des Vertrauens",
+    "biom": "Lichtung des Vertrauens",
+    "grund": "Stabile Einnahmen im Midgame.",
+    "tipp": "Gute Übergangslösung bis Kürbis-Farming möglich ist."
+  },
+  {
+    "id": 17,
+    "kategorie": "Route",
+    "phase": "Frühes Spiel",
+    "rang": "B",
+    "name": "Karotten-Farm Friedliche Wiese",
+    "biom": "Friedliche Wiese",
+    "grund": "Einfach, früh und zuverlässig.",
+    "tipp": "Nicht dauerhaft optimal, aber perfekt für den Start."
+  },
+  {
+    "id": 18,
+    "kategorie": "Warnung",
+    "phase": "Alle Phasen",
+    "rang": "S",
+    "name": "Traumscherben nicht verkaufen",
+    "biom": "Alle Gebiete",
+    "grund": "Traumscherben werden für Quests und Fortschritt benötigt.",
+    "tipp": "Immer behalten und nicht leichtfertig umwandeln."
+  },
+  {
+    "id": 19,
+    "kategorie": "Warnung",
+    "phase": "Alle Phasen",
+    "rang": "S",
+    "name": "Dunkles Holz behalten",
+    "biom": "Vergessene Lande",
+    "grund": "Seltene Ressource, die später sehr wichtig wird.",
+    "tipp": "Nicht verkaufen, auch wenn du Geld brauchst."
+  },
+  {
+    "id": 20,
+    "kategorie": "Warnung",
+    "phase": "Alle Phasen",
+    "rang": "A",
+    "name": "Eisenerz behalten",
+    "biom": "Wald der Tapferkeit",
+    "grund": "Eisenbarren werden sehr häufig gebraucht.",
+    "tipp": "Eisenerz ist meist wertvoller als sein Verkaufspreis."
+  }
+]

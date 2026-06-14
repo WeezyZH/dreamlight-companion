@@ -1,0 +1,123 @@
+[
+  {
+    "id": 1,
+    "name": "Platz",
+    "phase": "Frühes Spiel",
+    "prioritaet": "S",
+    "freischaltung": "Zu Beginn verfügbar",
+    "dreamlight": 0,
+    "besteGeldquelle": "Frühe Früchte, Granat, Topas",
+    "wichtigFuer": ["Startgebiet", "Frühe Quests", "Gewürze", "Edelsteine"],
+    "tipp": "Gutes Startgebiet zum Sammeln von Oregano, Früchten und frühen Edelsteinen."
+  },
+  {
+    "id": 2,
+    "name": "Friedliche Wiese",
+    "phase": "Frühes Spiel",
+    "prioritaet": "S",
+    "freischaltung": "Früh im Spiel verfügbar",
+    "dreamlight": 0,
+    "besteGeldquelle": "Karotten",
+    "wichtigFuer": ["Karotten", "Weizen", "Goofys Stand", "Frühe Fische"],
+    "tipp": "Sehr wichtig am Anfang. Karotten sind eine einfache frühe Geldquelle."
+  },
+  {
+    "id": 3,
+    "name": "Schillernder Strand",
+    "phase": "Frühes Spiel",
+    "prioritaet": "A",
+    "freischaltung": "Mit Dreamlight freischaltbar",
+    "dreamlight": 1000,
+    "besteGeldquelle": "Fische, Muscheln, Aquamarin",
+    "wichtigFuer": ["Fische", "Meeresfrüchte", "Zuckerrohr", "Arielle/Ursula-Quests"],
+    "tipp": "Sehr nützlich für frühe Rezepte, Meeresfrüchte und Zuckerrohr."
+  },
+  {
+    "id": 4,
+    "name": "Wald der Tapferkeit",
+    "phase": "Mittleres Spiel",
+    "prioritaet": "S",
+    "freischaltung": "Mit Dreamlight freischaltbar",
+    "dreamlight": 3000,
+    "besteGeldquelle": "Eisenerz, Smaragd, Raps",
+    "wichtigFuer": ["Eisenerz", "Hartholz", "Kristoff", "Knoblauch"],
+    "tipp": "Sehr wichtig für Eisen, Holz und viele Fortschrittsquests."
+  },
+  {
+    "id": 5,
+    "name": "Lichtung des Vertrauens",
+    "phase": "Mittleres Spiel",
+    "prioritaet": "S",
+    "freischaltung": "Mit Dreamlight freischaltbar",
+    "dreamlight": 5000,
+    "besteGeldquelle": "Okra, Hummer, Lehm",
+    "wichtigFuer": ["Okra", "Lehm", "Pilze", "Hummer", "Mutter Gothel"],
+    "tipp": "Sehr starkes Midgame-Biom. Okra ist eine gute Geldquelle vor Kürbissen."
+  },
+  {
+    "id": 6,
+    "name": "Sonnige Ebene",
+    "phase": "Mittleres Spiel",
+    "prioritaet": "A",
+    "freischaltung": "Mit Dreamlight freischaltbar",
+    "dreamlight": 7000,
+    "besteGeldquelle": "Chili, Soja, Citrin, Zander",
+    "wichtigFuer": ["Scar", "Baumwolle", "Chili", "Soja", "Vitalys-Mine"],
+    "tipp": "Wichtig für spätere Quests, Mine und mehrere wertvolle Ressourcen."
+  },
+  {
+    "id": 7,
+    "name": "Eisige Höhen",
+    "phase": "Spätes Spiel",
+    "prioritaet": "A",
+    "freischaltung": "Mit Dreamlight freischaltbar",
+    "dreamlight": 10000,
+    "besteGeldquelle": "Weißer Stör, Amethyst, Turmalin",
+    "wichtigFuer": ["Gurke", "Spargel", "Stör", "Schneebälle", "Elsa-Quests"],
+    "tipp": "Gut für wertvolle Fische, Edelsteine und spätere Zutaten."
+  },
+  {
+    "id": 8,
+    "name": "Vergessene Lande",
+    "phase": "Endgame",
+    "prioritaet": "S",
+    "freischaltung": "Mit Dreamlight freischaltbar",
+    "dreamlight": 15000,
+    "besteGeldquelle": "Kürbis, Seeteufel, Diamant",
+    "wichtigFuer": ["Kürbis", "Diamant", "Seeteufel", "Dunkles Holz", "Endgame-Farming"],
+    "tipp": "Eines der wichtigsten Biome für Geld. Kürbis-Farming ist extrem stark."
+  },
+  {
+    "id": 9,
+    "name": "Chez Remy",
+    "phase": "Frühes bis spätes Spiel",
+    "prioritaet": "S",
+    "freischaltung": "Remy freischalten und Restaurant öffnen",
+    "dreamlight": 0,
+    "besteGeldquelle": "Soufflé und hochwertige Rezepte",
+    "wichtigFuer": ["Milch", "Käse", "Butter", "Ei", "Viele Rezepte"],
+    "tipp": "Unverzichtbar für Kochen, Energiegerichte und viele starke Rezepte."
+  },
+  {
+    "id": 10,
+    "name": "Handwerk",
+    "phase": "Alle Phasen",
+    "prioritaet": "A",
+    "freischaltung": "Werkbank verwenden",
+    "dreamlight": 0,
+    "besteGeldquelle": "Nicht primär verkaufen",
+    "wichtigFuer": ["Eisenbarren", "Goldbarren", "Glas", "Stoff", "Seil"],
+    "tipp": "Handwerksmaterialien besser behalten. Sie werden später oft in großen Mengen gebraucht."
+  },
+  {
+    "id": 11,
+    "name": "Alle Gebiete",
+    "phase": "Alle Phasen",
+    "prioritaet": "A",
+    "freischaltung": "Allgemeine Sammelorte",
+    "dreamlight": 0,
+    "besteGeldquelle": "Allgemeine Ressourcen",
+    "wichtigFuer": ["Kohleerz", "Seetang", "Traumscherben", "Nachtscherben"],
+    "tipp": "Diese Ressourcen tauchen an mehreren Orten auf und sollten gesammelt werden."
+  }
+]

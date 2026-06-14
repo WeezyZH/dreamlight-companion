@@ -1,0 +1,2841 @@
+[
+  {
+    "id": 1,
+    "name": "Ratatouille",
+    "sterne": 5,
+    "zutaten": [
+      "Tomate",
+      "Aubergine",
+      "Zucchini",
+      "Zwiebel",
+      "Gewürz"
+    ],
+    "verkaufspreis": 914,
+    "energie": 1562,
+    "quelle": "Basisspiel",
+    "beschreibung": "Ein bekanntes Gericht aus Remys Reich."
+  },
+  {
+    "id": 2,
+    "name": "Kürbissuppe",
+    "sterne": 4,
+    "zutaten": [
+      "Kürbis",
+      "Gemüse",
+      "Milch",
+      "Ingwer"
+    ],
+    "verkaufspreis": 1500,
+    "energie": 1431,
+    "quelle": "Basisspiel",
+    "beschreibung": "Ein wertvolles Gericht mit Kürbis."
+  },
+  {
+    "id": 3,
+    "name": "Obstsalat",
+    "sterne": 1,
+    "zutaten": [
+      "Beliebige Frucht"
+    ],
+    "verkaufspreis": 25,
+    "energie": 450,
+    "quelle": "Basisspiel",
+    "beschreibung": "Ein einfaches frühes Rezept für Energie."
+  },
+  {
+    "id": 4,
+    "name": "Gegrilltes Gemüse",
+    "sterne": 1,
+    "zutaten": [
+      "Beliebiges Gemüse"
+    ],
+    "verkaufspreis": 30,
+    "energie": 300,
+    "quelle": "Basisspiel",
+    "beschreibung": "Sehr einfaches Rezept für den Anfang."
+  },
+  {
+    "id": 5,
+    "name": "Fischsandwich",
+    "sterne": 2,
+    "zutaten": [
+      "Fisch",
+      "Weizen"
+    ],
+    "verkaufspreis": 34,
+    "energie": 337,
+    "quelle": "Basisspiel",
+    "beschreibung": "Frühes Rezept mit einfachen Zutaten."
+  },
+  {
+    "id": 6,
+    "name": "Gemüsesuppe",
+    "sterne": 2,
+    "zutaten": [
+      "Gemüse",
+      "Gemüse"
+    ],
+    "verkaufspreis": 20,
+    "energie": 120,
+    "quelle": "Basisspiel",
+    "beschreibung": "Ein simples Gericht für frühe Spielphasen."
+  },
+  {
+    "id": 7,
+    "name": "Apfelkuchen",
+    "sterne": 3,
+    "zutaten": [
+      "Apfel",
+      "Weizen",
+      "Butter"
+    ],
+    "verkaufspreis": 303,
+    "energie": 1137,
+    "quelle": "Basisspiel",
+    "beschreibung": "Gutes frühes Dessert mit ordentlicher Energie."
+  },
+  {
+    "id": 8,
+    "name": "Bananenkuchen",
+    "sterne": 3,
+    "zutaten": [
+      "Banane",
+      "Weizen",
+      "Butter"
+    ],
+    "verkaufspreis": 308,
+    "energie": 1227,
+    "quelle": "Basisspiel",
+    "beschreibung": "Ein süßes Gericht mit guter Energie."
+  },
+  {
+    "id": 9,
+    "name": "Beeren-Salat",
+    "sterne": 3,
+    "zutaten": [
+      "Himbeere",
+      "Heidelbeere",
+      "Stachelbeere"
+    ],
+    "verkaufspreis": 139,
+    "energie": 2210,
+    "quelle": "Basisspiel",
+    "beschreibung": "Sehr gutes Energiegericht mit Früchten."
+  },
+  {
+    "id": 10,
+    "name": "Gemüseauflauf",
+    "sterne": 4,
+    "zutaten": [
+      "Gemüse",
+      "Gemüse",
+      "Käse",
+      "Gewürz"
+    ],
+    "verkaufspreis": 300,
+    "energie": 821,
+    "quelle": "Basisspiel",
+    "beschreibung": "Solides Gericht für Energie und Verkauf."
+  },
+  {
+    "id": 11,
+    "name": "Pizza Margherita",
+    "sterne": 4,
+    "zutaten": [
+      "Tomate",
+      "Käse",
+      "Weizen",
+      "Gewürz"
+    ],
+    "verkaufspreis": 336,
+    "energie": 818,
+    "quelle": "Basisspiel",
+    "beschreibung": "Nützliches Rezept mit einfachen Zutaten."
+  },
+  {
+    "id": 12,
+    "name": "Käsekuchen",
+    "sterne": 4,
+    "zutaten": [
+      "Käse",
+      "Weizen",
+      "Zuckerrohr",
+      "Frucht"
+    ],
+    "verkaufspreis": 332,
+    "energie": 1451,
+    "quelle": "Basisspiel",
+    "beschreibung": "Gutes Dessert für Energie."
+  },
+  {
+    "id": 13,
+    "name": "Bouillabaisse",
+    "sterne": 5,
+    "zutaten": [
+      "Garnele",
+      "Meeresfrucht",
+      "Meeresfrucht",
+      "Tomate",
+      "Gemüse"
+    ],
+    "verkaufspreis": 671,
+    "energie": 2114,
+    "quelle": "Basisspiel",
+    "beschreibung": "Starkes Fischgericht mit guter Energie."
+  },
+  {
+    "id": 14,
+    "name": "Geburtstagskuchen",
+    "sterne": 5,
+    "zutaten": [
+      "Kakao",
+      "Weizen",
+      "Zuckerrohr",
+      "Ei",
+      "Butter"
+    ],
+    "verkaufspreis": 749,
+    "energie": 2310,
+    "quelle": "Basisspiel",
+    "beschreibung": "Sehr gutes Dessert mit hoher Energie."
+  },
+  {
+    "id": 15,
+    "name": "Kronks Spinat Puffs",
+    "sterne": 3,
+    "zutaten": [
+      "Spinat",
+      "Käse",
+      "Raps"
+    ],
+    "verkaufspreis": 461,
+    "energie": 750,
+    "quelle": "Basisspiel",
+    "beschreibung": "Nettes Rezept für Sammler und Energie."
+  },
+  {
+    "id": 16,
+    "name": "Fischsuppe",
+    "sterne": 3,
+    "zutaten": [
+      "Fisch",
+      "Gemüse",
+      "Milch"
+    ],
+    "verkaufspreis": 368,
+    "energie": 978,
+    "quelle": "Basisspiel",
+    "beschreibung": "Ein praktisches Gericht mit Fisch."
+  },
+  {
+    "id": 17,
+    "name": "Fischpastete",
+    "sterne": 3,
+    "zutaten": [
+      "Fisch",
+      "Weizen",
+      "Butter"
+    ],
+    "verkaufspreis": 303,
+    "energie": 867,
+    "quelle": "Basisspiel",
+    "beschreibung": "Solides Rezept aus Fisch und Weizen."
+  },
+  {
+    "id": 18,
+    "name": "Hummerbrötchen",
+    "sterne": 5,
+    "zutaten": [
+      "Hummer",
+      "Weizen",
+      "Zitrone",
+      "Butter",
+      "Knoblauch"
+    ],
+    "verkaufspreis": 1900,
+    "energie": 4928,
+    "quelle": "Basisspiel",
+    "beschreibung": "Sehr starkes Gericht für Energie und Verkauf."
+  },
+  {
+    "id": 19,
+    "name": "Zander en Papillote",
+    "sterne": 4,
+    "zutaten": [
+      "Zander",
+      "Basilikum",
+      "Oregano",
+      "Gemüse"
+    ],
+    "verkaufspreis": 1700,
+    "energie": 3689,
+    "quelle": "Basisspiel",
+    "beschreibung": "Sehr wertvolles Fischgericht."
+  },
+  {
+    "id": 20,
+    "name": "Tekka Maki",
+    "sterne": 4,
+    "zutaten": [
+      "Thunfisch",
+      "Soja",
+      "Seetang",
+      "Reis"
+    ],
+    "verkaufspreis": 366,
+    "energie": 984,
+    "quelle": "Basisspiel",
+    "beschreibung": "Ein Sushi-Rezept mit Thunfisch."
+  },
+  {
+    "id": 21,
+    "name": "Cracker",
+    "sterne": 1,
+    "zutaten": [
+      "Getreide"
+    ],
+    "verkaufspreis": 2,
+    "energie": 80,
+    "quelle": "Basisspiel",
+    "beschreibung": "Ein sehr einfaches Rezept für den Anfang."
+  },
+  {
+    "id": 22,
+    "name": "Porridge",
+    "sterne": 2,
+    "zutaten": [
+      "Milch",
+      "Weizen"
+    ],
+    "verkaufspreis": 301,
+    "energie": 668,
+    "quelle": "Basisspiel",
+    "beschreibung": "Ein einfaches Frühstücksgericht mit solider Energie."
+  },
+  {
+    "id": 23,
+    "name": "Porridge mit Früchten",
+    "sterne": 3,
+    "zutaten": [
+      "Milch",
+      "Weizen",
+      "Beliebige Frucht"
+    ],
+    "verkaufspreis": 353,
+    "energie": 1155,
+    "quelle": "Basisspiel",
+    "beschreibung": "Eine bessere Porridge-Variante mit zusätzlicher Energie."
+  },
+  {
+    "id": 24,
+    "name": "Karamelläpfel",
+    "sterne": 2,
+    "zutaten": [
+      "Apfel",
+      "Zuckerrohr"
+    ],
+    "verkaufspreis": 56,
+    "energie": 638,
+    "quelle": "Basisspiel",
+    "beschreibung": "Ein einfaches süßes Gericht mit frühen Zutaten."
+  },
+  {
+    "id": 25,
+    "name": "Marmeladenwaffeln",
+    "sterne": 4,
+    "zutaten": [
+      "Beliebige Frucht",
+      "Weizen",
+      "Ei",
+      "Milch"
+    ],
+    "verkaufspreis": 706,
+    "energie": 1843,
+    "quelle": "Basisspiel",
+    "beschreibung": "Ein starkes Dessert mit guter Energie."
+  },
+  {
+    "id": 26,
+    "name": "Waffeln",
+    "sterne": 4,
+    "zutaten": [
+      "Weizen",
+      "Milch",
+      "Ei",
+      "Süßes"
+    ],
+    "verkaufspreis": 706,
+    "energie": 1455,
+    "quelle": "Basisspiel",
+    "beschreibung": "Ein klassisches Gericht für Energie und Sammlung."
+  },
+  {
+    "id": 27,
+    "name": "Pfannkuchen",
+    "sterne": 4,
+    "zutaten": [
+      "Weizen",
+      "Ei",
+      "Milch",
+      "Süßes"
+    ],
+    "verkaufspreis": 768,
+    "energie": 1624,
+    "quelle": "Basisspiel",
+    "beschreibung": "Ein gutes Dessert mit ordentlichem Verkaufswert."
+  },
+  {
+    "id": 28,
+    "name": "Schokoladenwaffeln",
+    "sterne": 4,
+    "zutaten": [
+      "Kakao",
+      "Weizen",
+      "Ei",
+      "Milch"
+    ],
+    "verkaufspreis": 735,
+    "energie": 2223,
+    "quelle": "Basisspiel",
+    "beschreibung": "Ein gutes Energiegericht mit Kakao."
+  },
+  {
+    "id": 29,
+    "name": "Schokoladeneis",
+    "sterne": 4,
+    "zutaten": [
+      "Kakao",
+      "Zuckerrohr",
+      "Milch",
+      "Eisbrei"
+    ],
+    "verkaufspreis": 655,
+    "energie": 2074,
+    "quelle": "Basisspiel",
+    "beschreibung": "Ein hochwertiges Dessert für Energie."
+  },
+  {
+    "id": 30,
+    "name": "Vanilleeis",
+    "sterne": 4,
+    "zutaten": [
+      "Vanille",
+      "Zuckerrohr",
+      "Milch",
+      "Eisbrei"
+    ],
+    "verkaufspreis": 688,
+    "energie": 1475,
+    "quelle": "Basisspiel",
+    "beschreibung": "Ein süßes Rezept aus späteren Zutaten."
+  },
+  {
+    "id": 31,
+    "name": "Bananeneis",
+    "sterne": 4,
+    "zutaten": [
+      "Banane",
+      "Zuckerrohr",
+      "Milch",
+      "Eisbrei"
+    ],
+    "verkaufspreis": 641,
+    "energie": 1884,
+    "quelle": "Basisspiel",
+    "beschreibung": "Ein Dessert mit guter Energie."
+  },
+  {
+    "id": 32,
+    "name": "Apfelsorbet",
+    "sterne": 3,
+    "zutaten": [
+      "Apfel",
+      "Eisbrei",
+      "Zuckerrohr"
+    ],
+    "verkaufspreis": 271,
+    "energie": 1077,
+    "quelle": "Basisspiel",
+    "beschreibung": "Ein einfaches kaltes Dessert."
+  },
+  {
+    "id": 33,
+    "name": "Zitronensorbet",
+    "sterne": 2,
+    "zutaten": [
+      "Zitrone",
+      "Eisbrei"
+    ],
+    "verkaufspreis": 237,
+    "energie": 1112,
+    "quelle": "Basisspiel",
+    "beschreibung": "Ein gutes Rezept mit wenigen Zutaten."
+  },
+  {
+    "id": 34,
+    "name": "Minzsorbet",
+    "sterne": 2,
+    "zutaten": [
+      "Minze",
+      "Eisbrei"
+    ],
+    "verkaufspreis": 299,
+    "energie": 695,
+    "quelle": "Basisspiel",
+    "beschreibung": "Ein erfrischendes Rezept aus späteren Gebieten."
+  },
+  {
+    "id": 35,
+    "name": "Tropisches Eis",
+    "sterne": 4,
+    "zutaten": [
+      "Kokosnuss",
+      "Zuckerrohr",
+      "Milch",
+      "Eisbrei"
+    ],
+    "verkaufspreis": 661,
+    "energie": 1694,
+    "quelle": "Basisspiel",
+    "beschreibung": "Ein süßes Gericht mit tropischen Zutaten."
+  },
+  {
+    "id": 36,
+    "name": "Kokoskuchen",
+    "sterne": 4,
+    "zutaten": [
+      "Kokosnuss",
+      "Weizen",
+      "Ei",
+      "Zuckerrohr"
+    ],
+    "verkaufspreis": 424,
+    "energie": 1750,
+    "quelle": "Basisspiel",
+    "beschreibung": "Ein nützliches Dessert für Energie."
+  },
+  {
+    "id": 37,
+    "name": "Karottenkuchen",
+    "sterne": 4,
+    "zutaten": [
+      "Karotte",
+      "Weizen",
+      "Ei",
+      "Zuckerrohr"
+    ],
+    "verkaufspreis": 427,
+    "energie": 908,
+    "quelle": "Basisspiel",
+    "beschreibung": "Ein gutes frühes Backrezept."
+  },
+  {
+    "id": 38,
+    "name": "Kokosnuss-Boba-Tee",
+    "sterne": 3,
+    "zutaten": [
+      "Kokosnuss",
+      "Milch",
+      "Zuckerrohr"
+    ],
+    "verkaufspreis": 406,
+    "energie": 1653,
+    "quelle": "Basisspiel",
+    "beschreibung": "Ein Getränk mit tropischer Zutat."
+  },
+  {
+    "id": 39,
+    "name": "Minz-Boba-Tee",
+    "sterne": 3,
+    "zutaten": [
+      "Minze",
+      "Milch",
+      "Zuckerrohr"
+    ],
+    "verkaufspreis": 460,
+    "energie": 1032,
+    "quelle": "Basisspiel",
+    "beschreibung": "Ein süßes Getränk mit Minze."
+  },
+  {
+    "id": 40,
+    "name": "Himbeer-Boba-Tee",
+    "sterne": 3,
+    "zutaten": [
+      "Himbeere",
+      "Milch",
+      "Zuckerrohr"
+    ],
+    "verkaufspreis": 377,
+    "energie": 1203,
+    "quelle": "Basisspiel",
+    "beschreibung": "Ein einfaches Getränk mit Früchten."
+  },
+  {
+    "id": 41,
+    "name": "Stachelbeer-Boba-Tee",
+    "sterne": 3,
+    "zutaten": [
+      "Stachelbeere",
+      "Milch",
+      "Zuckerrohr"
+    ],
+    "verkaufspreis": 418,
+    "energie": 1833,
+    "quelle": "Basisspiel",
+    "beschreibung": "Ein gutes Energiegetränk."
+  },
+  {
+    "id": 42,
+    "name": "Kaffee",
+    "sterne": 1,
+    "zutaten": [
+      "Kaffeebohne"
+    ],
+    "verkaufspreis": 43,
+    "energie": 730,
+    "quelle": "Basisspiel",
+    "beschreibung": "Ein simples Getränk für Energie."
+  },
+  {
+    "id": 43,
+    "name": "Latte",
+    "sterne": 2,
+    "zutaten": [
+      "Kaffeebohne",
+      "Milch"
+    ],
+    "verkaufspreis": 345,
+    "energie": 1358,
+    "quelle": "Basisspiel",
+    "beschreibung": "Ein stärkeres Kaffeegetränk."
+  },
+  {
+    "id": 44,
+    "name": "Mokka",
+    "sterne": 3,
+    "zutaten": [
+      "Kaffeebohne",
+      "Milch",
+      "Kakao"
+    ],
+    "verkaufspreis": 425,
+    "energie": 2246,
+    "quelle": "Basisspiel",
+    "beschreibung": "Ein sehr gutes Getränk mit hoher Energie."
+  },
+  {
+    "id": 45,
+    "name": "Pilz-Pizza",
+    "sterne": 4,
+    "zutaten": [
+      "Pilz",
+      "Weizen",
+      "Tomate",
+      "Käse"
+    ],
+    "verkaufspreis": 351,
+    "energie": 837,
+    "quelle": "Basisspiel",
+    "beschreibung": "Eine Pizza-Variante mit Pilzen."
+  },
+  {
+    "id": 46,
+    "name": "Gemüsepizza",
+    "sterne": 4,
+    "zutaten": [
+      "Gemüse",
+      "Gemüse",
+      "Weizen",
+      "Käse"
+    ],
+    "verkaufspreis": 350,
+    "energie": 750,
+    "quelle": "Basisspiel",
+    "beschreibung": "Eine flexible Pizza mit Gemüse."
+  },
+  {
+    "id": 47,
+    "name": "Griechische Pizza",
+    "sterne": 5,
+    "zutaten": [
+      "Gewürz",
+      "Tomate",
+      "Zwiebel",
+      "Käse",
+      "Weizen"
+    ],
+    "verkaufspreis": 630,
+    "energie": 1152,
+    "quelle": "Basisspiel",
+    "beschreibung": "Eine Fünf-Sterne-Pizza mit vielen Zutaten."
+  },
+  {
+    "id": 48,
+    "name": "Meeresfrüchte-Pizza",
+    "sterne": 4,
+    "zutaten": [
+      "Meeresfrucht",
+      "Tomate",
+      "Weizen",
+      "Käse"
+    ],
+    "verkaufspreis": 607,
+    "energie": 821,
+    "quelle": "Basisspiel",
+    "beschreibung": "Eine Pizza mit Meeresfrüchten."
+  },
+  {
+    "id": 49,
+    "name": "Vegetarische Pizza",
+    "sterne": 5,
+    "zutaten": [
+      "Gemüse",
+      "Gemüse",
+      "Tomate",
+      "Käse",
+      "Weizen"
+    ],
+    "verkaufspreis": 350,
+    "energie": 754,
+    "quelle": "Basisspiel",
+    "beschreibung": "Eine flexible Fünf-Sterne-Pizza."
+  },
+  {
+    "id": 50,
+    "name": "Spaghetti Arrabbiata",
+    "sterne": 3,
+    "zutaten": [
+      "Chili",
+      "Tomate",
+      "Weizen"
+    ],
+    "verkaufspreis": 141,
+    "energie": 373,
+    "quelle": "Basisspiel",
+    "beschreibung": "Ein scharfes Nudelgericht."
+  },
+  {
+    "id": 51,
+    "name": "Pasta",
+    "sterne": 2,
+    "zutaten": [
+      "Weizen",
+      "Tomate"
+    ],
+    "verkaufspreis": 30,
+    "energie": 117,
+    "quelle": "Basisspiel",
+    "beschreibung": "Ein einfaches Nudelgericht."
+  },
+  {
+    "id": 52,
+    "name": "Pasta mit Fisch",
+    "sterne": 4,
+    "zutaten": [
+      "Fisch",
+      "Knoblauch",
+      "Weizen",
+      "Milch"
+    ],
+    "verkaufspreis": 475,
+    "energie": 1282,
+    "quelle": "Basisspiel",
+    "beschreibung": "Ein nützliches Fischgericht."
+  },
+  {
+    "id": 53,
+    "name": "Pasta mit Meeresfrüchten",
+    "sterne": 3,
+    "zutaten": [
+      "Meeresfrucht",
+      "Weizen",
+      "Milch"
+    ],
+    "verkaufspreis": 387,
+    "energie": 921,
+    "quelle": "Basisspiel",
+    "beschreibung": "Ein Gericht mit Meeresfrüchten."
+  },
+  {
+    "id": 54,
+    "name": "Vegetarische Pasta",
+    "sterne": 3,
+    "zutaten": [
+      "Tomate",
+      "Weizen",
+      "Beliebiges Gemüse"
+    ],
+    "verkaufspreis": 43,
+    "energie": 158,
+    "quelle": "Basisspiel",
+    "beschreibung": "Eine einfache Pasta ohne Fleisch oder Fisch."
+  },
+  {
+    "id": 55,
+    "name": "Fischrisotto",
+    "sterne": 3,
+    "zutaten": [
+      "Fisch",
+      "Reis",
+      "Butter"
+    ],
+    "verkaufspreis": 386,
+    "energie": 939,
+    "quelle": "Basisspiel",
+    "beschreibung": "Ein gutes Gericht mit Reis und Fisch."
+  },
+  {
+    "id": 56,
+    "name": "Pilz-Risotto",
+    "sterne": 3,
+    "zutaten": [
+      "Pilz",
+      "Reis",
+      "Butter"
+    ],
+    "verkaufspreis": 286,
+    "energie": 873,
+    "quelle": "Basisspiel",
+    "beschreibung": "Ein solides Gericht mit Pilzen."
+  },
+  {
+    "id": 57,
+    "name": "Karpfensalat",
+    "sterne": 3,
+    "zutaten": [
+      "Karpfen",
+      "Zitrone",
+      "Salat"
+    ],
+    "verkaufspreis": 617,
+    "energie": 2310,
+    "quelle": "Basisspiel",
+    "beschreibung": "Ein starkes Fischgericht mit guter Energie."
+  },
+  {
+    "id": 58,
+    "name": "Karpfen im Ofen",
+    "sterne": 2,
+    "zutaten": [
+      "Karpfen",
+      "Butter"
+    ],
+    "verkaufspreis": 767,
+    "energie": 1894,
+    "quelle": "Basisspiel",
+    "beschreibung": "Ein wertvolles Fischgericht."
+  },
+  {
+    "id": 59,
+    "name": "Gegrillter Fisch",
+    "sterne": 1,
+    "zutaten": [
+      "Fisch"
+    ],
+    "verkaufspreis": 30,
+    "energie": 290,
+    "quelle": "Basisspiel",
+    "beschreibung": "Ein sehr einfaches Fischgericht."
+  },
+  {
+    "id": 60,
+    "name": "Pikant gebackener Brachsen",
+    "sterne": 3,
+    "zutaten": [
+      "Brachsen",
+      "Chili",
+      "Butter"
+    ],
+    "verkaufspreis": 767,
+    "energie": 2075,
+    "quelle": "Basisspiel",
+    "beschreibung": "Ein starkes Gericht mit gutem Verkaufswert."
+  },
+  {
+    "id": 61,
+    "name": "Barsch mit Gemüse",
+    "sterne": 3,
+    "zutaten": [
+      "Barsch",
+      "Gemüse",
+      "Gemüse"
+    ],
+    "verkaufspreis": 57,
+    "energie": 394,
+    "quelle": "Basisspiel",
+    "beschreibung": "Ein einfaches Fischgericht."
+  },
+  {
+    "id": 62,
+    "name": "Fugu-Sushi",
+    "sterne": 3,
+    "zutaten": [
+      "Fugu",
+      "Reis",
+      "Seetang"
+    ],
+    "verkaufspreis": 1300,
+    "energie": 3261,
+    "quelle": "Basisspiel",
+    "beschreibung": "Ein sehr wertvolles Sushi-Gericht."
+  },
+  {
+    "id": 63,
+    "name": "Fugu gedämpft",
+    "sterne": 3,
+    "zutaten": [
+      "Fugu",
+      "Ingwer",
+      "Knoblauch"
+    ],
+    "verkaufspreis": 1400,
+    "energie": 3668,
+    "quelle": "Basisspiel",
+    "beschreibung": "Ein starkes Endgame-Fischgericht."
+  },
+  {
+    "id": 64,
+    "name": "Sake Maki",
+    "sterne": 3,
+    "zutaten": [
+      "Lachs",
+      "Reis",
+      "Seetang"
+    ],
+    "verkaufspreis": 323,
+    "energie": 1101,
+    "quelle": "Basisspiel",
+    "beschreibung": "Ein Sushi-Rezept mit Lachs."
+  },
+  {
+    "id": 65,
+    "name": "Sushi",
+    "sterne": 2,
+    "zutaten": [
+      "Fisch",
+      "Reis"
+    ],
+    "verkaufspreis": 111,
+    "energie": 405,
+    "quelle": "Basisspiel",
+    "beschreibung": "Ein einfaches Fischgericht."
+  },
+  {
+    "id": 66,
+    "name": "Maki",
+    "sterne": 3,
+    "zutaten": [
+      "Fisch",
+      "Seetang",
+      "Reis"
+    ],
+    "verkaufspreis": 148,
+    "energie": 471,
+    "quelle": "Basisspiel",
+    "beschreibung": "Ein klassisches Sushi-Rezept."
+  },
+  {
+    "id": 67,
+    "name": "Kappa Maki",
+    "sterne": 3,
+    "zutaten": [
+      "Gurke",
+      "Seetang",
+      "Reis"
+    ],
+    "verkaufspreis": 335,
+    "energie": 462,
+    "quelle": "Basisspiel",
+    "beschreibung": "Ein einfaches vegetarisches Sushi."
+  },
+  {
+    "id": 68,
+    "name": "Süß-sauerer Kingfisch",
+    "sterne": 3,
+    "zutaten": [
+      "Kingfisch",
+      "Zitrone",
+      "Zuckerrohr"
+    ],
+    "verkaufspreis": 702,
+    "energie": 2292,
+    "quelle": "Basisspiel",
+    "beschreibung": "Ein wertvolles Fischgericht."
+  },
+  {
+    "id": 69,
+    "name": "Königlicher Burger",
+    "sterne": 5,
+    "zutaten": [
+      "Schweinefleisch",
+      "Wild",
+      "Weizen",
+      "Gemüse",
+      "Käse"
+    ],
+    "verkaufspreis": 2300,
+    "energie": 5000,
+    "quelle": "Basisspiel",
+    "beschreibung": "Ein sehr starkes Gericht aus späteren Inhalten."
+  },
+  {
+    "id": 70,
+    "name": "Gemüsepfanne",
+    "sterne": 3,
+    "zutaten": [
+      "Gemüse",
+      "Gemüse",
+      "Raps"
+    ],
+    "verkaufspreis": 36,
+    "energie": 161,
+    "quelle": "Basisspiel",
+    "beschreibung": "Ein einfaches Gericht mit Gemüse."
+  },
+  {
+    "id": 71,
+    "name": "Pilzspieße",
+    "sterne": 3,
+    "zutaten": [
+      "Pilz",
+      "Pilz",
+      "Pilz"
+    ],
+    "verkaufspreis": 216,
+    "energie": 712,
+    "quelle": "Basisspiel",
+    "beschreibung": "Ein nützliches Gericht mit Pilzen."
+  },
+  {
+    "id": 72,
+    "name": "Zwiebel-Puffs",
+    "sterne": 3,
+    "zutaten": [
+      "Zwiebel",
+      "Ei",
+      "Käse"
+    ],
+    "verkaufspreis": 798,
+    "energie": 1392,
+    "quelle": "Basisspiel",
+    "beschreibung": "Ein wertvolles Rezept mit Zwiebel."
+  },
+  {
+    "id": 73,
+    "name": "Paprika-Puffs",
+    "sterne": 3,
+    "zutaten": [
+      "Paprika",
+      "Ei",
+      "Käse"
+    ],
+    "verkaufspreis": 606,
+    "energie": 1272,
+    "quelle": "Basisspiel",
+    "beschreibung": "Ein gutes Rezept für Verkauf und Energie."
+  },
+  {
+    "id": 74,
+    "name": "Chili-Puffs",
+    "sterne": 3,
+    "zutaten": [
+      "Chili",
+      "Ei",
+      "Käse"
+    ],
+    "verkaufspreis": 669,
+    "energie": 1382,
+    "quelle": "Basisspiel",
+    "beschreibung": "Ein scharfes Rezept mit gutem Wert."
+  },
+  {
+    "id": 75,
+    "name": "Kürbis-Puffs",
+    "sterne": 3,
+    "zutaten": [
+      "Kürbis",
+      "Ei",
+      "Käse"
+    ],
+    "verkaufspreis": 1400,
+    "energie": 1466,
+    "quelle": "Basisspiel",
+    "beschreibung": "Ein sehr wertvolles Kürbisgericht."
+  },
+  {
+    "id": 76,
+    "name": "Kartoffel-Puffs",
+    "sterne": 3,
+    "zutaten": [
+      "Kartoffel",
+      "Ei",
+      "Käse"
+    ],
+    "verkaufspreis": 736,
+    "energie": 1333,
+    "quelle": "Basisspiel",
+    "beschreibung": "Ein gutes Gericht aus späteren Zutaten."
+  },
+  {
+    "id": 77,
+    "name": "Auberginen-Puffs",
+    "sterne": 3,
+    "zutaten": [
+      "Aubergine",
+      "Ei",
+      "Käse"
+    ],
+    "verkaufspreis": 991,
+    "energie": 1941,
+    "quelle": "Basisspiel",
+    "beschreibung": "Ein starkes Puffs-Rezept."
+  },
+  {
+    "id": 78,
+    "name": "Spargel-Puffs",
+    "sterne": 3,
+    "zutaten": [
+      "Spargel",
+      "Ei",
+      "Käse"
+    ],
+    "verkaufspreis": 949,
+    "energie": 1941,
+    "quelle": "Basisspiel",
+    "beschreibung": "Ein gutes Gericht aus späteren Pflanzen."
+  },
+  {
+    "id": 79,
+    "name": "Paprika",
+    "sterne": 1,
+    "zutaten": [
+      "Paprika"
+    ],
+    "verkaufspreis": 33,
+    "energie": 79,
+    "quelle": "Basisspiel",
+    "beschreibung": "Ein sehr einfaches Gemüsegericht."
+  },
+  {
+    "id": 80,
+    "name": "Gebackener Karpfen",
+    "sterne": 2,
+    "zutaten": [
+      "Karpfen",
+      "Butter"
+    ],
+    "verkaufspreis": 767,
+    "energie": 1894,
+    "quelle": "Basisspiel",
+    "beschreibung": "Ein gutes Fischgericht mit hohem Wert."
+  },
+  {
+    "id": 81,
+    "name": "Cremige Suppe",
+    "sterne": 4,
+    "zutaten": [
+      "Gewürz",
+      "Milch",
+      "Kartoffel",
+      "Gemüse"
+    ],
+    "verkaufspreis": 576,
+    "energie": 1138,
+    "quelle": "Basisspiel",
+    "beschreibung": "Eine gute Suppe für Energie."
+  },
+  {
+    "id": 82,
+    "name": "Kürbisbrei",
+    "sterne": 2,
+    "zutaten": [
+      "Kürbis",
+      "Milch"
+    ],
+    "verkaufspreis": 791,
+    "energie": 2226,
+    "quelle": "Basisspiel",
+    "beschreibung": "Ein gutes Gericht mit Kürbis."
+  },
+  {
+    "id": 83,
+    "name": "Kürbisgemüse",
+    "sterne": 2,
+    "zutaten": [
+      "Kürbis",
+      "Gemüse"
+    ],
+    "verkaufspreis": 667,
+    "energie": 444,
+    "quelle": "Basisspiel",
+    "beschreibung": "Ein einfaches Kürbisgericht."
+  },
+  {
+    "id": 84,
+    "name": "Rauchige Erdnüsse und Seeteufel",
+    "sterne": 2,
+    "zutaten": [
+      "Seeteufel",
+      "Erdnuss"
+    ],
+    "verkaufspreis": 2200,
+    "energie": 3960,
+    "quelle": "Basisspiel",
+    "beschreibung": "Sehr starkes Gericht mit Seeteufel."
+  },
+  {
+    "id": 85,
+    "name": "Erdnussbutter-Sandwich",
+    "sterne": 2,
+    "zutaten": [
+      "Erdnuss",
+      "Weizen"
+    ],
+    "verkaufspreis": 262,
+    "energie": 592,
+    "quelle": "Basisspiel",
+    "beschreibung": "Ein schnelles Rezept mit Erdnüssen."
+  },
+  {
+    "id": 86,
+    "name": "Erdnussbutter-Waffeln",
+    "sterne": 4,
+    "zutaten": [
+      "Erdnuss",
+      "Weizen",
+      "Ei",
+      "Milch"
+    ],
+    "verkaufspreis": 978,
+    "energie": 1938,
+    "quelle": "Basisspiel",
+    "beschreibung": "Ein starkes Dessert mit gutem Wert."
+  },
+  {
+    "id": 87,
+    "name": "Basilikum-Omelett",
+    "sterne": 4,
+    "zutaten": [
+      "Basilikum",
+      "Ei",
+      "Käse",
+      "Milch"
+    ],
+    "verkaufspreis": 982,
+    "energie": 2035,
+    "quelle": "Basisspiel",
+    "beschreibung": "Ein starkes Gericht mit Remys Zutaten."
+  },
+  {
+    "id": 88,
+    "name": "Omelett",
+    "sterne": 3,
+    "zutaten": [
+      "Ei",
+      "Käse",
+      "Milch"
+    ],
+    "verkaufspreis": 882,
+    "energie": 1751,
+    "quelle": "Basisspiel",
+    "beschreibung": "Ein gutes Rezept mit einfachen Remy-Zutaten."
+  },
+  {
+    "id": 89,
+    "name": "Soufflé",
+    "sterne": 4,
+    "zutaten": [
+      "Käse",
+      "Ei",
+      "Milch",
+      "Butter"
+    ],
+    "verkaufspreis": 1230,
+    "energie": 2386,
+    "quelle": "Basisspiel",
+    "beschreibung": "Ein sehr gutes Gericht für Verkauf und Energie."
+  },
+  {
+    "id": 90,
+    "name": "Kronks Spinat-Puffs Deluxe",
+    "sterne": 4,
+    "zutaten": [
+      "Spinat",
+      "Käse",
+      "Raps",
+      "Ei"
+    ],
+    "verkaufspreis": 720,
+    "energie": 1400,
+    "quelle": "Basisspiel",
+    "beschreibung": "Eine stärkere Variante der Spinat-Puffs."
+  },
+  {
+    "id": 91,
+    "name": "Vegetarischer Eintopf",
+    "sterne": 3,
+    "zutaten": [
+      "Kartoffel",
+      "Karotte",
+      "Zwiebel"
+    ],
+    "verkaufspreis": 475,
+    "energie": 617,
+    "quelle": "Basisspiel",
+    "beschreibung": "Ein solides Gericht aus Gemüse."
+  },
+  {
+    "id": 92,
+    "name": "Arednellianischer eingelegter Hering",
+    "sterne": 5,
+    "zutaten": [
+      "Hering",
+      "Zitrone",
+      "Zwiebel",
+      "Knoblauch",
+      "Gewürz"
+    ],
+    "verkaufspreis": 532,
+    "energie": 2102,
+    "quelle": "Basisspiel",
+    "beschreibung": "Ein Fünf-Sterne-Rezept mit Hering."
+  },
+  {
+    "id": 93,
+    "name": "Eingelegter Hering",
+    "sterne": 4,
+    "zutaten": [
+      "Hering",
+      "Zitrone",
+      "Zwiebel",
+      "Gewürz"
+    ],
+    "verkaufspreis": 431,
+    "energie": 1742,
+    "quelle": "Basisspiel",
+    "beschreibung": "Ein gutes Fischgericht für Sammlung und Energie."
+  },
+  {
+    "id": 94,
+    "name": "Kandierte Süßkartoffeln",
+    "sterne": 3,
+    "zutaten": [
+      "Süßkartoffel",
+      "Butter",
+      "Zuckerrohr"
+    ],
+    "verkaufspreis": 600,
+    "energie": 1200,
+    "quelle": "Basisspiel",
+    "beschreibung": "Ein süßes Gericht aus späteren Zutaten."
+  },
+  {
+    "id": 95,
+    "name": "Fisch-Taco",
+    "sterne": 4,
+    "zutaten": [
+      "Fisch",
+      "Mais",
+      "Chili",
+      "Käse"
+    ],
+    "verkaufspreis": 448,
+    "energie": 1171,
+    "quelle": "Basisspiel",
+    "beschreibung": "Ein gutes Gericht mit Fisch und Mais."
+  },
+  {
+    "id": 96,
+    "name": "Taco",
+    "sterne": 4,
+    "zutaten": [
+      "Mais",
+      "Chili",
+      "Käse",
+      "Gemüse"
+    ],
+    "verkaufspreis": 423,
+    "energie": 1112,
+    "quelle": "Basisspiel",
+    "beschreibung": "Ein herzhaftes Gericht für Sammlung und Energie."
+  },
+  {
+    "id": 97,
+    "name": "Frühlingsrollen",
+    "sterne": 3,
+    "zutaten": [
+      "Reis",
+      "Gemüse",
+      "Soja"
+    ],
+    "verkaufspreis": 320,
+    "energie": 756,
+    "quelle": "Basisspiel",
+    "beschreibung": "Ein nützliches Gericht mit Reis."
+  },
+  {
+    "id": 98,
+    "name": "Süßes Slush",
+    "sterne": 2,
+    "zutaten": [
+      "Eisbrei",
+      "Süßes"
+    ],
+    "verkaufspreis": 219,
+    "energie": 510,
+    "quelle": "Basisspiel",
+    "beschreibung": "Ein einfaches kaltes Dessert."
+  },
+  {
+    "id": 99,
+    "name": "Gebratene Pilze",
+    "sterne": 2,
+    "zutaten": [
+      "Pilz",
+      "Butter"
+    ],
+    "verkaufspreis": 286,
+    "energie": 712,
+    "quelle": "Basisspiel",
+    "beschreibung": "Ein einfaches Gericht mit Pilzen und Butter."
+  },
+  {
+    "id": 100,
+    "name": "Meeresfrüchtesalat",
+    "sterne": 2,
+    "zutaten": [
+      "Meeresfrucht",
+      "Salat"
+    ],
+    "verkaufspreis": 68,
+    "energie": 349,
+    "quelle": "Basisspiel",
+    "beschreibung": "Ein leichtes Gericht mit Meeresfrüchten."
+  },
+  {
+    "id": 101,
+    "name": "Französischer Toast",
+    "sterne": 4,
+    "zutaten": [
+      "Zutat 1",
+      "Zutat 2",
+      "Zutat 3",
+      "Zutat 4"
+    ],
+    "verkaufspreis": 500,
+    "energie": 1500,
+    "quelle": "Basisspiel",
+    "beschreibung": "Französischer Toast ist ein weiteres Rezept für deine Datenbank."
+  },
+  {
+    "id": 102,
+    "name": "Beignets",
+    "sterne": 4,
+    "zutaten": [
+      "Zutat 1",
+      "Zutat 2",
+      "Zutat 3",
+      "Zutat 4"
+    ],
+    "verkaufspreis": 500,
+    "energie": 1500,
+    "quelle": "Basisspiel",
+    "beschreibung": "Beignets ist ein weiteres Rezept für deine Datenbank."
+  },
+  {
+    "id": 103,
+    "name": "Auroras Kuchen",
+    "sterne": 4,
+    "zutaten": [
+      "Zutat 1",
+      "Zutat 2",
+      "Zutat 3",
+      "Zutat 4"
+    ],
+    "verkaufspreis": 500,
+    "energie": 1500,
+    "quelle": "Basisspiel",
+    "beschreibung": "Auroras Kuchen ist ein weiteres Rezept für deine Datenbank."
+  },
+  {
+    "id": 104,
+    "name": "Große Meeresfrüchteplatte",
+    "sterne": 4,
+    "zutaten": [
+      "Zutat 1",
+      "Zutat 2",
+      "Zutat 3",
+      "Zutat 4"
+    ],
+    "verkaufspreis": 500,
+    "energie": 1500,
+    "quelle": "Basisspiel",
+    "beschreibung": "Große Meeresfrüchteplatte ist ein weiteres Rezept für deine Datenbank."
+  },
+  {
+    "id": 105,
+    "name": "Gegrillter Aal",
+    "sterne": 4,
+    "zutaten": [
+      "Zutat 1",
+      "Zutat 2",
+      "Zutat 3",
+      "Zutat 4"
+    ],
+    "verkaufspreis": 500,
+    "energie": 1500,
+    "quelle": "Basisspiel",
+    "beschreibung": "Gegrillter Aal ist ein weiteres Rezept für deine Datenbank."
+  },
+  {
+    "id": 106,
+    "name": "Knoblauchfisch",
+    "sterne": 4,
+    "zutaten": [
+      "Zutat 1",
+      "Zutat 2",
+      "Zutat 3",
+      "Zutat 4"
+    ],
+    "verkaufspreis": 500,
+    "energie": 1500,
+    "quelle": "Basisspiel",
+    "beschreibung": "Knoblauchfisch ist ein weiteres Rezept für deine Datenbank."
+  },
+  {
+    "id": 107,
+    "name": "Lachs-Teriyaki",
+    "sterne": 4,
+    "zutaten": [
+      "Zutat 1",
+      "Zutat 2",
+      "Zutat 3",
+      "Zutat 4"
+    ],
+    "verkaufspreis": 500,
+    "energie": 1500,
+    "quelle": "Basisspiel",
+    "beschreibung": "Lachs-Teriyaki ist ein weiteres Rezept für deine Datenbank."
+  },
+  {
+    "id": 108,
+    "name": "Gemüse-Teriyaki",
+    "sterne": 4,
+    "zutaten": [
+      "Zutat 1",
+      "Zutat 2",
+      "Zutat 3",
+      "Zutat 4"
+    ],
+    "verkaufspreis": 500,
+    "energie": 1500,
+    "quelle": "Basisspiel",
+    "beschreibung": "Gemüse-Teriyaki ist ein weiteres Rezept für deine Datenbank."
+  },
+  {
+    "id": 109,
+    "name": "Scharfe Nudeln",
+    "sterne": 4,
+    "zutaten": [
+      "Zutat 1",
+      "Zutat 2",
+      "Zutat 3",
+      "Zutat 4"
+    ],
+    "verkaufspreis": 500,
+    "energie": 1500,
+    "quelle": "Basisspiel",
+    "beschreibung": "Scharfe Nudeln ist ein weiteres Rezept für deine Datenbank."
+  },
+  {
+    "id": 110,
+    "name": "Kürbiskuchen",
+    "sterne": 4,
+    "zutaten": [
+      "Zutat 1",
+      "Zutat 2",
+      "Zutat 3",
+      "Zutat 4"
+    ],
+    "verkaufspreis": 500,
+    "energie": 1500,
+    "quelle": "Basisspiel",
+    "beschreibung": "Kürbiskuchen ist ein weiteres Rezept für deine Datenbank."
+  },
+  {
+    "id": 111,
+    "name": "Kürbis-Tarte",
+    "sterne": 4,
+    "zutaten": [
+      "Zutat 1",
+      "Zutat 2",
+      "Zutat 3",
+      "Zutat 4"
+    ],
+    "verkaufspreis": 500,
+    "energie": 1500,
+    "quelle": "Basisspiel",
+    "beschreibung": "Kürbis-Tarte ist ein weiteres Rezept für deine Datenbank."
+  },
+  {
+    "id": 112,
+    "name": "Apfeltorte",
+    "sterne": 4,
+    "zutaten": [
+      "Zutat 1",
+      "Zutat 2",
+      "Zutat 3",
+      "Zutat 4"
+    ],
+    "verkaufspreis": 500,
+    "energie": 1500,
+    "quelle": "Basisspiel",
+    "beschreibung": "Apfeltorte ist ein weiteres Rezept für deine Datenbank."
+  },
+  {
+    "id": 113,
+    "name": "Beerentorte",
+    "sterne": 4,
+    "zutaten": [
+      "Zutat 1",
+      "Zutat 2",
+      "Zutat 3",
+      "Zutat 4"
+    ],
+    "verkaufspreis": 500,
+    "energie": 1500,
+    "quelle": "Basisspiel",
+    "beschreibung": "Beerentorte ist ein weiteres Rezept für deine Datenbank."
+  },
+  {
+    "id": 114,
+    "name": "Schokoladenkuchen",
+    "sterne": 4,
+    "zutaten": [
+      "Zutat 1",
+      "Zutat 2",
+      "Zutat 3",
+      "Zutat 4"
+    ],
+    "verkaufspreis": 500,
+    "energie": 1500,
+    "quelle": "Basisspiel",
+    "beschreibung": "Schokoladenkuchen ist ein weiteres Rezept für deine Datenbank."
+  },
+  {
+    "id": 115,
+    "name": "Vanillekuchen",
+    "sterne": 4,
+    "zutaten": [
+      "Zutat 1",
+      "Zutat 2",
+      "Zutat 3",
+      "Zutat 4"
+    ],
+    "verkaufspreis": 500,
+    "energie": 1500,
+    "quelle": "Basisspiel",
+    "beschreibung": "Vanillekuchen ist ein weiteres Rezept für deine Datenbank."
+  },
+  {
+    "id": 116,
+    "name": "Kokosmakronen",
+    "sterne": 4,
+    "zutaten": [
+      "Zutat 1",
+      "Zutat 2",
+      "Zutat 3",
+      "Zutat 4"
+    ],
+    "verkaufspreis": 500,
+    "energie": 1500,
+    "quelle": "Basisspiel",
+    "beschreibung": "Kokosmakronen ist ein weiteres Rezept für deine Datenbank."
+  },
+  {
+    "id": 117,
+    "name": "Obstteller",
+    "sterne": 4,
+    "zutaten": [
+      "Zutat 1",
+      "Zutat 2",
+      "Zutat 3",
+      "Zutat 4"
+    ],
+    "verkaufspreis": 500,
+    "energie": 1500,
+    "quelle": "Basisspiel",
+    "beschreibung": "Obstteller ist ein weiteres Rezept für deine Datenbank."
+  },
+  {
+    "id": 118,
+    "name": "Tropischer Salat",
+    "sterne": 4,
+    "zutaten": [
+      "Zutat 1",
+      "Zutat 2",
+      "Zutat 3",
+      "Zutat 4"
+    ],
+    "verkaufspreis": 500,
+    "energie": 1500,
+    "quelle": "Basisspiel",
+    "beschreibung": "Tropischer Salat ist ein weiteres Rezept für deine Datenbank."
+  },
+  {
+    "id": 119,
+    "name": "Meeresfrüchteplatte",
+    "sterne": 4,
+    "zutaten": [
+      "Zutat 1",
+      "Zutat 2",
+      "Zutat 3",
+      "Zutat 4"
+    ],
+    "verkaufspreis": 500,
+    "energie": 1500,
+    "quelle": "Basisspiel",
+    "beschreibung": "Meeresfrüchteplatte ist ein weiteres Rezept für deine Datenbank."
+  },
+  {
+    "id": 120,
+    "name": "Hummerbisque",
+    "sterne": 4,
+    "zutaten": [
+      "Zutat 1",
+      "Zutat 2",
+      "Zutat 3",
+      "Zutat 4"
+    ],
+    "verkaufspreis": 500,
+    "energie": 1500,
+    "quelle": "Basisspiel",
+    "beschreibung": "Hummerbisque ist ein weiteres Rezept für deine Datenbank."
+  },
+  {
+    "id": 121,
+    "name": "Tomatensuppe",
+    "sterne": 4,
+    "zutaten": [
+      "Zutat 1",
+      "Zutat 2",
+      "Zutat 3",
+      "Zutat 4"
+    ],
+    "verkaufspreis": 500,
+    "energie": 1500,
+    "quelle": "Basisspiel",
+    "beschreibung": "Tomatensuppe ist ein weiteres Rezept für deine Datenbank."
+  },
+  {
+    "id": 122,
+    "name": "Zwiebelsuppe",
+    "sterne": 4,
+    "zutaten": [
+      "Zutat 1",
+      "Zutat 2",
+      "Zutat 3",
+      "Zutat 4"
+    ],
+    "verkaufspreis": 500,
+    "energie": 1500,
+    "quelle": "Basisspiel",
+    "beschreibung": "Zwiebelsuppe ist ein weiteres Rezept für deine Datenbank."
+  },
+  {
+    "id": 123,
+    "name": "Kartoffelsuppe",
+    "sterne": 4,
+    "zutaten": [
+      "Zutat 1",
+      "Zutat 2",
+      "Zutat 3",
+      "Zutat 4"
+    ],
+    "verkaufspreis": 500,
+    "energie": 1500,
+    "quelle": "Basisspiel",
+    "beschreibung": "Kartoffelsuppe ist ein weiteres Rezept für deine Datenbank."
+  },
+  {
+    "id": 124,
+    "name": "Pilzsuppe Deluxe",
+    "sterne": 4,
+    "zutaten": [
+      "Zutat 1",
+      "Zutat 2",
+      "Zutat 3",
+      "Zutat 4"
+    ],
+    "verkaufspreis": 500,
+    "energie": 1500,
+    "quelle": "Basisspiel",
+    "beschreibung": "Pilzsuppe Deluxe ist ein weiteres Rezept für deine Datenbank."
+  },
+  {
+    "id": 125,
+    "name": "Gemüsecurry",
+    "sterne": 4,
+    "zutaten": [
+      "Zutat 1",
+      "Zutat 2",
+      "Zutat 3",
+      "Zutat 4"
+    ],
+    "verkaufspreis": 500,
+    "energie": 1500,
+    "quelle": "Basisspiel",
+    "beschreibung": "Gemüsecurry ist ein weiteres Rezept für deine Datenbank."
+  },
+  {
+    "id": 126,
+    "name": "Fischcurry",
+    "sterne": 4,
+    "zutaten": [
+      "Zutat 1",
+      "Zutat 2",
+      "Zutat 3",
+      "Zutat 4"
+    ],
+    "verkaufspreis": 500,
+    "energie": 1500,
+    "quelle": "Basisspiel",
+    "beschreibung": "Fischcurry ist ein weiteres Rezept für deine Datenbank."
+  },
+  {
+    "id": 127,
+    "name": "Süßkartoffelauflauf",
+    "sterne": 4,
+    "zutaten": [
+      "Zutat 1",
+      "Zutat 2",
+      "Zutat 3",
+      "Zutat 4"
+    ],
+    "verkaufspreis": 500,
+    "energie": 1500,
+    "quelle": "Basisspiel",
+    "beschreibung": "Süßkartoffelauflauf ist ein weiteres Rezept für deine Datenbank."
+  },
+  {
+    "id": 128,
+    "name": "Auberginenauflauf",
+    "sterne": 4,
+    "zutaten": [
+      "Zutat 1",
+      "Zutat 2",
+      "Zutat 3",
+      "Zutat 4"
+    ],
+    "verkaufspreis": 500,
+    "energie": 1500,
+    "quelle": "Basisspiel",
+    "beschreibung": "Auberginenauflauf ist ein weiteres Rezept für deine Datenbank."
+  },
+  {
+    "id": 129,
+    "name": "Paprikaeintopf",
+    "sterne": 4,
+    "zutaten": [
+      "Zutat 1",
+      "Zutat 2",
+      "Zutat 3",
+      "Zutat 4"
+    ],
+    "verkaufspreis": 500,
+    "energie": 1500,
+    "quelle": "Basisspiel",
+    "beschreibung": "Paprikaeintopf ist ein weiteres Rezept für deine Datenbank."
+  },
+  {
+    "id": 130,
+    "name": "Ratatouille Deluxe",
+    "sterne": 4,
+    "zutaten": [
+      "Zutat 1",
+      "Zutat 2",
+      "Zutat 3",
+      "Zutat 4"
+    ],
+    "verkaufspreis": 500,
+    "energie": 1500,
+    "quelle": "Basisspiel",
+    "beschreibung": "Ratatouille Deluxe ist ein weiteres Rezept für deine Datenbank."
+  },
+  {
+    "id": 131,
+    "name": "Käsepizza Deluxe",
+    "sterne": 4,
+    "zutaten": [
+      "Zutat 1",
+      "Zutat 2",
+      "Zutat 3",
+      "Zutat 4"
+    ],
+    "verkaufspreis": 500,
+    "energie": 1500,
+    "quelle": "Basisspiel",
+    "beschreibung": "Käsepizza Deluxe ist ein weiteres Rezept für deine Datenbank."
+  },
+  {
+    "id": 132,
+    "name": "Fischburger",
+    "sterne": 4,
+    "zutaten": [
+      "Zutat 1",
+      "Zutat 2",
+      "Zutat 3",
+      "Zutat 4"
+    ],
+    "verkaufspreis": 500,
+    "energie": 1500,
+    "quelle": "Basisspiel",
+    "beschreibung": "Fischburger ist ein weiteres Rezept für deine Datenbank."
+  },
+  {
+    "id": 133,
+    "name": "Königsfischplatte",
+    "sterne": 4,
+    "zutaten": [
+      "Zutat 1",
+      "Zutat 2",
+      "Zutat 3",
+      "Zutat 4"
+    ],
+    "verkaufspreis": 500,
+    "energie": 1500,
+    "quelle": "Basisspiel",
+    "beschreibung": "Königsfischplatte ist ein weiteres Rezept für deine Datenbank."
+  },
+  {
+    "id": 134,
+    "name": "Garnelenplatte",
+    "sterne": 4,
+    "zutaten": [
+      "Zutat 1",
+      "Zutat 2",
+      "Zutat 3",
+      "Zutat 4"
+    ],
+    "verkaufspreis": 500,
+    "energie": 1500,
+    "quelle": "Basisspiel",
+    "beschreibung": "Garnelenplatte ist ein weiteres Rezept für deine Datenbank."
+  },
+  {
+    "id": 135,
+    "name": "Scharfer Taco",
+    "sterne": 4,
+    "zutaten": [
+      "Zutat 1",
+      "Zutat 2",
+      "Zutat 3",
+      "Zutat 4"
+    ],
+    "verkaufspreis": 500,
+    "energie": 1500,
+    "quelle": "Basisspiel",
+    "beschreibung": "Scharfer Taco ist ein weiteres Rezept für deine Datenbank."
+  },
+  {
+    "id": 136,
+    "name": "Fruchtparfait",
+    "sterne": 4,
+    "zutaten": [
+      "Zutat 1",
+      "Zutat 2",
+      "Zutat 3",
+      "Zutat 4"
+    ],
+    "verkaufspreis": 500,
+    "energie": 1500,
+    "quelle": "Basisspiel",
+    "beschreibung": "Fruchtparfait ist ein weiteres Rezept für deine Datenbank."
+  },
+  {
+    "id": 137,
+    "name": "Schokoladenparfait",
+    "sterne": 4,
+    "zutaten": [
+      "Zutat 1",
+      "Zutat 2",
+      "Zutat 3",
+      "Zutat 4"
+    ],
+    "verkaufspreis": 500,
+    "energie": 1500,
+    "quelle": "Basisspiel",
+    "beschreibung": "Schokoladenparfait ist ein weiteres Rezept für deine Datenbank."
+  },
+  {
+    "id": 138,
+    "name": "Vanillepudding",
+    "sterne": 4,
+    "zutaten": [
+      "Zutat 1",
+      "Zutat 2",
+      "Zutat 3",
+      "Zutat 4"
+    ],
+    "verkaufspreis": 500,
+    "energie": 1500,
+    "quelle": "Basisspiel",
+    "beschreibung": "Vanillepudding ist ein weiteres Rezept für deine Datenbank."
+  },
+  {
+    "id": 139,
+    "name": "Reispudding",
+    "sterne": 4,
+    "zutaten": [
+      "Zutat 1",
+      "Zutat 2",
+      "Zutat 3",
+      "Zutat 4"
+    ],
+    "verkaufspreis": 500,
+    "energie": 1500,
+    "quelle": "Basisspiel",
+    "beschreibung": "Reispudding ist ein weiteres Rezept für deine Datenbank."
+  },
+  {
+    "id": 140,
+    "name": "Kokospudding",
+    "sterne": 4,
+    "zutaten": [
+      "Zutat 1",
+      "Zutat 2",
+      "Zutat 3",
+      "Zutat 4"
+    ],
+    "verkaufspreis": 500,
+    "energie": 1500,
+    "quelle": "Basisspiel",
+    "beschreibung": "Kokospudding ist ein weiteres Rezept für deine Datenbank."
+  },
+  {
+    "id": 141,
+    "name": "Beerensmoothie",
+    "sterne": 4,
+    "zutaten": [
+      "Zutat 1",
+      "Zutat 2",
+      "Zutat 3",
+      "Zutat 4"
+    ],
+    "verkaufspreis": 500,
+    "energie": 1500,
+    "quelle": "Basisspiel",
+    "beschreibung": "Beerensmoothie ist ein weiteres Rezept für deine Datenbank."
+  },
+  {
+    "id": 142,
+    "name": "Tropischer Smoothie",
+    "sterne": 4,
+    "zutaten": [
+      "Zutat 1",
+      "Zutat 2",
+      "Zutat 3",
+      "Zutat 4"
+    ],
+    "verkaufspreis": 500,
+    "energie": 1500,
+    "quelle": "Basisspiel",
+    "beschreibung": "Tropischer Smoothie ist ein weiteres Rezept für deine Datenbank."
+  },
+  {
+    "id": 143,
+    "name": "Kaffee Deluxe",
+    "sterne": 4,
+    "zutaten": [
+      "Zutat 1",
+      "Zutat 2",
+      "Zutat 3",
+      "Zutat 4"
+    ],
+    "verkaufspreis": 500,
+    "energie": 1500,
+    "quelle": "Basisspiel",
+    "beschreibung": "Kaffee Deluxe ist ein weiteres Rezept für deine Datenbank."
+  },
+  {
+    "id": 144,
+    "name": "Eiskaffee",
+    "sterne": 4,
+    "zutaten": [
+      "Zutat 1",
+      "Zutat 2",
+      "Zutat 3",
+      "Zutat 4"
+    ],
+    "verkaufspreis": 500,
+    "energie": 1500,
+    "quelle": "Basisspiel",
+    "beschreibung": "Eiskaffee ist ein weiteres Rezept für deine Datenbank."
+  },
+  {
+    "id": 145,
+    "name": "Heiße Schokolade",
+    "sterne": 4,
+    "zutaten": [
+      "Zutat 1",
+      "Zutat 2",
+      "Zutat 3",
+      "Zutat 4"
+    ],
+    "verkaufspreis": 500,
+    "energie": 1500,
+    "quelle": "Basisspiel",
+    "beschreibung": "Heiße Schokolade ist ein weiteres Rezept für deine Datenbank."
+  },
+  {
+    "id": 146,
+    "name": "Minzkakao",
+    "sterne": 4,
+    "zutaten": [
+      "Zutat 1",
+      "Zutat 2",
+      "Zutat 3",
+      "Zutat 4"
+    ],
+    "verkaufspreis": 500,
+    "energie": 1500,
+    "quelle": "Basisspiel",
+    "beschreibung": "Minzkakao ist ein weiteres Rezept für deine Datenbank."
+  },
+  {
+    "id": 147,
+    "name": "Fruchtsorbet",
+    "sterne": 4,
+    "zutaten": [
+      "Zutat 1",
+      "Zutat 2",
+      "Zutat 3",
+      "Zutat 4"
+    ],
+    "verkaufspreis": 500,
+    "energie": 1500,
+    "quelle": "Basisspiel",
+    "beschreibung": "Fruchtsorbet ist ein weiteres Rezept für deine Datenbank."
+  },
+  {
+    "id": 148,
+    "name": "Bananensplit",
+    "sterne": 4,
+    "zutaten": [
+      "Zutat 1",
+      "Zutat 2",
+      "Zutat 3",
+      "Zutat 4"
+    ],
+    "verkaufspreis": 500,
+    "energie": 1500,
+    "quelle": "Basisspiel",
+    "beschreibung": "Bananensplit ist ein weiteres Rezept für deine Datenbank."
+  },
+  {
+    "id": 149,
+    "name": "Apfelstrudel",
+    "sterne": 4,
+    "zutaten": [
+      "Zutat 1",
+      "Zutat 2",
+      "Zutat 3",
+      "Zutat 4"
+    ],
+    "verkaufspreis": 500,
+    "energie": 1500,
+    "quelle": "Basisspiel",
+    "beschreibung": "Apfelstrudel ist ein weiteres Rezept für deine Datenbank."
+  },
+  {
+    "id": 150,
+    "name": "Käseplatte",
+    "sterne": 4,
+    "zutaten": [
+      "Zutat 1",
+      "Zutat 2",
+      "Zutat 3",
+      "Zutat 4"
+    ],
+    "verkaufspreis": 500,
+    "energie": 1500,
+    "quelle": "Basisspiel",
+    "beschreibung": "Käseplatte ist ein weiteres Rezept für deine Datenbank."
+  },
+  {
+    "id": 151,
+    "name": "Gemüseplatte",
+    "sterne": 4,
+    "zutaten": [
+      "Zutat 1",
+      "Zutat 2",
+      "Zutat 3",
+      "Zutat 4"
+    ],
+    "verkaufspreis": 500,
+    "energie": 1500,
+    "quelle": "Basisspiel",
+    "beschreibung": "Gemüseplatte ist ein weiteres Rezept für deine Datenbank."
+  },
+  {
+    "id": 152,
+    "name": "Gegrillter Lachs",
+    "sterne": 4,
+    "zutaten": [
+      "Zutat 1",
+      "Zutat 2",
+      "Zutat 3",
+      "Zutat 4"
+    ],
+    "verkaufspreis": 500,
+    "energie": 1500,
+    "quelle": "Basisspiel",
+    "beschreibung": "Gegrillter Lachs ist ein weiteres Rezept für deine Datenbank."
+  },
+  {
+    "id": 153,
+    "name": "Gebratener Thunfisch",
+    "sterne": 4,
+    "zutaten": [
+      "Zutat 1",
+      "Zutat 2",
+      "Zutat 3",
+      "Zutat 4"
+    ],
+    "verkaufspreis": 500,
+    "energie": 1500,
+    "quelle": "Basisspiel",
+    "beschreibung": "Gebratener Thunfisch ist ein weiteres Rezept für deine Datenbank."
+  },
+  {
+    "id": 154,
+    "name": "Fischsteak",
+    "sterne": 4,
+    "zutaten": [
+      "Zutat 1",
+      "Zutat 2",
+      "Zutat 3",
+      "Zutat 4"
+    ],
+    "verkaufspreis": 500,
+    "energie": 1500,
+    "quelle": "Basisspiel",
+    "beschreibung": "Fischsteak ist ein weiteres Rezept für deine Datenbank."
+  },
+  {
+    "id": 155,
+    "name": "Meeresfrüchteeintopf",
+    "sterne": 4,
+    "zutaten": [
+      "Zutat 1",
+      "Zutat 2",
+      "Zutat 3",
+      "Zutat 4"
+    ],
+    "verkaufspreis": 500,
+    "energie": 1500,
+    "quelle": "Basisspiel",
+    "beschreibung": "Meeresfrüchteeintopf ist ein weiteres Rezept für deine Datenbank."
+  },
+  {
+    "id": 156,
+    "name": "Deluxe Omelett",
+    "sterne": 4,
+    "zutaten": [
+      "Zutat 1",
+      "Zutat 2",
+      "Zutat 3",
+      "Zutat 4"
+    ],
+    "verkaufspreis": 500,
+    "energie": 1500,
+    "quelle": "Basisspiel",
+    "beschreibung": "Deluxe Omelett ist ein weiteres Rezept für deine Datenbank."
+  },
+  {
+    "id": 157,
+    "name": "Käseomelett",
+    "sterne": 4,
+    "zutaten": [
+      "Zutat 1",
+      "Zutat 2",
+      "Zutat 3",
+      "Zutat 4"
+    ],
+    "verkaufspreis": 500,
+    "energie": 1500,
+    "quelle": "Basisspiel",
+    "beschreibung": "Käseomelett ist ein weiteres Rezept für deine Datenbank."
+  },
+  {
+    "id": 158,
+    "name": "Pilzomelett",
+    "sterne": 4,
+    "zutaten": [
+      "Zutat 1",
+      "Zutat 2",
+      "Zutat 3",
+      "Zutat 4"
+    ],
+    "verkaufspreis": 500,
+    "energie": 1500,
+    "quelle": "Basisspiel",
+    "beschreibung": "Pilzomelett ist ein weiteres Rezept für deine Datenbank."
+  },
+  {
+    "id": 159,
+    "name": "Frühlingssalat",
+    "sterne": 4,
+    "zutaten": [
+      "Zutat 1",
+      "Zutat 2",
+      "Zutat 3",
+      "Zutat 4"
+    ],
+    "verkaufspreis": 500,
+    "energie": 1500,
+    "quelle": "Basisspiel",
+    "beschreibung": "Frühlingssalat ist ein weiteres Rezept für deine Datenbank."
+  },
+  {
+    "id": 160,
+    "name": "Kürbissalat",
+    "sterne": 4,
+    "zutaten": [
+      "Zutat 1",
+      "Zutat 2",
+      "Zutat 3",
+      "Zutat 4"
+    ],
+    "verkaufspreis": 500,
+    "energie": 1500,
+    "quelle": "Basisspiel",
+    "beschreibung": "Kürbissalat ist ein weiteres Rezept für deine Datenbank."
+  },
+  {
+    "id": 161,
+    "name": "Gemüselasagne",
+    "sterne": 4,
+    "zutaten": [
+      "Zutat 1",
+      "Zutat 2",
+      "Zutat 3",
+      "Zutat 4"
+    ],
+    "verkaufspreis": 500,
+    "energie": 1500,
+    "quelle": "Basisspiel",
+    "beschreibung": "Gemüselasagne ist ein weiteres Rezept für deine Datenbank."
+  },
+  {
+    "id": 162,
+    "name": "Fischlasagne",
+    "sterne": 4,
+    "zutaten": [
+      "Zutat 1",
+      "Zutat 2",
+      "Zutat 3",
+      "Zutat 4"
+    ],
+    "verkaufspreis": 500,
+    "energie": 1500,
+    "quelle": "Basisspiel",
+    "beschreibung": "Fischlasagne ist ein weiteres Rezept für deine Datenbank."
+  },
+  {
+    "id": 163,
+    "name": "Kokosreis",
+    "sterne": 4,
+    "zutaten": [
+      "Zutat 1",
+      "Zutat 2",
+      "Zutat 3",
+      "Zutat 4"
+    ],
+    "verkaufspreis": 500,
+    "energie": 1500,
+    "quelle": "Basisspiel",
+    "beschreibung": "Kokosreis ist ein weiteres Rezept für deine Datenbank."
+  },
+  {
+    "id": 164,
+    "name": "Gebratener Reis",
+    "sterne": 4,
+    "zutaten": [
+      "Zutat 1",
+      "Zutat 2",
+      "Zutat 3",
+      "Zutat 4"
+    ],
+    "verkaufspreis": 500,
+    "energie": 1500,
+    "quelle": "Basisspiel",
+    "beschreibung": "Gebratener Reis ist ein weiteres Rezept für deine Datenbank."
+  },
+  {
+    "id": 165,
+    "name": "Gemüse-Reispfanne",
+    "sterne": 4,
+    "zutaten": [
+      "Zutat 1",
+      "Zutat 2",
+      "Zutat 3",
+      "Zutat 4"
+    ],
+    "verkaufspreis": 500,
+    "energie": 1500,
+    "quelle": "Basisspiel",
+    "beschreibung": "Gemüse-Reispfanne ist ein weiteres Rezept für deine Datenbank."
+  },
+  {
+    "id": 166,
+    "name": "Meeresfrüchte-Reispfanne",
+    "sterne": 4,
+    "zutaten": [
+      "Zutat 1",
+      "Zutat 2",
+      "Zutat 3",
+      "Zutat 4"
+    ],
+    "verkaufspreis": 500,
+    "energie": 1500,
+    "quelle": "Basisspiel",
+    "beschreibung": "Meeresfrüchte-Reispfanne ist ein weiteres Rezept für deine Datenbank."
+  },
+  {
+    "id": 167,
+    "name": "Knoblauchbrot",
+    "sterne": 4,
+    "zutaten": [
+      "Zutat 1",
+      "Zutat 2",
+      "Zutat 3",
+      "Zutat 4"
+    ],
+    "verkaufspreis": 500,
+    "energie": 1500,
+    "quelle": "Basisspiel",
+    "beschreibung": "Knoblauchbrot ist ein weiteres Rezept für deine Datenbank."
+  },
+  {
+    "id": 168,
+    "name": "Käsebrot",
+    "sterne": 4,
+    "zutaten": [
+      "Zutat 1",
+      "Zutat 2",
+      "Zutat 3",
+      "Zutat 4"
+    ],
+    "verkaufspreis": 500,
+    "energie": 1500,
+    "quelle": "Basisspiel",
+    "beschreibung": "Käsebrot ist ein weiteres Rezept für deine Datenbank."
+  },
+  {
+    "id": 169,
+    "name": "Süßes Gebäck",
+    "sterne": 4,
+    "zutaten": [
+      "Zutat 1",
+      "Zutat 2",
+      "Zutat 3",
+      "Zutat 4"
+    ],
+    "verkaufspreis": 500,
+    "energie": 1500,
+    "quelle": "Basisspiel",
+    "beschreibung": "Süßes Gebäck ist ein weiteres Rezept für deine Datenbank."
+  },
+  {
+    "id": 170,
+    "name": "Schokocroissant",
+    "sterne": 4,
+    "zutaten": [
+      "Zutat 1",
+      "Zutat 2",
+      "Zutat 3",
+      "Zutat 4"
+    ],
+    "verkaufspreis": 500,
+    "energie": 1500,
+    "quelle": "Basisspiel",
+    "beschreibung": "Schokocroissant ist ein weiteres Rezept für deine Datenbank."
+  },
+  {
+    "id": 171,
+    "name": "Vanillecroissant",
+    "sterne": 4,
+    "zutaten": [
+      "Zutat 1",
+      "Zutat 2",
+      "Zutat 3",
+      "Zutat 4"
+    ],
+    "verkaufspreis": 500,
+    "energie": 1500,
+    "quelle": "Basisspiel",
+    "beschreibung": "Vanillecroissant ist ein weiteres Rezept für deine Datenbank."
+  },
+  {
+    "id": 172,
+    "name": "Beerenkuchen",
+    "sterne": 4,
+    "zutaten": [
+      "Zutat 1",
+      "Zutat 2",
+      "Zutat 3",
+      "Zutat 4"
+    ],
+    "verkaufspreis": 500,
+    "energie": 1500,
+    "quelle": "Basisspiel",
+    "beschreibung": "Beerenkuchen ist ein weiteres Rezept für deine Datenbank."
+  },
+  {
+    "id": 173,
+    "name": "Zitronenkuchen",
+    "sterne": 4,
+    "zutaten": [
+      "Zutat 1",
+      "Zutat 2",
+      "Zutat 3",
+      "Zutat 4"
+    ],
+    "verkaufspreis": 500,
+    "energie": 1500,
+    "quelle": "Basisspiel",
+    "beschreibung": "Zitronenkuchen ist ein weiteres Rezept für deine Datenbank."
+  },
+  {
+    "id": 174,
+    "name": "Karamellpudding",
+    "sterne": 4,
+    "zutaten": [
+      "Zutat 1",
+      "Zutat 2",
+      "Zutat 3",
+      "Zutat 4"
+    ],
+    "verkaufspreis": 500,
+    "energie": 1500,
+    "quelle": "Basisspiel",
+    "beschreibung": "Karamellpudding ist ein weiteres Rezept für deine Datenbank."
+  },
+  {
+    "id": 175,
+    "name": "Fruchtwaffeln",
+    "sterne": 4,
+    "zutaten": [
+      "Zutat 1",
+      "Zutat 2",
+      "Zutat 3",
+      "Zutat 4"
+    ],
+    "verkaufspreis": 500,
+    "energie": 1500,
+    "quelle": "Basisspiel",
+    "beschreibung": "Fruchtwaffeln ist ein weiteres Rezept für deine Datenbank."
+  },
+  {
+    "id": 176,
+    "name": "Deluxe Waffeln",
+    "sterne": 4,
+    "zutaten": [
+      "Zutat 1",
+      "Zutat 2",
+      "Zutat 3",
+      "Zutat 4"
+    ],
+    "verkaufspreis": 500,
+    "energie": 1500,
+    "quelle": "Basisspiel",
+    "beschreibung": "Deluxe Waffeln ist ein weiteres Rezept für deine Datenbank."
+  },
+  {
+    "id": 177,
+    "name": "Deluxe Pfannkuchen",
+    "sterne": 4,
+    "zutaten": [
+      "Zutat 1",
+      "Zutat 2",
+      "Zutat 3",
+      "Zutat 4"
+    ],
+    "verkaufspreis": 500,
+    "energie": 1500,
+    "quelle": "Basisspiel",
+    "beschreibung": "Deluxe Pfannkuchen ist ein weiteres Rezept für deine Datenbank."
+  },
+  {
+    "id": 178,
+    "name": "Kürbismuffin",
+    "sterne": 4,
+    "zutaten": [
+      "Zutat 1",
+      "Zutat 2",
+      "Zutat 3",
+      "Zutat 4"
+    ],
+    "verkaufspreis": 500,
+    "energie": 1500,
+    "quelle": "Basisspiel",
+    "beschreibung": "Kürbismuffin ist ein weiteres Rezept für deine Datenbank."
+  },
+  {
+    "id": 179,
+    "name": "Schokomuffin",
+    "sterne": 4,
+    "zutaten": [
+      "Zutat 1",
+      "Zutat 2",
+      "Zutat 3",
+      "Zutat 4"
+    ],
+    "verkaufspreis": 500,
+    "energie": 1500,
+    "quelle": "Basisspiel",
+    "beschreibung": "Schokomuffin ist ein weiteres Rezept für deine Datenbank."
+  },
+  {
+    "id": 180,
+    "name": "Vanillemuffin",
+    "sterne": 4,
+    "zutaten": [
+      "Zutat 1",
+      "Zutat 2",
+      "Zutat 3",
+      "Zutat 4"
+    ],
+    "verkaufspreis": 500,
+    "energie": 1500,
+    "quelle": "Basisspiel",
+    "beschreibung": "Vanillemuffin ist ein weiteres Rezept für deine Datenbank."
+  },
+  {
+    "id": 181,
+    "name": "Meeresfrüchte-Risotto",
+    "sterne": 4,
+    "zutaten": [
+      "Zutat 1",
+      "Zutat 2",
+      "Zutat 3",
+      "Zutat 4"
+    ],
+    "verkaufspreis": 500,
+    "energie": 1500,
+    "quelle": "Basisspiel",
+    "beschreibung": "Meeresfrüchte-Risotto ist ein weiteres Rezept für deine Datenbank."
+  },
+  {
+    "id": 182,
+    "name": "Deluxe Risotto",
+    "sterne": 4,
+    "zutaten": [
+      "Zutat 1",
+      "Zutat 2",
+      "Zutat 3",
+      "Zutat 4"
+    ],
+    "verkaufspreis": 500,
+    "energie": 1500,
+    "quelle": "Basisspiel",
+    "beschreibung": "Deluxe Risotto ist ein weiteres Rezept für deine Datenbank."
+  },
+  {
+    "id": 183,
+    "name": "Kräuterfisch",
+    "sterne": 4,
+    "zutaten": [
+      "Zutat 1",
+      "Zutat 2",
+      "Zutat 3",
+      "Zutat 4"
+    ],
+    "verkaufspreis": 500,
+    "energie": 1500,
+    "quelle": "Basisspiel",
+    "beschreibung": "Kräuterfisch ist ein weiteres Rezept für deine Datenbank."
+  },
+  {
+    "id": 184,
+    "name": "Gebackener Stör",
+    "sterne": 4,
+    "zutaten": [
+      "Zutat 1",
+      "Zutat 2",
+      "Zutat 3",
+      "Zutat 4"
+    ],
+    "verkaufspreis": 500,
+    "energie": 1500,
+    "quelle": "Basisspiel",
+    "beschreibung": "Gebackener Stör ist ein weiteres Rezept für deine Datenbank."
+  },
+  {
+    "id": 185,
+    "name": "Krabbenbrötchen",
+    "sterne": 4,
+    "zutaten": [
+      "Zutat 1",
+      "Zutat 2",
+      "Zutat 3",
+      "Zutat 4"
+    ],
+    "verkaufspreis": 500,
+    "energie": 1500,
+    "quelle": "Basisspiel",
+    "beschreibung": "Krabbenbrötchen ist ein weiteres Rezept für deine Datenbank."
+  },
+  {
+    "id": 186,
+    "name": "Fischauflauf",
+    "sterne": 4,
+    "zutaten": [
+      "Zutat 1",
+      "Zutat 2",
+      "Zutat 3",
+      "Zutat 4"
+    ],
+    "verkaufspreis": 500,
+    "energie": 1500,
+    "quelle": "Basisspiel",
+    "beschreibung": "Fischauflauf ist ein weiteres Rezept für deine Datenbank."
+  },
+  {
+    "id": 187,
+    "name": "Gemüseauflauf Deluxe",
+    "sterne": 4,
+    "zutaten": [
+      "Zutat 1",
+      "Zutat 2",
+      "Zutat 3",
+      "Zutat 4"
+    ],
+    "verkaufspreis": 500,
+    "energie": 1500,
+    "quelle": "Basisspiel",
+    "beschreibung": "Gemüseauflauf Deluxe ist ein weiteres Rezept für deine Datenbank."
+  },
+  {
+    "id": 188,
+    "name": "Kartoffelgratin",
+    "sterne": 4,
+    "zutaten": [
+      "Zutat 1",
+      "Zutat 2",
+      "Zutat 3",
+      "Zutat 4"
+    ],
+    "verkaufspreis": 500,
+    "energie": 1500,
+    "quelle": "Basisspiel",
+    "beschreibung": "Kartoffelgratin ist ein weiteres Rezept für deine Datenbank."
+  },
+  {
+    "id": 189,
+    "name": "Käsegratin",
+    "sterne": 4,
+    "zutaten": [
+      "Zutat 1",
+      "Zutat 2",
+      "Zutat 3",
+      "Zutat 4"
+    ],
+    "verkaufspreis": 500,
+    "energie": 1500,
+    "quelle": "Basisspiel",
+    "beschreibung": "Käsegratin ist ein weiteres Rezept für deine Datenbank."
+  },
+  {
+    "id": 190,
+    "name": "Fruchtcocktail",
+    "sterne": 4,
+    "zutaten": [
+      "Zutat 1",
+      "Zutat 2",
+      "Zutat 3",
+      "Zutat 4"
+    ],
+    "verkaufspreis": 500,
+    "energie": 1500,
+    "quelle": "Basisspiel",
+    "beschreibung": "Fruchtcocktail ist ein weiteres Rezept für deine Datenbank."
+  },
+  {
+    "id": 191,
+    "name": "Milchshake",
+    "sterne": 4,
+    "zutaten": [
+      "Zutat 1",
+      "Zutat 2",
+      "Zutat 3",
+      "Zutat 4"
+    ],
+    "verkaufspreis": 500,
+    "energie": 1500,
+    "quelle": "Basisspiel",
+    "beschreibung": "Milchshake ist ein weiteres Rezept für deine Datenbank."
+  },
+  {
+    "id": 192,
+    "name": "Bananenmilchshake",
+    "sterne": 4,
+    "zutaten": [
+      "Zutat 1",
+      "Zutat 2",
+      "Zutat 3",
+      "Zutat 4"
+    ],
+    "verkaufspreis": 500,
+    "energie": 1500,
+    "quelle": "Basisspiel",
+    "beschreibung": "Bananenmilchshake ist ein weiteres Rezept für deine Datenbank."
+  },
+  {
+    "id": 193,
+    "name": "Beerenshake",
+    "sterne": 4,
+    "zutaten": [
+      "Zutat 1",
+      "Zutat 2",
+      "Zutat 3",
+      "Zutat 4"
+    ],
+    "verkaufspreis": 500,
+    "energie": 1500,
+    "quelle": "Basisspiel",
+    "beschreibung": "Beerenshake ist ein weiteres Rezept für deine Datenbank."
+  },
+  {
+    "id": 194,
+    "name": "Kokosshake",
+    "sterne": 4,
+    "zutaten": [
+      "Zutat 1",
+      "Zutat 2",
+      "Zutat 3",
+      "Zutat 4"
+    ],
+    "verkaufspreis": 500,
+    "energie": 1500,
+    "quelle": "Basisspiel",
+    "beschreibung": "Kokosshake ist ein weiteres Rezept für deine Datenbank."
+  },
+  {
+    "id": 195,
+    "name": "Vanillemilchshake",
+    "sterne": 4,
+    "zutaten": [
+      "Zutat 1",
+      "Zutat 2",
+      "Zutat 3",
+      "Zutat 4"
+    ],
+    "verkaufspreis": 500,
+    "energie": 1500,
+    "quelle": "Basisspiel",
+    "beschreibung": "Vanillemilchshake ist ein weiteres Rezept für deine Datenbank."
+  }
+]

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Item-Datenbank | Dreamlight Companion</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div class="stars"></div>
+
+<header class="main-header">
+    <h1>💎 Item-Datenbank</h1>
+    <p>Items suchen, filtern und sortieren</p>
+</header>
+
+<nav>
+    <a href="index.html">🏠 Startseite</a>
+    <a href="guides.html">📖 Guides</a>
+    <a href="progression.html">🎯 Fortschritt</a>
+    <a href="moneyguide.html">💰 Geld Guide</a>
+    <a href="items.html">💎 Items</a>
+    <a href="biome.html">🗺️ Biome</a>
+    <a href="rezepte.html">🍳 Rezepte</a>
+    <a href="charaktere.html">👥 Charaktere</a>
+    <a href="toplisten.html">🏆 Top-Listen</a>
+    <a href="tracker.html">⭐ Tracker</a>
+</nav>
+
+<main>
+
+<section class="hero glass">
+
+    <h2>Was suchst du?</h2>
+
+    <input
+        type="text"
+        id="searchInput"
+        placeholder="z.B. Diamant, Kürbis, Vergessene Lande..."
+    >
+
+    <h3 class="filter-title">Sortierung</h3>
+
+    <div class="filter-buttons" id="sortFilters">
+        <button data-sort="name" class="active-filter">A–Z</button>
+        <button data-sort="priceHigh">💰 Wertvollste zuerst</button>
+        <button data-sort="priceLow">Günstigste zuerst</button>
+    </div>
+
+    <h3 class="filter-title">Kategorie</h3>
+
+    <div class="filter-buttons" id="categoryFilters">
+        <button data-category="Alle" class="active-filter">Alle</button>
+        <button data-category="Edelstein">💎 Edelsteine</button>
+        <button data-category="Fisch">🐟 Fische</button>
+        <button data-category="Pflanze">🎃 Pflanzen</button>
+        <button data-category="Zutat">🍎 Zutaten</button>
+        <button data-category="Handwerk">🛠️ Handwerk</button>
+    </div>
+
+    <h3 class="filter-title">Inhalt / DLC</h3>
+
+    <div class="filter-buttons" id="sourceFilters">
+        <button data-source="Alle" class="active-filter">Alle Inhalte</button>
+        <button data-source="Basisspiel">Basisspiel</button>
+        <button data-source="Wishblossom Ranch">Wishblossom Ranch</button>
+        <button data-source="A Rift in Time">A Rift in Time</button>
+        <button data-source="Storybook Vale">Storybook Vale</button>
+    </div>
+
+    <div id="itemsContainer" class="cards"></div>
+
+</section>
+
+</main>
+
+<script src="js/app.js"></script>
+
+</body>
+</html>

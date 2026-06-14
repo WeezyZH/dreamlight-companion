@@ -1,0 +1,218 @@
+[
+  {
+    "id": 1,
+    "phase": "Frühes Spiel",
+    "prioritaet": "S",
+    "titel": "Merlins Hauptquests folgen",
+    "ziel": "Grundfunktionen freischalten",
+    "warum": "Merlin erklärt die wichtigsten Mechaniken und öffnet den Weg für weitere Fortschritte.",
+    "tipp": "Erledige seine Aufgaben zuerst, bevor du dich zu stark auf Dekoration konzentrierst."
+  },
+  {
+    "id": 2,
+    "phase": "Frühes Spiel",
+    "prioritaet": "S",
+    "titel": "Goofys Stand ausbauen",
+    "ziel": "Samen und frühe Einnahmen sichern",
+    "warum": "Goofys Stände sind wichtig für Pflanzen, Verkauf und regelmäßige Sternenmünzen.",
+    "tipp": "Starte mit Karotten und sammle nebenbei Ressourcen."
+  },
+  {
+    "id": 3,
+    "phase": "Frühes Spiel",
+    "prioritaet": "S",
+    "titel": "Remy früh freischalten",
+    "ziel": "Kochen und Restaurant freischalten",
+    "warum": "Remy macht Rezepte, Energie und viele spätere Aufgaben deutlich einfacher.",
+    "tipp": "Remy ist einer der wichtigsten frühen Charaktere."
+  },
+  {
+    "id": 4,
+    "phase": "Frühes Spiel",
+    "prioritaet": "A",
+    "titel": "Vaiana freischalten",
+    "ziel": "Fischfang verbessern",
+    "warum": "Vaiana hilft beim Zugang zu Fischressourcen und ist langfristig sehr nützlich.",
+    "tipp": "Gut, wenn du früh mehr Fisch und Rezepte nutzen willst."
+  },
+  {
+    "id": 5,
+    "phase": "Frühes Spiel",
+    "prioritaet": "A",
+    "titel": "WALL-E freischalten",
+    "ziel": "Ressourcen und frühe Quests stärken",
+    "warum": "WALL-E hilft bei frühen Fortschritten und Ressourcenaufgaben.",
+    "tipp": "Sehr hilfreich für ruhigen, stabilen Aufbau."
+  },
+  {
+    "id": 6,
+    "phase": "Frühes Spiel",
+    "prioritaet": "A",
+    "titel": "Karotten farmen",
+    "ziel": "Erste Sternenmünzen verdienen",
+    "warum": "Karotten sind früh verfügbar und eine einfache Einnahmequelle.",
+    "tipp": "Nicht perfekt, aber sehr zuverlässig am Anfang."
+  },
+  {
+    "id": 7,
+    "phase": "Frühes Spiel",
+    "prioritaet": "A",
+    "titel": "Lagerkisten bauen",
+    "ziel": "Ressourcen behalten",
+    "warum": "Viele Materialien werden später in großen Mengen gebraucht.",
+    "tipp": "Nicht alles verkaufen: Holz, Stein, Erz, Blumen und Scherben behalten."
+  },
+  {
+    "id": 8,
+    "phase": "Frühes Spiel",
+    "prioritaet": "B",
+    "titel": "Freundschaftsrollen verteilen",
+    "ziel": "Begleiter effizient nutzen",
+    "warum": "Rollen wie Gartenarbeit, Bergbau und Fischfang erhöhen langfristig deinen Ertrag.",
+    "tipp": "Gartenarbeit und Bergbau sind besonders wertvoll."
+  },
+  {
+    "id": 9,
+    "phase": "Mittleres Spiel",
+    "prioritaet": "S",
+    "titel": "Lichtung des Vertrauens freischalten",
+    "ziel": "Okra, Lehm, Pilze und neue Quests erhalten",
+    "warum": "Dieses Biom bringt starke Midgame-Ressourcen und gute Fortschrittsmöglichkeiten.",
+    "tipp": "Okra ist eine starke Geldquelle im mittleren Spiel."
+  },
+  {
+    "id": 10,
+    "phase": "Mittleres Spiel",
+    "prioritaet": "S",
+    "titel": "Wald der Tapferkeit freischalten",
+    "ziel": "Holz, Eisen und Kristoff erreichen",
+    "warum": "Der Wald ist wichtig für Materialien, Quests und spätere Verbesserungen.",
+    "tipp": "Eisenerz wird sehr oft gebraucht."
+  },
+  {
+    "id": 11,
+    "phase": "Mittleres Spiel",
+    "prioritaet": "S",
+    "titel": "Kristoff freischalten",
+    "ziel": "Materialversorgung verbessern",
+    "warum": "Kristoffs Stand hilft später enorm beim Sammeln wichtiger Materialien.",
+    "tipp": "Sehr wichtig, wenn du weniger farmen willst."
+  },
+  {
+    "id": 12,
+    "phase": "Mittleres Spiel",
+    "prioritaet": "A",
+    "titel": "Okra anbauen",
+    "ziel": "Mehr Sternenmünzen verdienen",
+    "warum": "Okra ist deutlich stärker als frühe Pflanzen und gut für das Midgame.",
+    "tipp": "Mit Gartenarbeits-Begleiter farmen."
+  },
+  {
+    "id": 13,
+    "phase": "Mittleres Spiel",
+    "prioritaet": "A",
+    "titel": "Eisenbarren vorbereiten",
+    "ziel": "Quests und Handwerk beschleunigen",
+    "warum": "Eisenbarren werden häufig benötigt und können schnell zum Engpass werden.",
+    "tipp": "Eisenerz und Kohle immer behalten."
+  },
+  {
+    "id": 14,
+    "phase": "Mittleres Spiel",
+    "prioritaet": "A",
+    "titel": "Remys Zutaten freischalten",
+    "ziel": "Bessere Rezepte kochen",
+    "warum": "Milch, Käse, Eier und Butter sind für viele starke Rezepte wichtig.",
+    "tipp": "Soufflé und andere Gerichte werden dadurch möglich."
+  },
+  {
+    "id": 15,
+    "phase": "Mittleres Spiel",
+    "prioritaet": "B",
+    "titel": "Biome gezielt statt zufällig öffnen",
+    "ziel": "Dreamlight effizient einsetzen",
+    "warum": "Manche Gebiete bringen deutlich mehr Fortschritt als andere.",
+    "tipp": "Lichtung, Wald und später Vergessene Lande sind besonders stark."
+  },
+  {
+    "id": 16,
+    "phase": "Spätes Spiel",
+    "prioritaet": "S",
+    "titel": "Vergessene Lande freischalten",
+    "ziel": "Kürbisse und wertvolle Ressourcen erhalten",
+    "warum": "Dieses Biom ist zentral für Endgame-Geldquellen und wertvolle Items.",
+    "tipp": "Sobald möglich freischalten, wenn du viel Geld verdienen willst."
+  },
+  {
+    "id": 17,
+    "phase": "Spätes Spiel",
+    "prioritaet": "S",
+    "titel": "Kürbis-Farm aufbauen",
+    "ziel": "Sehr viele Sternenmünzen verdienen",
+    "warum": "Kürbisse gehören zu den besten Geldquellen im Spiel.",
+    "tipp": "Große Felder plus Gartenarbeits-Begleiter nutzen."
+  },
+  {
+    "id": 18,
+    "phase": "Spätes Spiel",
+    "prioritaet": "S",
+    "titel": "Mining-Routen laufen",
+    "ziel": "Edelsteine und Materialien farmen",
+    "warum": "Glänzende Edelsteine, Erz und seltene Materialien bringen Fortschritt und Geld.",
+    "tipp": "Immer einen Bergbau-Begleiter mitnehmen."
+  },
+  {
+    "id": 19,
+    "phase": "Spätes Spiel",
+    "prioritaet": "A",
+    "titel": "Dunkles Holz sammeln",
+    "ziel": "Seltene Handwerksressourcen sichern",
+    "warum": "Dunkles Holz ist selten und später sehr wertvoll.",
+    "tipp": "Nicht verkaufen."
+  },
+  {
+    "id": 20,
+    "phase": "Spätes Spiel",
+    "prioritaet": "A",
+    "titel": "Sammlung systematisch vervollständigen",
+    "ziel": "Items, Rezepte und Charaktere abschließen",
+    "warum": "Im Endgame geht es stark um Vollständigkeit und effiziente Planung.",
+    "tipp": "Tracker regelmäßig nutzen."
+  },
+  {
+    "id": 21,
+    "phase": "Endgame",
+    "prioritaet": "S",
+    "titel": "Beste Geldquellen optimieren",
+    "ziel": "Kürbis, Seeteufel, Gerichte und Edelsteine gezielt nutzen",
+    "warum": "Jetzt lohnt sich Effizienz mehr als zufälliges Sammeln.",
+    "tipp": "Nicht alles verkaufen – wertvolle Questitems trotzdem behalten."
+  },
+  {
+    "id": 22,
+    "phase": "Endgame",
+    "prioritaet": "A",
+    "titel": "Alle Biome analysieren",
+    "ziel": "Fundorte besser verstehen",
+    "warum": "Wer weiß, wo was vorkommt, spart extrem viel Zeit.",
+    "tipp": "Biome-Seite und Item-Datenbank zusammen nutzen."
+  },
+  {
+    "id": 23,
+    "phase": "Endgame",
+    "prioritaet": "A",
+    "titel": "Rezepte nach Energie sortieren",
+    "ziel": "Beste Energiegerichte finden",
+    "warum": "Hohe Energie spart Zeit beim Farmen, Mining und Quests.",
+    "tipp": "Hummerbrötchen und starke Fischgerichte beachten."
+  },
+  {
+    "id": 24,
+    "phase": "Endgame",
+    "prioritaet": "B",
+    "titel": "Tal dekorieren und Bereiche planen",
+    "ziel": "Optik und Komfort verbessern",
+    "warum": "Wenn Ressourcen stabil sind, lohnt sich Design und Struktur.",
+    "tipp": "Erst Fortschritt, dann Cosmetics."
+  }
+]

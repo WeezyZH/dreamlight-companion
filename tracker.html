@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tracker | Dreamlight Companion</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div class="stars"></div>
+
+<header class="main-header">
+    <h1>⭐ Sammlungstracker</h1>
+    <p>Behalte Items, Rezepte und Charaktere im Blick</p>
+</header>
+
+<nav>
+    <a href="index.html">🏠 Startseite</a>
+    <a href="guides.html">📖 Guides</a>
+    <a href="progression.html">🎯 Fortschritt</a>
+    <a href="moneyguide.html">💰 Geld Guide</a>
+    <a href="items.html">💎 Items</a>
+    <a href="biome.html">🗺️ Biome</a>
+    <a href="rezepte.html">🍳 Rezepte</a>
+    <a href="charaktere.html">👥 Charaktere</a>
+    <a href="toplisten.html">🏆 Top-Listen</a>
+    <a href="tracker.html">⭐ Tracker</a>
+</nav>
+
+<main>
+
+<section class="hero glass">
+
+    <h2>Mein Fortschritt</h2>
+
+    <div class="dashboard dashboard-main">
+
+        <div class="dash-card">
+            <strong>💎 Items</strong>
+            <span id="itemProgress">0 / 0</span>
+            <small id="itemPercent">0%</small>
+        </div>
+
+        <div class="dash-card">
+            <strong>🍳 Rezepte</strong>
+            <span id="recipeProgress">0 / 0</span>
+            <small id="recipePercent">0%</small>
+        </div>
+
+        <div class="dash-card">
+            <strong>👥 Charaktere</strong>
+            <span id="characterProgress">0 / 0</span>
+            <small id="characterPercent">0%</small>
+        </div>
+
+        <div class="dash-card">
+            <strong>🏆 Gesamt</strong>
+            <span id="totalProgress">0 / 0</span>
+            <small id="totalPercent">0%</small>
+        </div>
+
+    </div>
+
+</section>
+
+<section class="hero glass guide-section">
+
+    <h2>Filter & Suche</h2>
+
+    <input
+        type="text"
+        id="trackerSearch"
+        placeholder="z.B. Kürbis, Remy, Hummerbrötchen..."
+    >
+
+    <h3 class="filter-title">Status</h3>
+
+    <div class="filter-buttons" id="statusFilters">
+        <button data-filter="all" class="active-filter">Alle</button>
+        <button data-filter="open">Offen</button>
+        <button data-filter="done">Erledigt</button>
+    </div>
+
+    <h3 class="filter-title">Typ</h3>
+
+    <div class="filter-buttons" id="typeFilters">
+        <button data-type="all" class="active-filter">Alles</button>
+        <button data-type="item">💎 Items</button>
+        <button data-type="recipe">🍳 Rezepte</button>
+        <button data-type="character">👥 Charaktere</button>
+    </div>
+
+</section>
+
+<section class="hero glass guide-section tracker-section" id="itemSection">
+
+    <h2>💎 Items</h2>
+    <div id="itemTracker" class="cards"></div>
+
+</section>
+
+<section class="hero glass guide-section tracker-section" id="recipeSection">
+
+    <h2>🍳 Rezepte</h2>
+    <div id="recipeTracker" class="cards"></div>
+
+</section>
+
+<section class="hero glass guide-section tracker-section" id="characterSection">
+
+    <h2>👥 Charaktere</h2>
+    <div id="characterTracker" class="cards"></div>
+
+</section>
+
+</main>
+
+<script src="js/tracker.js"></script>
+
+</body>
+</html>
