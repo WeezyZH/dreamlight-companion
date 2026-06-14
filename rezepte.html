@@ -34,21 +34,13 @@
 
 <section class="hero glass">
 
-<h2>Rezeptsuche</h2>
+    <h2>Rezeptsuche</h2>
 
-<div class="card" style="margin-bottom:20px;">
-    <h3>⚠️ Datenbank in Prüfung</h3>
-    <p>
-        Einige Rezepte, Zutaten und Werte werden aktuell überprüft und ergänzt.
-        Falls du ein fehlendes Rezept bemerkst, freuen wir uns über Feedback.
-    </p>
-</div>
-
-<input
-    type="text"
-    id="recipeSearch"
-    placeholder="z.B. Ratatouille, Kürbis, Tomate..."
->
+    <input
+        type="text"
+        id="recipeSearch"
+        placeholder="z.B. Ratatouille, Kürbis, Tomate..."
+    >
 
     <h3 class="filter-title">⭐ Sterne</h3>
 
@@ -120,15 +112,52 @@ document.addEventListener("DOMContentLoaded", async () => {
     filterRecipes();
 });
 
+function getRecipeName(recipe) {
+    return recipe.name_de || recipe.name || "Unbekanntes Rezept";
+}
+
+function getRecipeIngredients(recipe) {
+    if (Array.isArray(recipe.zutaten_de) && recipe.zutaten_de.length > 0) {
+        return recipe.zutaten_de;
+    }
+
+    if (Array.isArray(recipe.zutaten) && recipe.zutaten.length > 0) {
+        return recipe.zutaten;
+    }
+
+    return [];
+}
+
+function getRecipeSource(recipe) {
+    return recipe.quelle_de || recipe.quelle || recipe.collection || "Unbekannt";
+}
+
+function getRecipeDescription(recipe) {
+    return recipe.beschreibung_de || recipe.beschreibung || "";
+}
+
 function filterRecipes() {
     const searchValue = document.getElementById("recipeSearch").value.toLowerCase();
 
-    let filtered = allRecipes.filter(recipe =>
-        String(recipe.name).toLowerCase().includes(searchValue) ||
-        recipe.zutaten.join(" ").toLowerCase().includes(searchValue) ||
-        String(recipe.quelle).toLowerCase().includes(searchValue) ||
-        String(recipe.beschreibung).toLowerCase().includes(searchValue)
-    );
+    let filtered = allRecipes.filter(recipe => {
+        const name = String(recipe.name || "").toLowerCase();
+        const nameDe = String(recipe.name_de || "").toLowerCase();
+        const ingredients = Array.isArray(recipe.zutaten) ? recipe.zutaten.join(" ").toLowerCase() : "";
+        const ingredientsDe = Array.isArray(recipe.zutaten_de) ? recipe.zutaten_de.join(" ").toLowerCase() : "";
+        const source = String(recipe.quelle || recipe.collection || "").toLowerCase();
+        const description = String(recipe.beschreibung || recipe.beschreibung_de || "").toLowerCase();
+        const type = String(recipe.typ || recipe.type || "").toLowerCase();
+
+        return (
+            name.includes(searchValue) ||
+            nameDe.includes(searchValue) ||
+            ingredients.includes(searchValue) ||
+            ingredientsDe.includes(searchValue) ||
+            source.includes(searchValue) ||
+            description.includes(searchValue) ||
+            type.includes(searchValue)
+        );
+    });
 
     if (selectedStars !== "all") {
         filtered = filtered.filter(recipe =>
@@ -137,7 +166,7 @@ function filterRecipes() {
     }
 
     if (selectedSort === "name") {
-        filtered.sort((a, b) => String(a.name).localeCompare(String(b.name)));
+        filtered.sort((a, b) => getRecipeName(a).localeCompare(getRecipeName(b)));
     }
 
     if (selectedSort === "priceHigh") {
@@ -171,12 +200,12 @@ function updateRecipeStats(recipes) {
 
         <div class="dash-card">
             <strong>💰 Wertvollstes</strong>
-            <span>${bestPrice ? `${bestPrice.name} (${bestPrice.verkaufspreis})` : "Keine Daten"}</span>
+            <span>${bestPrice ? `${getRecipeName(bestPrice)} (${bestPrice.verkaufspreis})` : "Keine Daten"}</span>
         </div>
 
         <div class="dash-card">
             <strong>⚡ Meiste Energie</strong>
-            <span>${bestEnergy ? `${bestEnergy.name} (${bestEnergy.energie})` : "Keine Daten"}</span>
+            <span>${bestEnergy ? `${getRecipeName(bestEnergy)} (${bestEnergy.energie})` : "Keine Daten"}</span>
         </div>
 
         <div class="dash-card">
@@ -202,21 +231,26 @@ function displayRecipes(recipes) {
 
     recipes.forEach(recipe => {
         const sterne = "⭐".repeat(Number(recipe.sterne));
-        const zutaten = recipe.zutaten.join(", ");
+        const zutaten = getRecipeIngredients(recipe).join(", ");
+        const name = getRecipeName(recipe);
+        const source = getRecipeSource(recipe);
+        const description = getRecipeDescription(recipe);
+        const englishName = recipe.name_de && recipe.name ? `<p><strong>🇬🇧 Englisch:</strong> ${recipe.name}</p>` : "";
 
         container.innerHTML += `
             <div class="card">
 
                 <div class="item-badge">${sterne}</div>
 
-                <h3>${recipe.name}</h3>
+                <h3>${name}</h3>
 
+                ${englishName}
                 <p><strong>🍎 Zutaten:</strong> ${zutaten}</p>
                 <p><strong>💰 Verkaufspreis:</strong> ${recipe.verkaufspreis} Sternenmünzen</p>
                 <p><strong>⚡ Energie:</strong> ${recipe.energie}</p>
-                <p><strong>🎮 Inhalt:</strong> ${recipe.quelle}</p>
+                <p><strong>🎮 Inhalt:</strong> ${source}</p>
 
-                <p class="item-description">${recipe.beschreibung}</p>
+                <p class="item-description">${description}</p>
 
             </div>
         `;
