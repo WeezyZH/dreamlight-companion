@@ -5,45 +5,41 @@ let selectedSort = "name";
 async function loadRecipes() {
     const response = await fetch("data/recipes.json");
     allRecipes = await response.json();
+
+    setupRecipeSearch();
     filterRecipes();
 }
 
-function displayRecipes(recipes) {
-    const container = document.getElementById("recipesContainer");
+function setRecipeStars(stars, clickedButton) {
+    selectedStars = stars;
 
-    if (!container) return;
+    document
+        .querySelectorAll("#starFilters button")
+        .forEach(button => button.classList.remove("active-filter"));
 
-    container.innerHTML = "";
+    clickedButton.classList.add("active-filter");
 
-    if (recipes.length === 0) {
-        container.innerHTML = `
-            <div class="card">
-                <h3>Keine Rezepte gefunden</h3>
-                <p>Versuche einen anderen Suchbegriff oder ändere den Filter.</p>
-            </div>
-        `;
-        return;
-    }
+    filterRecipes();
+}
 
-    recipes.forEach(recipe => {
-        const sterne = "⭐".repeat(Number(recipe.sterne));
-        const zutaten = recipe.zutaten.join(", ");
+function setRecipeSort(sortType, clickedButton) {
+    selectedSort = sortType;
 
-        container.innerHTML += `
-            <div class="card">
-                <div class="item-badge">${sterne}</div>
+    document
+        .querySelectorAll("#recipeSortFilters button")
+        .forEach(button => button.classList.remove("active-filter"));
 
-                <h3>${recipe.name}</h3>
+    clickedButton.classList.add("active-filter");
 
-                <p><strong>🍎 Zutaten:</strong> ${zutaten}</p>
-                <p><strong>💰 Verkaufspreis:</strong> ${recipe.verkaufspreis} Sternenmünzen</p>
-                <p><strong>⚡ Energie:</strong> ${recipe.energie}</p>
-                <p><strong>🎮 Inhalt:</strong> ${recipe.quelle}</p>
+    filterRecipes();
+}
 
-                <p class="item-description">${recipe.beschreibung}</p>
-            </div>
-        `;
-    });
+function setupRecipeSearch() {
+    const searchInput = document.getElementById("recipeSearch");
+
+    if (!searchInput) return;
+
+    searchInput.addEventListener("input", filterRecipes);
 }
 
 function filterRecipes() {
@@ -115,47 +111,44 @@ function updateRecipeStats(recipes) {
     `;
 }
 
-function setupRecipeSearch() {
-    const searchInput = document.getElementById("recipeSearch");
+function displayRecipes(recipes) {
+    const container = document.getElementById("recipesContainer");
 
-    if (!searchInput) return;
+    if (!container) return;
 
-    searchInput.addEventListener("input", filterRecipes);
-}
+    container.innerHTML = "";
 
-function setupStarFilters() {
-    const buttons = document.querySelectorAll("#starFilters button");
+    if (recipes.length === 0) {
+        container.innerHTML = `
+            <div class="card">
+                <h3>Keine Rezepte gefunden</h3>
+                <p>Versuche einen anderen Suchbegriff oder ändere den Filter.</p>
+            </div>
+        `;
+        return;
+    }
 
-    buttons.forEach(button => {
-        button.addEventListener("click", () => {
-            selectedStars = button.dataset.stars;
+    recipes.forEach(recipe => {
+        const sterne = "⭐".repeat(Number(recipe.sterne));
+        const zutaten = recipe.zutaten.join(", ");
 
-            buttons.forEach(btn => btn.classList.remove("active-filter"));
-            button.classList.add("active-filter");
+        container.innerHTML += `
+            <div class="card">
 
-            filterRecipes();
-        });
+                <div class="item-badge">${sterne}</div>
+
+                <h3>${recipe.name}</h3>
+
+                <p><strong>🍎 Zutaten:</strong> ${zutaten}</p>
+                <p><strong>💰 Verkaufspreis:</strong> ${recipe.verkaufspreis} Sternenmünzen</p>
+                <p><strong>⚡ Energie:</strong> ${recipe.energie}</p>
+                <p><strong>🎮 Inhalt:</strong> ${recipe.quelle}</p>
+
+                <p class="item-description">${recipe.beschreibung}</p>
+
+            </div>
+        `;
     });
 }
 
-function setupRecipeSortFilters() {
-    const buttons = document.querySelectorAll("#recipeSortFilters button");
-
-    buttons.forEach(button => {
-        button.addEventListener("click", () => {
-            selectedSort = button.dataset.sort;
-
-            buttons.forEach(btn => btn.classList.remove("active-filter"));
-            button.classList.add("active-filter");
-
-            filterRecipes();
-        });
-    });
-}
-
-document.addEventListener("DOMContentLoaded", () => {
-    loadRecipes();
-    setupRecipeSearch();
-    setupStarFilters();
-    setupRecipeSortFilters();
-});
+document.addEventListener("DOMContentLoaded", loadRecipes);

@@ -44,21 +44,21 @@
     <h3 class="filter-title">⭐ Sterne</h3>
 
     <div class="filter-buttons" id="starFilters">
-        <button data-stars="all" class="active-filter">Alle</button>
-        <button data-stars="1">⭐ 1</button>
-        <button data-stars="2">⭐⭐ 2</button>
-        <button data-stars="3">⭐⭐⭐ 3</button>
-        <button data-stars="4">⭐⭐⭐⭐ 4</button>
-        <button data-stars="5">⭐⭐⭐⭐⭐ 5</button>
+        <button onclick="setRecipeStars('all', this)" class="active-filter">Alle</button>
+        <button onclick="setRecipeStars('1', this)">⭐ 1</button>
+        <button onclick="setRecipeStars('2', this)">⭐⭐ 2</button>
+        <button onclick="setRecipeStars('3', this)">⭐⭐⭐ 3</button>
+        <button onclick="setRecipeStars('4', this)">⭐⭐⭐⭐ 4</button>
+        <button onclick="setRecipeStars('5', this)">⭐⭐⭐⭐⭐ 5</button>
     </div>
 
     <h3 class="filter-title">Sortierung</h3>
 
     <div class="filter-buttons" id="recipeSortFilters">
-        <button data-sort="name" class="active-filter">A–Z</button>
-        <button data-sort="priceHigh">💰 Wertvollste</button>
-        <button data-sort="energyHigh">⚡ Meiste Energie</button>
-        <button data-sort="starsHigh">⭐ Höchste Sterne</button>
+        <button onclick="setRecipeSort('name', this)" class="active-filter">A-Z</button>
+        <button onclick="setRecipeSort('priceHigh', this)">💰 Wertvollste</button>
+        <button onclick="setRecipeSort('energyHigh', this)">⚡ Meiste Energie</button>
+        <button onclick="setRecipeSort('starsHigh', this)">⭐ Höchste Sterne</button>
     </div>
 
     <div id="recipeStats" class="dashboard dashboard-main"></div>
@@ -69,7 +69,7 @@
 
 </main>
 
-<script src="js/recipes.js?v=2"></script>
+<script src="js/recipes.js?v=100"></script>
 <script src="js/mobilejump.js"></script>
 
 </body>
