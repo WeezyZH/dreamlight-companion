@@ -235,7 +235,9 @@ function displayRecipes(recipes) {
         const name = getRecipeName(recipe);
         const source = getRecipeSource(recipe);
         const description = getRecipeDescription(recipe);
-        const englishName = recipe.name_de && recipe.name ? `<p><strong>🇬🇧 Englisch:</strong> ${recipe.name}</p>` : "";
+        const englishName = recipe.status === "needs_de_translation"
+            ? `<p><strong>🇬🇧 Englischer Begriff</strong></p>`
+            : "";
 
         container.innerHTML += `
             <div class="card">
