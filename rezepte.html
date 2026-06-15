@@ -76,7 +76,7 @@ let selectedStars = "all";
 let selectedSort = "name";
 
 document.addEventListener("DOMContentLoaded", async () => {
-    const response = await fetch("data/recipes.json");
+   const response = await fetch("data/recipes_final.json");
     allRecipes = await response.json();
 
     document.getElementById("recipeSearch").addEventListener("input", filterRecipes);
