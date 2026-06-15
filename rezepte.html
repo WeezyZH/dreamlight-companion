@@ -74,12 +74,19 @@
 let allRecipes = [];
 let selectedStars = "all";
 let selectedSort = "name";
+let recipeSearchTimeout = null;
 
 document.addEventListener("DOMContentLoaded", async () => {
    const response = await fetch("data/recipes_final.json");
     allRecipes = await response.json();
 
-    document.getElementById("recipeSearch").addEventListener("input", filterRecipes);
+    document.getElementById("recipeSearch").addEventListener("input", () => {
+        clearTimeout(recipeSearchTimeout);
+
+        recipeSearchTimeout = setTimeout(() => {
+            filterRecipes();
+        }, 250);
+    });
 
     document.querySelectorAll("#starFilters button").forEach(button => {
         button.addEventListener("click", () => {
