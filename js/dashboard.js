@@ -1,7 +1,7 @@
 async function loadDashboard() {
     try {
         const itemsResponse = await fetch("data/items.json");
-        const recipesResponse = await fetch("data/recipes.json");
+        const recipesResponse = await fetch("data/recipes_final.json");
         const charactersResponse = await fetch("data/characters.json");
 
         const items = await itemsResponse.json();
