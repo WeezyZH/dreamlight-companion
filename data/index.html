@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dreamlight Companion</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<div class="stars"></div>
+
+<header class="main-header">
+    <h1>✨ Dreamlight Companion ✨</h1>
+    <p>Dein deutscher Guide für Disney Dreamlight Valley</p>
+</header>
+
+<nav>
+    <a href="index.html">🏠 Startseite</a>
+    <a href="guides.html">📖 Guides</a>
+    <a href="progression.html">🎯 Fortschritt</a>
+    <a href="moneyguide.html">💰 Geld Guide</a>
+    <a href="items.html">💎 Items</a>
+    <a href="biome.html">🗺️ Biome</a>
+    <a href="rezepte.html">🍳 Rezepte</a>
+    <a href="charaktere.html">👥 Charaktere</a>
+    <a href="werkzeuge.html">🛠️ Werkzeuge</a>
+    <a href="toplisten.html">🏆 Top-Listen</a>
+    <a href="tracker.html">⭐ Tracker</a>
+</nav>
+
+<main>
+
+<section class="hero glass home-hero">
+
+    <h2>Willkommen im Tal ✨</h2>
+
+    <p>
+        Finde Items, Verkaufspreise, Fundorte, Guides,
+        Biome und hilfreiche Tipps für deinen Weg
+        vom Anfänger bis ins Endgame.
+    </p>
+
+    <h3 class="dashboard-title">✨ Schnellzugriff</h3>
+
+    <div class="cards">
+
+        <a class="card home-card" href="guides.html">
+            <h3>📖 Anfänger-Guide</h3>
+            <p>Starte hier, wenn du neu bist oder Orientierung brauchst.</p>
+        </a>
+
+        <a class="card home-card" href="progression.html">
+            <h3>🎯 Fortschritts-Guide</h3>
+            <p>Was du zuerst tun solltest – vom Start bis ins Endgame.</p>
+        </a>
+
+        <a class="card home-card" href="moneyguide.html">
+            <h3>💰 Geld Guide</h3>
+            <p>Die besten Wege, um Sternenmünzen zu verdienen.</p>
+        </a>
+
+        <a class="card home-card" href="werkzeuge.html">
+            <h3>🛠️ Werkzeuge</h3>
+            <p>Werkzeug-Upgrades, Freischaltungen und Tipps.</p>
+        </a>
+
+        <a class="card home-card" href="rezepte.html">
+            <h3>🍳 Rezepte</h3>
+            <p>Gerichte, Zutaten, Energie und Verkaufspreise.</p>
+        </a>
+
+        <a class="card home-card" href="items.html">
+            <h3>💎 Item-Datenbank</h3>
+            <p>Alle Items, Verkaufspreise, Fundorte und Kategorien.</p>
+        </a>
+
+        <a class="card home-card" href="biome.html">
+            <h3>🗺️ Biome & Fundorte</h3>
+            <p>Finde heraus, wo du welche Items bekommst.</p>
+        </a>
+
+        <a class="card home-card" href="tracker.html">
+            <h3>⭐ Sammlungstracker</h3>
+            <p>Markiere, was du bereits gefunden oder freigeschaltet hast.</p>
+        </a>
+
+    </div>
+
+    <h3 class="dashboard-title">🏆 Highlights</h3>
+
+    <div class="dashboard dashboard-highlights">
+
+        <div class="dash-card">
+            <strong>🏆 Wertvollstes Item</strong>
+            <span id="topItem">Wird geladen...</span>
+        </div>
+
+        <div class="dash-card">
+            <strong>🐟 Wertvollster Fisch</strong>
+            <span id="topFish">Wird geladen...</span>
+        </div>
+
+        <div class="dash-card">
+            <strong>🎃 Wertvollste Pflanze</strong>
+            <span id="topCrop">Wird geladen...</span>
+        </div>
+
+        <div class="dash-card">
+            <strong>⚡ Bestes Rezept</strong>
+            <span id="topRecipe">Wird geladen...</span>
+        </div>
+
+    </div>
+
+    <h3 class="dashboard-title">📊 Datenbank</h3>
+
+    <div class="dashboard dashboard-main">
+
+        <div class="dash-card">
+            <strong>💎 Items</strong>
+            <span><span id="itemCount">0</span> Einträge</span>
+        </div>
+
+        <div class="dash-card">
+            <strong>🍳 Rezepte</strong>
+            <span><span id="recipeCount">0</span> Einträge</span>
+        </div>
+
+        <div class="dash-card">
+            <strong>👥 Charaktere</strong>
+            <span><span id="characterCount">0</span> Einträge</span>
+        </div>
+
+    </div>
+
+</section>
+
+</main>
+
+<script src="js/dashboard.js"></script>
+<script src="js/mobilejump.js"></script>
+
+</body>
+</html>
