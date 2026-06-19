@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kleintiere & Begleiter | Dreamlight Companion</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div class="stars"></div>
+
+<header class="main-header">
+    <h1>🐾 Kleintiere & Begleiter</h1>
+    <p>Alle Kleintiere, Lieblingsfutter, Fundorte, Annäherung und Verfügbarkeit</p>
+</header>
+
+<nav>
+    <a href="index.html">🏠 Startseite</a>
+    <a href="guides.html">📖 Guides</a>
+    <a href="progression.html">🎯 Fortschritt</a>
+    <a href="moneyguide.html">💰 Geld Guide</a>
+    <a href="items.html">💎 Items</a>
+    <a href="biome.html">🗺️ Biome</a>
+    <a href="rezepte.html">🍳 Rezepte</a>
+    <a href="charaktere.html">👥 Charaktere</a>
+    <a href="werkzeuge.html">🛠️ Werkzeuge</a>
+    <a href="toplisten.html">🏆 Top-Listen</a>
+    <a href="schnipsel.html">✨ Schnipsel</a>
+    <a href="wissenshueter.html">📚 Wissenshüter</a>
+    <a href="kleintiere.html">🐾 Kleintiere</a>
+    <a href="tracker.html">⭐ Tracker</a>
+</nav>
+
+<main>
+
+<section class="hero glass">
+
+    <h2>Welchen Begleiter suchst du?</h2>
+
+    <input
+        type="text"
+        id="searchInput"
+        placeholder="z.B. Fuchs, Hummer, Friedliche Wiese, Montag..."
+    >
+
+    <h3 class="filter-title">Art</h3>
+
+    <div class="filter-buttons" id="typeFilters">
+        <button data-type="Alle" class="active-filter">Alle</button>
+    </div>
+
+    <h3 class="filter-title">Inhalt / Sammlung</h3>
+
+    <div class="filter-buttons" id="sourceFilters">
+        <button data-source="Alle" class="active-filter">Alle Inhalte</button>
+    </div>
+
+    <h3 class="filter-title">Wochentag</h3>
+
+    <div class="filter-buttons" id="dayFilters">
+        <button data-day="Alle" class="active-filter">Alle Tage</button>
+        <button data-day="Montag">Montag</button>
+        <button data-day="Dienstag">Dienstag</button>
+        <button data-day="Mittwoch">Mittwoch</button>
+        <button data-day="Donnerstag">Donnerstag</button>
+        <button data-day="Freitag">Freitag</button>
+        <button data-day="Samstag">Samstag</button>
+        <button data-day="Sonntag">Sonntag</button>
+    </div>
+
+    <h3 class="filter-title">Sortierung</h3>
+
+    <div class="filter-buttons" id="sortFilters">
+        <button data-sort="name" class="active-filter">A–Z</button>
+        <button data-sort="type">Nach Art</button>
+        <button data-sort="location">Nach Fundort</button>
+    </div>
+
+    <p id="critterCount" class="item-description"></p>
+
+    <div id="crittersContainer" class="cards"></div>
+
+</section>
+
+</main>
+
+<script>
+let allCritters = [];
+let selectedType = "Alle";
+let selectedSource = "Alle";
+let selectedDay = "Alle";
+let selectedSort = "name";
+
+async function loadCritters() {
+    const response = await fetch("data/kleintiere.json");
+    allCritters = await response.json();
+
+    buildDynamicFilters();
+    filterCritters();
+}
+
+function escapeText(value) {
+    if (value === undefined || value === null) return "";
+
+    return String(value)
+        .replaceAll("&", "&amp;")
+        .replaceAll("<", "&lt;")
+        .replaceAll(">", "&gt;")
+        .replaceAll('"', "&quot;")
+        .replaceAll("'", "&#039;");
+}
+
+function hasValue(value) {
+    return value !== undefined &&
+        value !== null &&
+        String(value).trim() !== "";
+}
+
+function getTypeIcon(type) {
+    const icons = {
+        "Nektarvogel": "🐦",
+        "Sonnenvogel": "☀️",
+        "Eichhörnchen": "🐿️",
+        "Krokodil": "🐊",
+        "Kaninchen": "🐰",
+        "Rabe": "🐦‍⬛",
+        "Fuchs": "🦊",
+        "Waschbär": "🦝",
+        "Schildkröte": "🐢",
+        "Affe": "🐒",
+        "Kobra": "🐍",
+        "Capybara": "🐾",
+        "Kapibara": "🐾",
+        "Eule": "🦉",
+        "Drache": "🐉",
+        "Pegasus": "🪽",
+        "Gans": "🪿",
+        "Stinktier": "🦨",
+        "Honigbiene": "🐝"
+    };
+
+    return icons[type] || "🐾";
+}
+
+function createLine(label, value) {
+    if (!hasValue(value)) return "";
+    return `<p>${label}: ${escapeText(value)}</p>`;
+}
+
+function createDetails(title, value) {
+    if (!hasValue(value)) return "";
+
+    return `
+        <details class="item-description">
+            <summary>${escapeText(title)}</summary>
+            <p>${escapeText(value)}</p>
+        </details>
+    `;
+}
+
+function createAvailability(item) {
+    if (!item.verfuegbarkeit || Object.keys(item.verfuegbarkeit).length === 0) {
+        return "";
+    }
+
+    const activeEntries = Object.entries(item.verfuegbarkeit)
+        .filter(([day, time]) => hasValue(time));
+
+    if (activeEntries.length === 0) {
+        return "";
+    }
+
+    return `
+        <details class="item-description">
+            <summary>🗓️ Verfügbarkeit anzeigen</summary>
+            <ul>
+                ${activeEntries.map(([day, time]) => `
+                    <li>${escapeText(day)}: ${escapeText(time)}</li>
+                `).join("")}
+            </ul>
+        </details>
+    `;
+}
+
+function buildDynamicFilters() {
+    const typeContainer = document.getElementById("typeFilters");
+    const sourceContainer = document.getElementById("sourceFilters");
+
+    const types = [...new Set(allCritters.map(item => item.art).filter(hasValue))]
+        .sort((a, b) => a.localeCompare(b));
+
+    const sources = [...new Set(allCritters.map(item => item.quelle).filter(hasValue))]
+        .sort((a, b) => a.localeCompare(b));
+
+    if (typeContainer) {
+        typeContainer.innerHTML = `<button data-type="Alle" class="active-filter">Alle</button>`;
+
+        types.forEach(type => {
+            typeContainer.innerHTML += `
+                <button data-type="${escapeText(type)}">${getTypeIcon(type)} ${escapeText(type)}</button>
+            `;
+        });
+    }
+
+    if (sourceContainer) {
+        sourceContainer.innerHTML = `<button data-source="Alle" class="active-filter">Alle Inhalte</button>`;
+
+        sources.forEach(source => {
+            sourceContainer.innerHTML += `
+                <button data-source="${escapeText(source)}">${escapeText(source)}</button>
+            `;
+        });
+    }
+
+    setupTypeFilters();
+    setupSourceFilters();
+}
+
+function displayCritters(items) {
+    const container = document.getElementById("crittersContainer");
+    const countElement = document.getElementById("critterCount");
+
+    if (!container) return;
+
+    if (countElement) {
+        countElement.textContent = `${items.length} von ${allCritters.length} Kleintieren angezeigt`;
+    }
+
+    container.innerHTML = "";
+
+    if (items.length === 0) {
+        container.innerHTML = `
+            <div class="card">
+                <h3>Keine Kleintiere gefunden</h3>
+                <p>Versuche eine andere Suche oder ändere den Filter.</p>
+            </div>
+        `;
+        return;
+    }
+
+    items.forEach(item => {
+        container.innerHTML += `
+            <div class="card item-card">
+
+                <img
+                    class="item-image"
+                    src="${escapeText(item.bild)}"
+                    alt="${escapeText(item.name)}"
+                    onerror="this.src='images/items/placeholder.png'"
+                >
+
+                <div class="item-badge">${getTypeIcon(item.art)} ${escapeText(item.art)}</div>
+
+                <h3>${escapeText(item.name)}</h3>
+
+                ${createLine("📍 Fundort", item.fundort)}
+                ${createLine("🎮 Inhalt", item.quelle)}
+                ${createLine("❤️ Lieblingsfutter", item.favorit)}
+                ${createLine("🍽️ Mag auch", item.mag)}
+                ${createLine("🎁 Lieblingsfutter-Belohnung", item.favorit_belohnung)}
+                ${createLine("🎁 Mögliche Belohnung", item.belohnung)}
+
+                ${createDetails("🕹️ Annäherung anzeigen", item.annaeherung)}
+                ${createAvailability(item)}
+
+                <p class="item-description">${escapeText(item.beschreibung)}</p>
+
+            </div>
+        `;
+    });
+}
+
+function filterCritters() {
+    const searchInput = document.getElementById("searchInput");
+    const searchValue = searchInput ? searchInput.value.toLowerCase() : "";
+
+    let filtered = allCritters.filter(item => {
+        const scheduleText = item.verfuegbarkeit
+            ? Object.entries(item.verfuegbarkeit).map(([day, time]) => `${day} ${time}`).join(" ")
+            : "";
+
+        const searchableText = [
+            item.name,
+            item.art,
+            item.favorit,
+            item.favorit_belohnung,
+            item.mag,
+            item.belohnung,
+            item.fundort,
+            item.annaeherung,
+            item.sammlung,
+            item.quelle,
+            item.beschreibung,
+            scheduleText
+        ]
+            .filter(hasValue)
+            .join(" ")
+            .toLowerCase();
+
+        return searchableText.includes(searchValue);
+    });
+
+    if (selectedType !== "Alle") {
+        filtered = filtered.filter(item => item.art === selectedType);
+    }
+
+    if (selectedSource !== "Alle") {
+        filtered = filtered.filter(item => item.quelle === selectedSource);
+    }
+
+    if (selectedDay !== "Alle") {
+        filtered = filtered.filter(item =>
+            item.verfuegbarkeit &&
+            hasValue(item.verfuegbarkeit[selectedDay])
+        );
+    }
+
+    if (selectedSort === "name") {
+        filtered.sort((a, b) => a.name.localeCompare(b.name));
+    }
+
+    if (selectedSort === "type") {
+        filtered.sort((a, b) => a.art.localeCompare(b.art) || a.name.localeCompare(b.name));
+    }
+
+    if (selectedSort === "location") {
+        filtered.sort((a, b) => a.fundort.localeCompare(b.fundort) || a.name.localeCompare(b.name));
+    }
+
+    displayCritters(filtered);
+}
+
+function setupSearch() {
+    const searchInput = document.getElementById("searchInput");
+    if (!searchInput) return;
+
+    searchInput.addEventListener("input", filterCritters);
+}
+
+function setupTypeFilters() {
+    const buttons = document.querySelectorAll("#typeFilters button");
+
+    buttons.forEach(button => {
+        button.addEventListener("click", () => {
+            selectedType = button.dataset.type;
+
+            buttons.forEach(btn => btn.classList.remove("active-filter"));
+            button.classList.add("active-filter");
+
+            filterCritters();
+        });
+    });
+}
+
+function setupSourceFilters() {
+    const buttons = document.querySelectorAll("#sourceFilters button");
+
+    buttons.forEach(button => {
+        button.addEventListener("click", () => {
+            selectedSource = button.dataset.source;
+
+            buttons.forEach(btn => btn.classList.remove("active-filter"));
+            button.classList.add("active-filter");
+
+            filterCritters();
+        });
+    });
+}
+
+function setupDayFilters() {
+    const buttons = document.querySelectorAll("#dayFilters button");
+
+    buttons.forEach(button => {
+        button.addEventListener("click", () => {
+            selectedDay = button.dataset.day;
+
+            buttons.forEach(btn => btn.classList.remove("active-filter"));
+            button.classList.add("active-filter");
+
+            filterCritters();
+        });
+    });
+}
+
+function setupSortFilters() {
+    const buttons = document.querySelectorAll("#sortFilters button");
+
+    buttons.forEach(button => {
+        button.addEventListener("click", () => {
+            selectedSort = button.dataset.sort;
+
+            buttons.forEach(btn => btn.classList.remove("active-filter"));
+            button.classList.add("active-filter");
+
+            filterCritters();
+        });
+    });
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+    loadCritters();
+    setupSearch();
+    setupDayFilters();
+    setupSortFilters();
+});
+</script>
+
+<script src="js/mobilejump.js"></script>
+
+</body>
+</html>
