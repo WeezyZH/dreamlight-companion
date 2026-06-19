@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Schnipsel | Dreamlight Companion</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div class="stars"></div>
+
+<header class="main-header">
+    <h1>✨ Schnipsel</h1>
+    <p>Alle Vogel-, Dämon- und Frosch-Schnipsel aus Storybook Vale</p>
+</header>
+
+<nav>
+    <a href="index.html">🏠 Startseite</a>
+    <a href="guides.html">📖 Guides</a>
+    <a href="progression.html">🎯 Fortschritt</a>
+    <a href="moneyguide.html">💰 Geld Guide</a>
+    <a href="items.html">💎 Items</a>
+    <a href="biome.html">🗺️ Biome</a>
+    <a href="rezepte.html">🍳 Rezepte</a>
+    <a href="charaktere.html">👥 Charaktere</a>
+    <a href="werkzeuge.html">🛠️ Werkzeuge</a>
+    <a href="toplisten.html">🏆 Top-Listen</a>
+    <a href="schnipsel.html">✨ Schnipsel</a>
+    <a href="tracker.html">⭐ Tracker</a>
+</nav>
+
+<main>
+
+<section class="hero glass">
+
+    <h2>Was suchst du?</h2>
+
+    <input
+        type="text"
+        id="searchInput"
+        placeholder="z.B. Blauer Vogel, Dämon, Tiefer Wald..."
+    >
+
+    <h3 class="filter-title">Typ</h3>
+
+    <div class="filter-buttons" id="typeFilters">
+        <button data-type="Alle" class="active-filter">Alle</button>
+        <button data-type="Vogel">🐦 Vogel</button>
+        <button data-type="Dämon">😈 Dämon</button>
+        <button data-type="Frosch">🐸 Frosch</button>
+    </div>
+
+    <h3 class="filter-title">Sortierung</h3>
+
+    <div class="filter-buttons" id="sortFilters">
+        <button data-sort="name" class="active-filter">A–Z</button>
+        <button data-sort="priceHigh">💰 Wertvollste zuerst</button>
+        <button data-sort="priceLow">Günstigste zuerst</button>
+    </div>
+
+    <p id="schnipselCount" class="item-description"></p>
+
+    <div id="schnipselContainer" class="cards"></div>
+
+</section>
+
+</main>
+
+<script>
+let allSchnipsel = [];
+let selectedType = "Alle";
+let selectedSort = "name";
+
+async function loadSchnipsel() {
+    const response = await fetch("data/schnipsel.json");
+    allSchnipsel = await response.json();
+    filterSchnipsel();
+}
+
+function escapeText(value) {
+    if (value === undefined || value === null) return "";
+
+    return String(value)
+        .replaceAll("&", "&amp;")
+        .replaceAll("<", "&lt;")
+        .replaceAll(">", "&gt;")
+        .replaceAll('"', "&quot;")
+        .replaceAll("'", "&#039;");
+}
+
+function hasValue(value) {
+    return value !== undefined &&
+        value !== null &&
+        String(value).trim() !== "";
+}
+
+function getTypeIcon(type) {
+    if (type === "Vogel") return "🐦";
+    if (type === "Dämon") return "😈";
+    if (type === "Frosch") return "🐸";
+    return "✨";
+}
+
+function displaySchnipsel(items) {
+    const container = document.getElementById("schnipselContainer");
+    const countElement = document.getElementById("schnipselCount");
+
+    if (!container) return;
+
+    if (countElement) {
+        countElement.textContent = `${items.length} von ${allSchnipsel.length} Schnipseln angezeigt`;
+    }
+
+    container.innerHTML = "";
+
+    if (items.length === 0) {
+        container.innerHTML = `
+            <div class="card">
+                <h3>Keine Schnipsel gefunden</h3>
+                <p>Versuche eine andere Suche oder ändere den Filter.</p>
+            </div>
+        `;
+        return;
+    }
+
+    items.forEach(item => {
+        container.innerHTML += `
+            <div class="card item-card">
+
+                <img
+                    class="item-image"
+                    src="${escapeText(item.bild)}"
+                    alt="${escapeText(item.name)}"
+                    onerror="this.src='images/items/placeholder.png'"
+                >
+
+                <div class="item-badge">${getTypeIcon(item.typ)} ${escapeText(item.typ)}</div>
+
+                <h3>${escapeText(item.name)}</h3>
+
+                <p>💰 Verkaufspreis: ${escapeText(item.verkaufspreis)} Sternenmünzen</p>
+                <p>📍 Fundort: ${escapeText(item.fundort)}</p>
+                <p>🗺️ Gebiet: ${escapeText(item.biom)}</p>
+                <p>🎮 Inhalt: ${escapeText(item.quelle)}</p>
+                <p>🕸️ Fangmethode: ${escapeText(item.fangmethode)}</p>
+
+                <p class="item-description">${escapeText(item.beschreibung)}</p>
+
+            </div>
+        `;
+    });
+}
+
+function filterSchnipsel() {
+    const searchInput = document.getElementById("searchInput");
+    const searchValue = searchInput ? searchInput.value.toLowerCase() : "";
+
+    let filtered = allSchnipsel.filter(item => {
+        const searchableText = [
+            item.name,
+            item.typ,
+            item.fundort,
+            item.biom,
+            item.quelle,
+            item.fangmethode,
+            item.beschreibung
+        ]
+            .filter(hasValue)
+            .join(" ")
+            .toLowerCase();
+
+        return searchableText.includes(searchValue);
+    });
+
+    if (selectedType !== "Alle") {
+        filtered = filtered.filter(item => item.typ === selectedType);
+    }
+
+    if (selectedSort === "name") {
+        filtered.sort((a, b) => a.name.localeCompare(b.name));
+    }
+
+    if (selectedSort === "priceHigh") {
+        filtered.sort((a, b) => b.verkaufspreis - a.verkaufspreis);
+    }
+
+    if (selectedSort === "priceLow") {
+        filtered.sort((a, b) => a.verkaufspreis - b.verkaufspreis);
+    }
+
+    displaySchnipsel(filtered);
+}
+
+function setupSearch() {
+    const searchInput = document.getElementById("searchInput");
+    if (!searchInput) return;
+
+    searchInput.addEventListener("input", filterSchnipsel);
+}
+
+function setupTypeFilters() {
+    const buttons = document.querySelectorAll("#typeFilters button");
+
+    buttons.forEach(button => {
+        button.addEventListener("click", () => {
+            selectedType = button.dataset.type;
+
+            buttons.forEach(btn => btn.classList.remove("active-filter"));
+            button.classList.add("active-filter");
+
+            filterSchnipsel();
+        });
+    });
+}
+
+function setupSortFilters() {
+    const buttons = document.querySelectorAll("#sortFilters button");
+
+    buttons.forEach(button => {
+        button.addEventListener("click", () => {
+            selectedSort = button.dataset.sort;
+
+            buttons.forEach(btn => btn.classList.remove("active-filter"));
+            button.classList.add("active-filter");
+
+            filterSchnipsel();
+        });
+    });
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+    loadSchnipsel();
+    setupSearch();
+    setupTypeFilters();
+    setupSortFilters();
+});
+</script>
+
+<script src="js/mobilejump.js"></script>
+
+</body>
+</html>
