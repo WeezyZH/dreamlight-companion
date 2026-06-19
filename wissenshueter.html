@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Geschichten der Wissenshüterin | Dreamlight Companion</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div class="stars"></div>
+
+<header class="main-header">
+    <h1>📚 Geschichten der Wissenshüterin</h1>
+    <p>Alle Puzzle-Geschichten aus Storybook Vale mit benötigten Schnipseln und Belohnungen</p>
+</header>
+
+<nav>
+    <a href="index.html">🏠 Startseite</a>
+    <a href="guides.html">📖 Guides</a>
+    <a href="progression.html">🎯 Fortschritt</a>
+    <a href="moneyguide.html">💰 Geld Guide</a>
+    <a href="items.html">💎 Items</a>
+    <a href="biome.html">🗺️ Biome</a>
+    <a href="rezepte.html">🍳 Rezepte</a>
+    <a href="charaktere.html">👥 Charaktere</a>
+    <a href="werkzeuge.html">🛠️ Werkzeuge</a>
+    <a href="toplisten.html">🏆 Top-Listen</a>
+    <a href="schnipsel.html">✨ Schnipsel</a>
+    <a href="wissenshueter.html">📚 Wissenshüter</a>
+    <a href="tracker.html">⭐ Tracker</a>
+</nav>
+
+<main>
+<section class="hero glass">
+    <h2>Welche Geschichte suchst du?</h2>
+
+    <input type="text" id="searchInput" placeholder="z.B. Aurora, Mulan, Aladdin, Belohnung...">
+
+    <h3 class="filter-title">Sterne</h3>
+    <div class="filter-buttons" id="starFilters">
+        <button data-stars="Alle" class="active-filter">Alle</button>
+        <button data-stars="1">★</button>
+        <button data-stars="2">★★</button>
+        <button data-stars="3">★★★</button>
+        <button data-stars="4">★★★★</button>
+        <button data-stars="5">★★★★★</button>
+    </div>
+
+    <h3 class="filter-title">Sortierung</h3>
+    <div class="filter-buttons" id="sortFilters">
+        <button data-sort="name" class="active-filter">A–Z</button>
+        <button data-sort="starsHigh">⭐ Meiste Sterne</button>
+        <button data-sort="starsLow">⭐ Wenigste Sterne</button>
+    </div>
+
+    <p id="storyCount" class="item-description"></p>
+    <div id="storiesContainer" class="cards"></div>
+</section>
+</main>
+
+<script>
+let allStories = [];
+let selectedStars = "Alle";
+let selectedSort = "name";
+
+async function loadStories() {
+    const response = await fetch("data/wissenshueter.json");
+    allStories = await response.json();
+    filterStories();
+}
+
+function escapeText(value) {
+    if (value === undefined || value === null) return "";
+    return String(value)
+        .replaceAll("&", "&amp;")
+        .replaceAll("<", "&lt;")
+        .replaceAll(">", "&gt;")
+        .replaceAll('"', "&quot;")
+        .replaceAll("'", "&#039;");
+}
+
+function hasValue(value) {
+    return value !== undefined && value !== null && String(value).trim() !== "";
+}
+
+function createSchnipselList(story) {
+    if (!Array.isArray(story.schnipsel) || story.schnipsel.length === 0) {
+        return "<p>Keine Schnipsel-Daten vorhanden.</p>";
+    }
+
+    return `
+        <ul class="item-description">
+            ${story.schnipsel.map(item => `
+                <li>${escapeText(item.anzahl)}x ${escapeText(item.name)}</li>
+            `).join("")}
+        </ul>
+    `;
+}
+
+function displayStories(stories) {
+    const container = document.getElementById("storiesContainer");
+    const countElement = document.getElementById("storyCount");
+
+    if (!container) return;
+
+    if (countElement) {
+        countElement.textContent = `${stories.length} von ${allStories.length} Geschichten angezeigt`;
+    }
+
+    container.innerHTML = "";
+
+    if (stories.length === 0) {
+        container.innerHTML = `
+            <div class="card">
+                <h3>Keine Geschichten gefunden</h3>
+                <p>Versuche eine andere Suche oder ändere den Filter.</p>
+            </div>
+        `;
+        return;
+    }
+
+    stories.forEach(story => {
+        container.innerHTML += `
+            <div class="card item-card">
+                <img
+                    class="item-image"
+                    src="${escapeText(story.bild)}"
+                    alt="${escapeText(story.name)}"
+                    onerror="this.src='images/items/placeholder.png'"
+                >
+
+                <div class="item-badge">📚 ${escapeText(story.sterne_text)}</div>
+
+                <h3>${escapeText(story.name)}</h3>
+
+                <p>⭐ Sterne: ${escapeText(story.sterne_text)}</p>
+                <p>🎮 Inhalt: ${escapeText(story.quelle)}</p>
+
+                <h4>✨ Benötigte Schnipsel</h4>
+                ${createSchnipselList(story)}
+
+                <p>🎁 Belohnung: ${escapeText(story.belohnung)}</p>
+                <p class="item-description">${escapeText(story.beschreibung)}</p>
+            </div>
+        `;
+    });
+}
+
+function filterStories() {
+    const searchInput = document.getElementById("searchInput");
+    const searchValue = searchInput ? searchInput.value.toLowerCase() : "";
+
+    let filtered = allStories.filter(story => {
+        const schnipselText = Array.isArray(story.schnipsel)
+            ? story.schnipsel.map(item => `${item.anzahl} ${item.name}`).join(" ")
+            : "";
+
+        const searchableText = [
+            story.name,
+            story.sterne_text,
+            story.belohnung,
+            story.quelle,
+            story.beschreibung,
+            schnipselText
+        ].filter(hasValue).join(" ").toLowerCase();
+
+        return searchableText.includes(searchValue);
+    });
+
+    if (selectedStars !== "Alle") {
+        filtered = filtered.filter(story => String(story.sterne) === selectedStars);
+    }
+
+    if (selectedSort === "name") {
+        filtered.sort((a, b) => a.name.localeCompare(b.name));
+    }
+
+    if (selectedSort === "starsHigh") {
+        filtered.sort((a, b) => b.sterne - a.sterne || a.name.localeCompare(b.name));
+    }
+
+    if (selectedSort === "starsLow") {
+        filtered.sort((a, b) => a.sterne - b.sterne || a.name.localeCompare(b.name));
+    }
+
+    displayStories(filtered);
+}
+
+function setupSearch() {
+    const searchInput = document.getElementById("searchInput");
+    if (!searchInput) return;
+    searchInput.addEventListener("input", filterStories);
+}
+
+function setupStarFilters() {
+    const buttons = document.querySelectorAll("#starFilters button");
+    buttons.forEach(button => {
+        button.addEventListener("click", () => {
+            selectedStars = button.dataset.stars;
+            buttons.forEach(btn => btn.classList.remove("active-filter"));
+            button.classList.add("active-filter");
+            filterStories();
+        });
+    });
+}
+
+function setupSortFilters() {
+    const buttons = document.querySelectorAll("#sortFilters button");
+    buttons.forEach(button => {
+        button.addEventListener("click", () => {
+            selectedSort = button.dataset.sort;
+            buttons.forEach(btn => btn.classList.remove("active-filter"));
+            button.classList.add("active-filter");
+            filterStories();
+        });
+    });
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+    loadStories();
+    setupSearch();
+    setupStarFilters();
+    setupSortFilters();
+});
+</script>
+
+<script src="js/mobilejump.js"></script>
+
+</body>
+</html>
