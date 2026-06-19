@@ -3,14 +3,17 @@ async function loadDashboard() {
         const itemsResponse = await fetch("data/items.json");
         const recipesResponse = await fetch("data/recipes_final.json");
         const charactersResponse = await fetch("data/characters.json");
+        const schnipselResponse = await fetch("data/schnipsel.json");
 
         const items = await itemsResponse.json();
         const recipes = await recipesResponse.json();
         const characters = await charactersResponse.json();
+        const schnipsel = await schnipselResponse.json();
 
         document.getElementById("itemCount").textContent = items.length;
         document.getElementById("recipeCount").textContent = recipes.length;
         document.getElementById("characterCount").textContent = characters.length;
+        document.getElementById("schnipselCount").textContent = schnipsel.length;
 
         const mostValuableItem = [...items]
             .sort((a, b) => b.verkaufspreis - a.verkaufspreis)[0];
