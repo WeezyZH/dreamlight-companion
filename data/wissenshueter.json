@@ -1,0 +1,633 @@
+[
+  {
+    "id": 1,
+    "name": "Es war einmal im Tal der Geschichten ...",
+    "sterne": 1,
+    "sterne_text": "★",
+    "schnipsel": [
+      {
+        "name": "Roter Vogel-Schnipsel",
+        "anzahl": 10
+      }
+    ],
+    "belohnung": "Märchenbaum",
+    "quelle": "Storybook Vale",
+    "bild": "images/wissenshueter/es-war-einmal-im-tal-der-geschichten.png",
+    "beschreibung": "Geschichte der Wissenshüterin aus Storybook Vale. Belohnung: Märchenbaum.",
+    "status": "imported_from_wissenshueter_wiki_v1"
+  },
+  {
+    "id": 2,
+    "name": "Aladdin",
+    "sterne": 2,
+    "sterne_text": "★★",
+    "schnipsel": [
+      {
+        "name": "Blauer Vogel-Schnipsel",
+        "anzahl": 25
+      }
+    ],
+    "belohnung": "Stuhl aus Agrabah",
+    "quelle": "Storybook Vale",
+    "bild": "images/wissenshueter/aladdin.png",
+    "beschreibung": "Geschichte der Wissenshüterin aus Storybook Vale. Belohnung: Stuhl aus Agrabah.",
+    "status": "imported_from_wissenshueter_wiki_v1"
+  },
+  {
+    "id": 3,
+    "name": "Cinderella",
+    "sterne": 2,
+    "sterne_text": "★★",
+    "schnipsel": [
+      {
+        "name": "Roter Vogel-Schnipsel",
+        "anzahl": 10
+      },
+      {
+        "name": "Blauer Vogel-Schnipsel",
+        "anzahl": 15
+      }
+    ],
+    "belohnung": "Grüne Vintage-Tapete",
+    "quelle": "Storybook Vale",
+    "bild": "images/wissenshueter/cinderella.png",
+    "beschreibung": "Geschichte der Wissenshüterin aus Storybook Vale. Belohnung: Grüne Vintage-Tapete.",
+    "status": "imported_from_wissenshueter_wiki_v1"
+  },
+  {
+    "id": 4,
+    "name": "Die Schöne und das Biest",
+    "sterne": 2,
+    "sterne_text": "★★",
+    "schnipsel": [
+      {
+        "name": "Roter Vogel-Schnipsel",
+        "anzahl": 5
+      },
+      {
+        "name": "Blauer Vogel-Schnipsel",
+        "anzahl": 20
+      }
+    ],
+    "belohnung": "Taschenuhr-Halskette",
+    "quelle": "Storybook Vale",
+    "bild": "images/wissenshueter/die-schoene-und-das-biest.png",
+    "beschreibung": "Geschichte der Wissenshüterin aus Storybook Vale. Belohnung: Taschenuhr-Halskette.",
+    "status": "imported_from_wissenshueter_wiki_v1"
+  },
+  {
+    "id": 5,
+    "name": "Encanto",
+    "sterne": 2,
+    "sterne_text": "★★",
+    "schnipsel": [
+      {
+        "name": "Blauer Vogel-Schnipsel",
+        "anzahl": 15
+      },
+      {
+        "name": "Rosa Dämon-Schnipsel",
+        "anzahl": 10
+      }
+    ],
+    "belohnung": "Tür der Madrigals",
+    "quelle": "Storybook Vale",
+    "bild": "images/wissenshueter/encanto.png",
+    "beschreibung": "Geschichte der Wissenshüterin aus Storybook Vale. Belohnung: Tür der Madrigals.",
+    "status": "imported_from_wissenshueter_wiki_v1"
+  },
+  {
+    "id": 6,
+    "name": "Vaiana",
+    "sterne": 2,
+    "sterne_text": "★★",
+    "schnipsel": [
+      {
+        "name": "Blauer Vogel-Schnipsel",
+        "anzahl": 10
+      },
+      {
+        "name": "Grüner Frosch-Schnipsel",
+        "anzahl": 15
+      }
+    ],
+    "belohnung": "Plumeria-Blumenpfad",
+    "quelle": "Storybook Vale",
+    "bild": "images/wissenshueter/vaiana.png",
+    "beschreibung": "Geschichte der Wissenshüterin aus Storybook Vale. Belohnung: Plumeria-Blumenpfad.",
+    "status": "imported_from_wissenshueter_wiki_v1"
+  },
+  {
+    "id": 7,
+    "name": "Aurora und die Teekannenfälle",
+    "sterne": 3,
+    "sterne_text": "★★★",
+    "schnipsel": [
+      {
+        "name": "Grüner Frosch-Schnipsel",
+        "anzahl": 10
+      },
+      {
+        "name": "Rosa Frosch-Schnipsel",
+        "anzahl": 5
+      },
+      {
+        "name": "Blauer Vogel-Schnipsel",
+        "anzahl": 3
+      }
+    ],
+    "belohnung": "Zerbrochene Teetasse",
+    "quelle": "Storybook Vale",
+    "bild": "images/wissenshueter/aurora-und-die-teekannenfaelle.png",
+    "beschreibung": "Geschichte der Wissenshüterin aus Storybook Vale. Belohnung: Zerbrochene Teetasse.",
+    "status": "imported_from_wissenshueter_wiki_v1"
+  },
+  {
+    "id": 8,
+    "name": "Aurora und die heilige Quelle",
+    "sterne": 3,
+    "sterne_text": "★★★",
+    "schnipsel": [
+      {
+        "name": "Roter Vogel-Schnipsel",
+        "anzahl": 10
+      },
+      {
+        "name": "Rosa Dämon-Schnipsel",
+        "anzahl": 5
+      },
+      {
+        "name": "Blauer Dämon-Schnipsel",
+        "anzahl": 2
+      }
+    ],
+    "belohnung": "Gravierte Marmortapete",
+    "quelle": "Storybook Vale",
+    "bild": "images/wissenshueter/aurora-und-die-heilige-quelle.png",
+    "beschreibung": "Geschichte der Wissenshüterin aus Storybook Vale. Belohnung: Gravierte Marmortapete.",
+    "status": "imported_from_wissenshueter_wiki_v1"
+  },
+  {
+    "id": 9,
+    "name": "Die Monster AG",
+    "sterne": 3,
+    "sterne_text": "★★★",
+    "schnipsel": [
+      {
+        "name": "Roter Vogel-Schnipsel",
+        "anzahl": 10
+      },
+      {
+        "name": "Gelber Vogel-Schnipsel",
+        "anzahl": 5
+      },
+      {
+        "name": "Rosa Frosch-Schnipsel",
+        "anzahl": 10
+      }
+    ],
+    "belohnung": "Deckenlampe der Firma",
+    "quelle": "Storybook Vale",
+    "bild": "images/wissenshueter/die-monster-ag.png",
+    "beschreibung": "Geschichte der Wissenshüterin aus Storybook Vale. Belohnung: Deckenlampe der Firma.",
+    "status": "imported_from_wissenshueter_wiki_v1"
+  },
+  {
+    "id": 10,
+    "name": "Dornröschen",
+    "sterne": 3,
+    "sterne_text": "★★★",
+    "schnipsel": [
+      {
+        "name": "Blauer Vogel-Schnipsel",
+        "anzahl": 30
+      },
+      {
+        "name": "Grüner Vogel-Schnipsel",
+        "anzahl": 5
+      },
+      {
+        "name": "Blauer Dämon-Schnipsel",
+        "anzahl": 5
+      }
+    ],
+    "belohnung": "Wams des Barden",
+    "quelle": "Storybook Vale",
+    "bild": "images/wissenshueter/dornroeschen.png",
+    "beschreibung": "Geschichte der Wissenshüterin aus Storybook Vale. Belohnung: Wams des Barden.",
+    "status": "imported_from_wissenshueter_wiki_v1"
+  },
+  {
+    "id": 11,
+    "name": "König der Löwen",
+    "sterne": 3,
+    "sterne_text": "★★★",
+    "schnipsel": [
+      {
+        "name": "Roter Vogel-Schnipsel",
+        "anzahl": 10
+      },
+      {
+        "name": "Blauer Vogel-Schnipsel",
+        "anzahl": 30
+      }
+    ],
+    "belohnung": "Riesiger Blattstuhl",
+    "quelle": "Storybook Vale",
+    "bild": "images/wissenshueter/koenig-der-loewen.png",
+    "beschreibung": "Geschichte der Wissenshüterin aus Storybook Vale. Belohnung: Riesiger Blattstuhl.",
+    "status": "imported_from_wissenshueter_wiki_v1"
+  },
+  {
+    "id": 12,
+    "name": "Küss den Frosch",
+    "sterne": 3,
+    "sterne_text": "★★★",
+    "schnipsel": [
+      {
+        "name": "Gelber Frosch-Schnipsel",
+        "anzahl": 20
+      },
+      {
+        "name": "Grüner Dämon-Schnipsel",
+        "anzahl": 10
+      }
+    ],
+    "belohnung": "Truhe \"Küss den Frosch\"",
+    "quelle": "Storybook Vale",
+    "bild": "images/wissenshueter/kuess-den-frosch.png",
+    "beschreibung": "Geschichte der Wissenshüterin aus Storybook Vale. Belohnung: Truhe \"Küss den Frosch\".",
+    "status": "imported_from_wissenshueter_wiki_v1"
+  },
+  {
+    "id": 13,
+    "name": "Mulan",
+    "sterne": 3,
+    "sterne_text": "★★★",
+    "schnipsel": [
+      {
+        "name": "Grüner Vogel-Schnipsel",
+        "anzahl": 5
+      },
+      {
+        "name": "Blauer Dämon-Schnipsel",
+        "anzahl": 5
+      },
+      {
+        "name": "Roter Dämon-Schnipsel",
+        "anzahl": 15
+      }
+    ],
+    "belohnung": "Gartentempel",
+    "quelle": "Storybook Vale",
+    "bild": "images/wissenshueter/mulan.png",
+    "beschreibung": "Geschichte der Wissenshüterin aus Storybook Vale. Belohnung: Gartentempel.",
+    "status": "imported_from_wissenshueter_wiki_v1"
+  },
+  {
+    "id": 14,
+    "name": "Tim Burtons Nightmare Before Christmas",
+    "sterne": 3,
+    "sterne_text": "★★★",
+    "schnipsel": [
+      {
+        "name": "Gelber Vogel-Schnipsel",
+        "anzahl": 5
+      },
+      {
+        "name": "Rosa Frosch-Schnipsel",
+        "anzahl": 10
+      },
+      {
+        "name": "Lila Frosch-Schnipsel",
+        "anzahl": 25
+      }
+    ],
+    "belohnung": "Uhr aus Halloween Town",
+    "quelle": "Storybook Vale",
+    "bild": "images/wissenshueter/tim-burtons-nightmare-before-christmas.png",
+    "beschreibung": "Geschichte der Wissenshüterin aus Storybook Vale. Belohnung: Uhr aus Halloween Town.",
+    "status": "imported_from_wissenshueter_wiki_v1"
+  },
+  {
+    "id": 15,
+    "name": "Die Hexe und der Zauberer",
+    "sterne": 4,
+    "sterne_text": "★★★★",
+    "schnipsel": [
+      {
+        "name": "Rosa Dämon-Schnipsel",
+        "anzahl": 10
+      },
+      {
+        "name": "Blauer Dämon-Schnipsel",
+        "anzahl": 5
+      },
+      {
+        "name": "Roter Dämon-Schnipsel",
+        "anzahl": 20
+      }
+    ],
+    "belohnung": "Mittelalterlicher Holzstuhl",
+    "quelle": "Storybook Vale",
+    "bild": "images/wissenshueter/die-hexe-und-der-zauberer.png",
+    "beschreibung": "Geschichte der Wissenshüterin aus Storybook Vale. Belohnung: Mittelalterlicher Holzstuhl.",
+    "status": "imported_from_wissenshueter_wiki_v1"
+  },
+  {
+    "id": 16,
+    "name": "Hercules",
+    "sterne": 4,
+    "sterne_text": "★★★★",
+    "schnipsel": [
+      {
+        "name": "Grüner Frosch-Schnipsel",
+        "anzahl": 20
+      },
+      {
+        "name": "Rosa Frosch-Schnipsel",
+        "anzahl": 10
+      },
+      {
+        "name": "Lila Frosch-Schnipsel",
+        "anzahl": 310
+      }
+    ],
+    "belohnung": "Brunnen von Theben",
+    "quelle": "Storybook Vale",
+    "bild": "images/wissenshueter/hercules.png",
+    "beschreibung": "Geschichte der Wissenshüterin aus Storybook Vale. Belohnung: Brunnen von Theben.",
+    "status": "imported_from_wissenshueter_wiki_v1"
+  },
+  {
+    "id": 17,
+    "name": "Lilo und Stitch",
+    "sterne": 4,
+    "sterne_text": "★★★★",
+    "schnipsel": [
+      {
+        "name": "Roter Vogel-Schnipsel",
+        "anzahl": 10
+      },
+      {
+        "name": "Blauer Vogel-Schnipsel",
+        "anzahl": 35
+      },
+      {
+        "name": "Rosa Dämon-Schnipsel",
+        "anzahl": 15
+      }
+    ],
+    "belohnung": "Lilos Etagenbett",
+    "quelle": "Storybook Vale",
+    "bild": "images/wissenshueter/lilo-und-stitch.png",
+    "beschreibung": "Geschichte der Wissenshüterin aus Storybook Vale. Belohnung: Lilos Etagenbett.",
+    "status": "imported_from_wissenshueter_wiki_v1"
+  },
+  {
+    "id": 18,
+    "name": "Ralph reichts",
+    "sterne": 4,
+    "sterne_text": "★★★★",
+    "schnipsel": [
+      {
+        "name": "Gelber Vogel-Schnipsel",
+        "anzahl": 5
+      },
+      {
+        "name": "Grüner Frosch-Schnipsel",
+        "anzahl": 45
+      },
+      {
+        "name": "Rosa Frosch-Schnipsel",
+        "anzahl": 10
+      }
+    ],
+    "belohnung": "Herrschaftliche Süßigkeitentür",
+    "quelle": "Storybook Vale",
+    "bild": "images/wissenshueter/ralph-reichts.png",
+    "beschreibung": "Geschichte der Wissenshüterin aus Storybook Vale. Belohnung: Herrschaftliche Süßigkeitentür.",
+    "status": "imported_from_wissenshueter_wiki_v1"
+  },
+  {
+    "id": 19,
+    "name": "Rapunzel - Neu verföhnt",
+    "sterne": 4,
+    "sterne_text": "★★★★",
+    "schnipsel": [
+      {
+        "name": "Roter Vogel-Schnipsel",
+        "anzahl": 20
+      },
+      {
+        "name": "Blauer Vogel-Schnipsel",
+        "anzahl": 10
+      },
+      {
+        "name": "Grüner Frosch-Schnipsel",
+        "anzahl": 30
+      }
+    ],
+    "belohnung": "Blühender Baum im Topf",
+    "quelle": "Storybook Vale",
+    "bild": "images/wissenshueter/rapunzel-neu-verfoehnt.png",
+    "beschreibung": "Geschichte der Wissenshüterin aus Storybook Vale. Belohnung: Blühender Baum im Topf.",
+    "status": "imported_from_wissenshueter_wiki_v1"
+  },
+  {
+    "id": 20,
+    "name": "WALL·E",
+    "sterne": 4,
+    "sterne_text": "★★★★",
+    "schnipsel": [
+      {
+        "name": "Grüner Vogel-Schnipsel",
+        "anzahl": 5
+      },
+      {
+        "name": "Rosa Dämon-Schnipsel",
+        "anzahl": 25
+      },
+      {
+        "name": "Blauer Dämon-Schnipsel",
+        "anzahl": 5
+      }
+    ],
+    "belohnung": "Transporttisch",
+    "quelle": "Storybook Vale",
+    "bild": "images/wissenshueter/wall-e.png",
+    "beschreibung": "Geschichte der Wissenshüterin aus Storybook Vale. Belohnung: Transporttisch.",
+    "status": "imported_from_wissenshueter_wiki_v1"
+  },
+  {
+    "id": 21,
+    "name": "Arielle, die Meerjungfrau",
+    "sterne": 5,
+    "sterne_text": "★★★★★",
+    "schnipsel": [
+      {
+        "name": "Roter Vogel-Schnipsel",
+        "anzahl": 20
+      },
+      {
+        "name": "Grüner Frosch-Schnipsel",
+        "anzahl": 30
+      },
+      {
+        "name": "Rosa Dämon-Schnipsel",
+        "anzahl": 15
+      }
+    ],
+    "belohnung": "Fenster des Meerespalasts",
+    "quelle": "Storybook Vale",
+    "bild": "images/wissenshueter/arielle-die-meerjungfrau.png",
+    "beschreibung": "Geschichte der Wissenshüterin aus Storybook Vale. Belohnung: Fenster des Meerespalasts.",
+    "status": "imported_from_wissenshueter_wiki_v1"
+  },
+  {
+    "id": 22,
+    "name": "Der Funke des Hasses",
+    "sterne": 5,
+    "sterne_text": "★★★★★",
+    "schnipsel": [
+      {
+        "name": "Frosch-Schnipsel des Nimmermehrs",
+        "anzahl": 4
+      },
+      {
+        "name": "Dämon-Schnipsel des Nimmermehrs",
+        "anzahl": 3
+      }
+    ],
+    "belohnung": "Buntglasfenster der Vorstellungskraft",
+    "quelle": "Storybook Vale",
+    "bild": "images/wissenshueter/der-funke-des-hasses.png",
+    "beschreibung": "Geschichte der Wissenshüterin aus Storybook Vale. Belohnung: Buntglasfenster der Vorstellungskraft.",
+    "status": "imported_from_wissenshueter_wiki_v1"
+  },
+  {
+    "id": 23,
+    "name": "Der Zauberlehrling",
+    "sterne": 5,
+    "sterne_text": "★★★★★",
+    "schnipsel": [
+      {
+        "name": "Grüner Vogel-Schnipsel",
+        "anzahl": 5
+      },
+      {
+        "name": "Gelber Vogel-Schnipsel",
+        "anzahl": 5
+      },
+      {
+        "name": "Gelber Frosch-Schnipsel",
+        "anzahl": 70
+      }
+    ],
+    "belohnung": "Buchgleiter",
+    "quelle": "Storybook Vale",
+    "bild": "images/wissenshueter/der-zauberlehrling.png",
+    "beschreibung": "Geschichte der Wissenshüterin aus Storybook Vale. Belohnung: Buchgleiter.",
+    "status": "imported_from_wissenshueter_wiki_v1"
+  },
+  {
+    "id": 24,
+    "name": "Die Eiskönigin - Völlig unverfroren",
+    "sterne": 5,
+    "sterne_text": "★★★★★",
+    "schnipsel": [
+      {
+        "name": "Blauer Vogel-Schnipsel",
+        "anzahl": 35
+      },
+      {
+        "name": "Grüner Frosch-Schnipsel",
+        "anzahl": 30
+      },
+      {
+        "name": "Rosa Dämon-Schnipsel",
+        "anzahl": 15
+      }
+    ],
+    "belohnung": "Königin Idunas Kleid",
+    "quelle": "Storybook Vale",
+    "bild": "images/wissenshueter/die-eiskoenigin-voellig-unverfroren.png",
+    "beschreibung": "Geschichte der Wissenshüterin aus Storybook Vale. Belohnung: Königin Idunas Kleid.",
+    "status": "imported_from_wissenshueter_wiki_v1"
+  },
+  {
+    "id": 25,
+    "name": "Merida - Legende der Highlands",
+    "sterne": 5,
+    "sterne_text": "★★★★★",
+    "schnipsel": [
+      {
+        "name": "Grüner Vogel-Schnipsel",
+        "anzahl": 5
+      },
+      {
+        "name": "Gelber Vogel-Schnipsel",
+        "anzahl": 5
+      },
+      {
+        "name": "Grüner Dämon-Schnipsel",
+        "anzahl": 35
+      }
+    ],
+    "belohnung": "Schicksalsteppich",
+    "quelle": "Storybook Vale",
+    "bild": "images/wissenshueter/merida-legende-der-highlands.png",
+    "beschreibung": "Geschichte der Wissenshüterin aus Storybook Vale. Belohnung: Schicksalsteppich.",
+    "status": "imported_from_wissenshueter_wiki_v1"
+  },
+  {
+    "id": 26,
+    "name": "Ratatouille",
+    "sterne": 5,
+    "sterne_text": "★★★★★",
+    "schnipsel": [
+      {
+        "name": "Lila Frosch-Schnipsel",
+        "anzahl": 35
+      },
+      {
+        "name": "Blauer Dämon-Schnipsel",
+        "anzahl": 5
+      },
+      {
+        "name": "Roter Dämon-Schnipsel",
+        "anzahl": 25
+      }
+    ],
+    "belohnung": "Schild \"La Ratatouille\"",
+    "quelle": "Storybook Vale",
+    "bild": "images/wissenshueter/ratatouille.png",
+    "beschreibung": "Geschichte der Wissenshüterin aus Storybook Vale. Belohnung: Schild \"La Ratatouille\".",
+    "status": "imported_from_wissenshueter_wiki_v1"
+  },
+  {
+    "id": 27,
+    "name": "Toy Story",
+    "sterne": 5,
+    "sterne_text": "★★★★★",
+    "schnipsel": [
+      {
+        "name": "Rosa Frosch-Schnipsel",
+        "anzahl": 10
+      },
+      {
+        "name": "Lila Frosch-Schnipsel",
+        "anzahl": 35
+      },
+      {
+        "name": "Roter Dämon-Schnipsel",
+        "anzahl": 25
+      }
+    ],
+    "belohnung": "Kipplaster-Sessel",
+    "quelle": "Storybook Vale",
+    "bild": "images/wissenshueter/toy-story.png",
+    "beschreibung": "Geschichte der Wissenshüterin aus Storybook Vale. Belohnung: Kipplaster-Sessel.",
+    "status": "imported_from_wissenshueter_wiki_v1"
+  }
+]
