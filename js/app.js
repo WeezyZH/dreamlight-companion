@@ -1,20 +1,119 @@
 let allItems = [];
+let preparedItems = [];
 let selectedCategory = "Alle";
 let selectedSource = "Alle";
 let selectedSort = "name";
+let searchTimeout = null;
 
 async function loadItems() {
     const response = await fetch("data/items.json");
     allItems = await response.json();
+
+    preparedItems = allItems.map(item => {
+        const searchableText = [
+            item.name,
+            item.fundort,
+            item.kategorie,
+            item.quelle,
+            item.biom,
+            item.beschreibung,
+            item.blasenfarbe,
+            item.wetter,
+            item.zeit
+        ]
+            .filter(hasValue)
+            .join(" ")
+            .toLowerCase();
+
+        return {
+            ...item,
+            searchableText
+        };
+    });
+
     filterItems();
+}
+
+function escapeText(value) {
+    if (value === undefined || value === null) return "";
+
+    return String(value)
+        .replaceAll("&", "&amp;")
+        .replaceAll("<", "&lt;")
+        .replaceAll(">", "&gt;")
+        .replaceAll('"', "&quot;")
+        .replaceAll("'", "&#039;");
+}
+
+function hasValue(value) {
+    return value !== undefined &&
+        value !== null &&
+        String(value).trim() !== "";
+}
+
+function createFishDetails(item) {
+    if (item.kategorie !== "Fisch") return "";
+
+    const details = [];
+
+    if (hasValue(item.blasenfarbe)) {
+        details.push(`<p>🎣 Blasenfarbe: ${escapeText(item.blasenfarbe)}</p>`);
+    }
+
+    if (hasValue(item.wetter)) {
+        details.push(`<p>🌦️ Wetter: ${escapeText(item.wetter)}</p>`);
+    }
+
+    if (hasValue(item.zeit)) {
+        details.push(`<p>🕒 Zeit: ${escapeText(item.zeit)}</p>`);
+    }
+
+    return details.join("");
+}
+
+function createItemCard(item) {
+    const recommendation = item.behalten
+        ? "✅ Behalten empfohlen"
+        : "💰 Gut zum Verkaufen";
+
+    const fishDetails = createFishDetails(item);
+
+    return `
+        <div class="card item-card">
+
+            <img
+                class="item-image"
+                src="${escapeText(item.bild)}"
+                alt="${escapeText(item.name)}"
+                onerror="this.src='images/items/placeholder.png'"
+            >
+
+            <div class="item-badge">${escapeText(item.kategorie)}</div>
+
+            <h3>
+                <a href="item.html?id=${escapeText(item.id)}" class="item-link">
+                    ${escapeText(item.name)}
+                </a>
+            </h3>
+
+            <p>💰 Verkaufspreis: ${escapeText(item.verkaufspreis)} Sternenmünzen</p>
+            <p>📍 Fundort: ${escapeText(item.fundort)}</p>
+            <p>🗺️ Biom: ${escapeText(item.biom)}</p>
+            <p>🎮 Inhalt: ${escapeText(item.quelle)}</p>
+            <p>⭐ Seltenheit: ${escapeText(item.seltenheit)}</p>
+            ${fishDetails}
+            <p>${recommendation}</p>
+
+            <p class="item-description">${escapeText(item.beschreibung)}</p>
+
+        </div>
+    `;
 }
 
 function displayItems(items) {
     const container = document.getElementById("itemsContainer");
 
     if (!container) return;
-
-    container.innerHTML = "";
 
     if (items.length === 0) {
         container.innerHTML = `
@@ -26,63 +125,28 @@ function displayItems(items) {
         return;
     }
 
-    items.forEach(item => {
-        const recommendation = item.behalten
-            ? "✅ Behalten empfohlen"
-            : "💰 Gut zum Verkaufen";
-
-        container.innerHTML += `
-            <div class="card item-card">
-
-                <img
-                    class="item-image"
-                    src="${item.bild}"
-                    alt="${item.name}"
-                    onerror="this.src='images/items/placeholder.png'"
-                >
-
-                <div class="item-badge">${item.kategorie}</div>
-
-                <h3>
-                    <a href="item.html?id=${item.id}" class="item-link">
-                        ${item.name}
-                    </a>
-                </h3>
-
-                <p>💰 Verkaufspreis: ${item.verkaufspreis} Sternenmünzen</p>
-                <p>📍 Fundort: ${item.fundort}</p>
-                <p>🗺️ Biom: ${item.biom}</p>
-                <p>🎮 Inhalt: ${item.quelle}</p>
-                <p>⭐ Seltenheit: ${item.seltenheit}</p>
-                <p>${recommendation}</p>
-
-                <p class="item-description">${item.beschreibung}</p>
-
-            </div>
-        `;
-    });
+    container.innerHTML = items.map(createItemCard).join("");
 }
 
 function filterItems() {
     const searchInput = document.getElementById("searchInput");
-    const searchValue = searchInput ? searchInput.value.toLowerCase() : "";
+    const searchValue = searchInput ? searchInput.value.trim().toLowerCase() : "";
 
-    let filtered = allItems.filter(item =>
-        item.name.toLowerCase().includes(searchValue) ||
-        item.fundort.toLowerCase().includes(searchValue) ||
-        item.kategorie.toLowerCase().includes(searchValue) ||
-        item.quelle.toLowerCase().includes(searchValue) ||
-        item.biom.toLowerCase().includes(searchValue) ||
-        item.beschreibung.toLowerCase().includes(searchValue)
-    );
+    let filtered = preparedItems.filter(item => {
+        const matchesSearch =
+            searchValue === "" ||
+            item.searchableText.includes(searchValue);
 
-    if (selectedCategory !== "Alle") {
-        filtered = filtered.filter(item => item.kategorie === selectedCategory);
-    }
+        const matchesCategory =
+            selectedCategory === "Alle" ||
+            item.kategorie === selectedCategory;
 
-    if (selectedSource !== "Alle") {
-        filtered = filtered.filter(item => item.quelle === selectedSource);
-    }
+        const matchesSource =
+            selectedSource === "Alle" ||
+            item.quelle === selectedSource;
+
+        return matchesSearch && matchesCategory && matchesSource;
+    });
 
     if (selectedSort === "name") {
         filtered.sort((a, b) => a.name.localeCompare(b.name));
@@ -103,7 +167,13 @@ function setupSearch() {
     const searchInput = document.getElementById("searchInput");
     if (!searchInput) return;
 
-    searchInput.addEventListener("input", filterItems);
+    searchInput.addEventListener("input", () => {
+        clearTimeout(searchTimeout);
+
+        searchTimeout = setTimeout(() => {
+            filterItems();
+        }, 300);
+    });
 }
 
 function setupSortFilters() {
