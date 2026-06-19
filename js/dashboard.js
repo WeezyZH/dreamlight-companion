@@ -4,30 +4,37 @@ async function loadDashboard() {
         const recipesResponse = await fetch("data/recipes_final.json");
         const charactersResponse = await fetch("data/characters.json");
         const schnipselResponse = await fetch("data/schnipsel.json");
+        const wissenshueterResponse = await fetch("data/wissenshueter.json");
 
         const items = await itemsResponse.json();
         const recipes = await recipesResponse.json();
         const characters = await charactersResponse.json();
         const schnipsel = await schnipselResponse.json();
+        const wissenshueter = await wissenshueterResponse.json();
 
         document.getElementById("itemCount").textContent = items.length;
         document.getElementById("recipeCount").textContent = recipes.length;
         document.getElementById("characterCount").textContent = characters.length;
         document.getElementById("schnipselCount").textContent = schnipsel.length;
 
+        const wissenshueterElement = document.getElementById("wissenshueterCount");
+        if (wissenshueterElement) {
+            wissenshueterElement.textContent = wissenshueter.length;
+        }
+
         const mostValuableItem = [...items]
-            .sort((a, b) => b.verkaufspreis - a.verkaufspreis)[0];
+            .sort((a, b) => (b.verkaufspreis || 0) - (a.verkaufspreis || 0))[0];
 
         const mostValuableFish = items
             .filter(item => item.kategorie === "Fisch")
-            .sort((a, b) => b.verkaufspreis - a.verkaufspreis)[0];
+            .sort((a, b) => (b.verkaufspreis || 0) - (a.verkaufspreis || 0))[0];
 
         const mostValuableCrop = items
             .filter(item => item.kategorie === "Pflanze")
-            .sort((a, b) => b.verkaufspreis - a.verkaufspreis)[0];
+            .sort((a, b) => (b.verkaufspreis || 0) - (a.verkaufspreis || 0))[0];
 
         const bestEnergyRecipe = [...recipes]
-            .sort((a, b) => b.energie - a.energie)[0];
+            .sort((a, b) => (b.energie || 0) - (a.energie || 0))[0];
 
         document.getElementById("topItem").textContent =
             mostValuableItem
@@ -50,7 +57,7 @@ async function loadDashboard() {
                 : "Keine Rezeptdaten";
 
     } catch (error) {
-        console.error(error);
+        console.error("Dashboard Fehler:", error);
     }
 }
 
